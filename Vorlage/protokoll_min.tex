@@ -1,0 +1,136 @@
+% ################################################################
+% #                                                              #
+% # Autor: Michael Epping                                        #
+% # E-Mail: michael.epping@uni-muenster.de                       #
+% # Version: 1.0                                                 #
+% # Datum: Juni 2013                                             #
+% # Info: Diese Version der Protokollvorlage besteht nur aus     #
+% #       einer Datei. Außerdem wurde auf viele Spielereien      #
+% #       verzichtet.                                            #
+% # Copyright: CC0 (macht mit diesen Dateien was ihr wollt)      #
+% #    https://creativecommons.org/publicdomain/zero/1.0/deed.de #
+% #                                                              #
+% ################################################################
+
+% ###############
+% # Allgemeines #
+% ###############
+
+% Zeilen, die mit einem Prozentzeichen beginnen sind Kommentare. 
+% Alle verwendeten Funktionen sind mit solchen Kommentaren versehen, so dass man den Zweck der jeweiligen Funktion nachvollziehen kann.
+
+% ######################################
+% # Konfigurieren der Dokumentenklasse #
+% ######################################
+
+\documentclass[
+    bibtotocnumbered,                                      % Listet das Literaturverzeichnis auch im Inhaltsverzeichnis auf
+    a4paper,                                               % Papierformat
+    oneside,                                               % Einseitig
+    %twoside,                                              % Zweiseitig
+    12pt,                                                  % Schriftgröße
+    pagesize=auto                                          % schreibt die Papiergröße korrekt ins Ausgabedokument
+]{scrartcl}
+% Es gibt die Dokumenttypen scrartcle, srcbook, scrreprt und scrlettr. Diese gehören zum KOME-Skript und sollten für deutsche Texte benutzt werden.
+% Für englische Texte wählt man entsprechend article, book, report und letter.
+% Es ist nicht unbedingt zu empfehlen, bei einem bestehendem Dokument, die documentclass zu ändern.
+
+% ####################
+% # Pakete einbinden #
+% ####################
+
+% Pakete erweitern LaTeX um zusätzliche Funktionen. Dies ist eine Satz nützlicher Pakete.
+\usepackage[utf8x]{inputenc}                               % Legt die Zeichenkodierung fest, z.B UTF8
+\usepackage[T1]{fontenc}                                   % Verwendung der Zeichentabelle T1, für deutschsprachige Dokumente sinnvoll
+\usepackage[ngerman,english]{babel}                        % Silbentrennung nach neuer deutscher und englischer Rechtschreibung
+\usepackage{amsmath}                                       % Mathepaket
+\usepackage{units}                                         % Ermöglicht die Nutzung von \unit[Zahl]{Einheit}
+
+% #########################
+% # Beginn des Dokumentes #
+% #########################
+
+\begin{document}
+\selectlanguage{ngerman}                                   % Schreibsprache Deutsch
+
+% Römische Ziffern als Seitenzahlen für Titelseite bis einschließlich dem Inhaltsverzeichnis
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+% ########################
+% # Titelseite erstellen #
+% ########################
+
+\begin{titlepage}
+    \vspace*{4cm}
+    \begin{center}
+        \Huge
+        \textbf{Protokollvorlage}\\
+        \vspace{1cm}
+        \large
+        Einfache Version \\
+        \vspace{5cm}
+        Michael Epping \\  
+        \vspace{1cm}
+        \normalsize      
+        \textit{michael.epping@uni-muenster.de} \\ 
+    \end{center}
+\end{titlepage}
+
+% ################################
+% # Inhaltsverzeichnis erstellen #
+% ################################
+
+\tableofcontents
+\newpage
+
+% Zurücksetzen der Seitenzahlen auf arabische Ziffern
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% ###################################
+% # Den Inhalt der Arbeit einbinden #
+% ###################################
+
+\section{Text}
+
+Hier könnt ihr den eigentlichen Text einfügen. \\
+Zitate: \cite{anleitung2012} und \cite{anleitung2013}.
+
+% ###################################
+% # Literaturverzeichnis mit BibTeX #
+% ###################################
+
+% Dies ist die einfachste Variante um ein Literaturverzeichnis zu erzeugen.
+% Die einzelnen Einträge müssen dabei per Hand angelegt und formatiert werden.
+% Es kann auch bibtex verwendet werden, so wie es in der komplexen Vorlage der Fall ist.
+
+\newpage
+% entweder ...
+\begin{thebibliography}{2} % https://de.wikibooks.org/wiki/LaTeX-Kompendium:_Schnellkurs:_Erstellen_eines_Literaturverzeichnisses
+    \bibitem[1]{anleitung2012} Markus Donath und Anke Schmidt.
+        \emph{Anleitung zu den Experimentellen Übungen zur Mechanik und Elektrizitätslehre}, Oktober 2012.
+    \bibitem[2]{anleitung2013} Markus Donath und Anke Schmidt.
+        \emph{Anleitung zu den Experimentellen Übungen zur Optik, Wärmelehre und Atomphysik}, Oktober 2013.
+\end{thebibliography}
+% oder ...
+%\bibliography{literatur}
+%\bibliographystyle{unsrtdin}
+
+% ####################
+% # Anhang erstellen #
+% ####################
+
+\newpage
+\appendix
+\section{Anhang}
+
+Hier ist Platz für euren Anhang. Wird kein Anhang benötigt, dann löscht einfach die diese und die 4 vorherigen Zeilen.\\
+
+Den Anhang habe ich absichtlich hinter dem Literaturverzeichnis platziert, so dass man einfach seine handschriftlichen Notizen (z.\,B. die Fehlerrechnung) mit ans Protokoll heften kann.
+
+% #######################
+% # Ende des Dokumentes #
+% #######################
+
+\end{document}
