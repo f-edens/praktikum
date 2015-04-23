@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\begin{axis} [
+enlargelimits=.15,
+ybar,
+%symbolic x coords={excellent, good, neutral},
+xtick = data,	
+xlabel={Impulszahl},
+ylabel={Absolute Häufigkeit}
+]
+\addplot coordinates {(0, 10)
+	(1, 19)
+	(2, 30)
+	(3, 18)
+	(4, 9)
+	(5, 9)
+	(6, 2)
+	(7, 0)
+	(8, 2)
+	(9, 1)
+};
+\end{axis}
+\end{tikzpicture}
