@@ -1,7 +1,12 @@
 \label{anhang}
 
 \subsection{Fehlerrechnung}
-
+\subsubsection{Impulsrate}
+In die Impulsrate $ \frac{N}{t} $ fließen die statistische Unsicherheit der Strahlenquelle und die Messgenauigkeit der Zeit ein. Der statistische Fehler von N beträgt $ \Delta N = \sigma = \sqrt{N} $. Die Unsicherheit ist nach Gaußscher Fehlerfortpflanzung gegeben durch
+\begin{align}
+	\Delta\left(\frac{N}{t}\right) &= \sqrt{\left(\frac{N}{t^2} \Delta t\right)^2 + \left(\frac{1}{t} \Delta N\right)^2} \notag \\
+		&= \sqrt{\left(\frac{N}{t^2} \Delta t\right)^2 + \left(\frac{\sqrt{N}}{t} \right)^2}
+\end{align} 
 %Links zu den Dokumentationen der verwendeten Pakete.
 %
 %\begin{itemize}
