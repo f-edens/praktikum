@@ -1,0 +1,182 @@
+% ################################################################
+% #                                                              #
+% # Autor: Michael Epping                                        #
+% # E-Mail: michael.epping@uni-muenster.de                       #
+% # Version: 1.4                                                 #
+% # Datum: Juni 2013                                             #
+% # Info: Diese Datei sollte nicht verändert werden.             #
+% #    Hier werden die Einstellungen festgelegt und              #
+% #    Pakete eingebunden. Alles weitere wird über               #
+% #    die Dateien verändert, die mit "0X_" beginnen.            #
+% # Copyright: CC0 (macht mit diesen Dateien was ihr wollt)      #
+% #    https://creativecommons.org/publicdomain/zero/1.0/deed.de #
+% #                                                              #
+% ################################################################
+
+% Änderungen 1.2 -> 1.3
+% * Bei der Verwendung von texlive2012 gibt es Probleme mit myalphadin.
+%   Diese Vorlage für Einträge insLiteraturverzeichnis habe ich durch unsrtdin ersetzt.
+% * Da ich jetzt mit TeXlipse arbeite, habe ich ein paar Anpassungen vorgenommen.
+%   So ist z.B. der Name der bib-Datei fest vorgegeben, damit auch die Autovervollständigung bei BibTeX-Keys funktioniert.
+% * Zusätzliche Kommentare sollten das Arbeiten mit dieser Vorlage erleichtern.
+% * Die Vorlage enthält sinnvollen Text und nicht nur nutzlose Platzhalter.
+
+% Änderungen 1.3 -> 1.4
+% * Das Paket "ifthenx" gibt es unter Ubuntu 12.04 mit texlive 2009-15 nicht. Als alternative habe ich "xifthen" eingetragen.
+% * Tabulatoren habe ich durch Leerzeichen ersetzt. Dadurch bleibt das Layout (Einrücken und Position Kommentare) erhalten, 
+%   egal mit welchem Editor man die Dateien öffnet.
+% * Ich habe einen Copyright-Vermerk hinzugefügt, nämlich dass es im Prizip keines gibt.
+% * Neuer Abschnitt: latexmk
+% * Neuer Abschnitt: Verbatim
+% * Die Bilddatei "titelseite.jpg" wurde entfernt (wegen Copyright), da die Vorlage ab jetzt öffentlich zugänglich sein soll.
+% * "README.txt" im Verzeichnis Bilder wurde erstellt.
+% * Literaturangabe der Anleitung zur Optik, Wärmelehre und Atomphysik hinzugefügt. 
+
+% ###############
+% # Allgemeines #
+% ###############
+
+% Zeilen, die mit einem Prozentzeichen beginnen sind Kommentare. 
+% Alle verwendeten Funktionen sind mit solchen Kommentaren versehen, so dass man den Zweck der jeweiligen Funktion nachvollziehen kann.
+
+% ######################################
+% # Konfigurieren der Dokumentenklasse #
+% ######################################
+
+\documentclass[
+    a4paper,                                               % Papierformat
+    oneside,                                               % Einseitig
+    %twoside,                                              % Zweiseitig
+    12pt,                                                  % Schriftgröße
+    pagesize=auto,                                         % schreibt die Papiergröße korrekt ins Ausgabedokument
+    headsepline,                                           % Linie unter der Kopfzeile
+    %draft=true                                            % Markiert zu lange und zu kurze Zeilen
+]{scrartcl}
+% Es gibt die Dokumenttypen scrartcle, srcbook, scrreprt und scrlettr. Diese gehören zum KOME-Skript und sollten für deutsche Texte benutzt werden.
+% Für englische Texte wählt man entsprechend article, book, report und letter.
+% Es ist  nicht unbedingt zu empfehlen, bei einem bestehendem Dokument, die documentclass zu ändern.
+
+% ####################
+% # Pakete einbinden #
+% ####################
+
+% Pakete erweitern LaTeX um zusätzliche Funktionen. Dies ist eine Satz nützlicher Pakete.
+% Weitere sollten in der Datei"`01_EigenePakete.tex"' hinzugefügt werden.
+\usepackage[utf8x]{inputenc}                                                  % Legt die Zeichenkodierung fest, z.B UTF8
+\usepackage[T1]{fontenc}                                                      % Verwendung der Zeichentabelle T1, für deutschsprachige Dokumente sinnvoll
+\usepackage[ngerman,english]{babel}                                           % Silbentrennung nach neuer deutscher und englischer Rechtschreibung
+\usepackage{amsmath}                                                          % Mathepaket
+\usepackage{xifthen}                                                          % Wird benötigt um \ifthenelse zu benutzen
+\usepackage[pdftex]{graphicx}                                                 % Zum flexiblen Einbinden von Grafiken, pdftex ist optional
+\usepackage{units}                                                            % Ermöglicht die Nutzung von \unit[Zahl]{Einheit}
+\usepackage{setspace}                                                         % Einfaches wechseln zwischen unterschiedlichen Zeilenabständen
+\usepackage[pdfpagelabels]{hyperref}                                          % Verlinkt Textstellen im PDF Dokument
+\usepackage[font=small,labelfont=bf,labelsep=endash,format=plain]{caption}    % Darstellung für Caption s.u.
+\usepackage{subfig}                                                           % Bilder nebeneinander
+\usepackage{wrapfig}                                                          % Fließtext um Figure-Umgebung
+\usepackage{cite}                                                             % Zusatzfunktionen zum zitieren
+\usepackage{scrpage2}                                                         % Wird für Kopf- und Fußzeile benötigt
+\usepackage{array,dcolumn}                                                    % Beide Pakete werden für die Ausrichtung der Tabellenspalten benötigt
+
+% weitere Pakete einbinden
+\input{01_EigenePakete}
+
+% ############################
+% # Eigene Befehle einbinden #
+% ############################
+
+\input{02_EigeneBefehle}
+
+% #########################
+% # Variablen importieren #
+% #########################
+
+\input{03_Variablen}
+\newboolean{show}
+
+% #########################
+% # Beginn des Dokumentes #
+% #########################
+
+\begin{document}
+\selectlanguage{ngerman}                                   % Schreibsprache Deutsch
+\onehalfspacing                                            % 1 1/2 facher Zeilenabstand
+\addtokomafont{sectioning}{\rmfamily}                      % Schriftsatz
+\numberwithin{equation}{section}                           % Nummerierung der Formeln entsprechend der Section (z.B. 1.1)
+\addtokomafont{caption}{\small\linespread{1}\selectfont}   % Ändert Schriftgröße und Zeilenabstand bei captions
+
+% Römische Ziffern als Seitenzahlen für Titelseite bis einschließlich dem Inhaltsverzeichnis
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+% #######################################
+% # Kopf- und Fußzeile konfigurieren    #
+% #######################################
+
+\ihead{\textit{\varNum\ - \varName }}                      % Innenseite der Kopfzeile
+\chead{}                                                   % Mitte der Kopfzeile
+\ohead{\textit{\varAutor}}                                 % Außenseite der Kopfzeile
+\ifoot{}                                                   % Innnenseite der Fußzeile
+\cfoot{- \textit{\pagemark} -}                             % Mitte der Fußzeile
+\ofoot{}                                                   % Aussenseite der Fußzeile
+
+% ###################################
+% # Ausrichtung der Tabellenspalten #
+% ###################################
+
+\newcolumntype{,}[1]{D{,}{,}{#1}}                          % , in Tabellen untereinander stellen
+\newcolumntype{p}{D{p}{\pm}{-1}}                           % +- in Tabellen untereinander stellen
+
+% ########################
+% # Titelseite einbinden #
+% ########################
+
+\input{04_Titelseite}
+
+% ################################
+% # Inhaltsverzeichnis einbinden #
+% ################################
+
+\tableofcontents
+\newpage
+
+% Zurücksetzen der Seitenzahlen auf arabische Ziffern
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\pagestyle{scrheadings}                                    % Ab hier mit Kopf- und Fußzeile
+
+% ###################################
+% # Den Inhalt der Arbeit einbinden #
+% ###################################
+
+\input{10_Inhalt}
+
+% ####################
+% # Anhang einbinden #
+% ####################
+
+% Löscht man die Datei "`20_Anhang.tex"', dann wird kein Anhang erzeugt.
+\IfFileExists{20_Anhang}{
+    \newpage
+    \appendix
+    \section{Anhang}
+    \input{20_Anhang}
+} % Nach \IfFileExists muss eine Leerzeile eingefügt werden
+
+% ###################################
+% # Literaturverzeichnis mit BibTeX #
+% ###################################
+
+\setboolean{show}{\varZeigeLiteraturverzeichnis}
+\ifthenelse{\boolean{show}}{
+    \newpage
+    \bibliography{literatur}
+    \bibliographystyle{\varLiteraturLayout}
+}{}
+
+% #######################
+% # Ende des Dokumentes #
+% #######################
+
+\end{document}
