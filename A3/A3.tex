@@ -1,0 +1,229 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+
+\subtitle{Versuch A3:\\
+Absorption von $\gamma-$und $\beta-$Strahlung}
+
+
+\date{\{Datum\}}
+
+
+\author{Gruppe 6MO:\\
+Frederik Edens\\
+Dennis Eckermann}
+
+\maketitle
+\vfill{}
+
+
+\tableofcontents{}
+
+\vfill{}
+
+
+\newpage{}
+
+
+\section{Einleitung}
+
+
+\subsection{Arten von Strahlung}
+
+In diesem Versuch werden $\beta-$und $\gamma-$Zerfälle gemessen.
+
+Diese sind zwei von drei Arten den radioaktiven Zerfalls, die Dritte
+Art ist die $\alpha-$Strahlung. Bei der $\alpha-$Strahlung handelt
+es sich um Heliumatomkerne, bestehend aus zwei Protonen und zwei Neutronen,
+die aus dem radioaktiven Atom hinausgeschleudert werden, dabei nimmt
+die Masse des Atoms um vier atomare Masseneinheiten ab (4 atomare
+Masseneinheiten=4u$\thickapprox6,64\cdot10^{-27}kg$) und die Ordnungszahl
+wird um zwei verringert, dadurch entsteht ein neues Element. Die $\alpha$-
+Strahlung besitzt diskrete Energiebeträge.
+
+Da die $\alpha-$Strahlung nicht in diesem Versuch vorkommt, wird
+nicht weiter darauf eingegangen.
+
+Bei der $\beta-$Strahlung gibt es zwei mögliche Zerfälle die stattfinden
+können. Zum einen der $\beta^{-}$-Zerfall bei dem ein Neutron im
+Atomkern zu einem Proton sowie Elektron und einem Neutrino zerfällt,
+dabei verbleibt das Proton im Atomkern, das Elektron ist das Teilchen,
+welches als $\beta$-Strahlung gemessen werden kann, das Neutrino
+ist nur sehr schwer nachweisbar. Neben dem $\beta^{-}$-Zerfall gibt
+es noch den $\beta^{+}$-Zerfall bei dem ein Proton in ein Neutron,
+ein Positron und ein Neutrino zerfällt, das Positron kann als $\beta$-Strahlung
+gemessen werden, auch hier ist das Neutrino nur sehr schwer nachweisbar.
+
+Im Gegensatz zur $\alpha$- und $\gamma$- Strahlung besitzt die $\beta$-
+Strahlung keine diskreten sondern kontinuierliche Energiebeträge bis
+hin zu einer gewissen Maximalenergie, dieses Phänomen liegt an dem
+Neutrino, welches die fehlende Energie aufnimmt.
+
+Die $\gamma$- Strahlung besteht aus hochenergetischen Photonen, den
+sogenannten $\gamma$- Quanten, diese entstehen aus angeregten Atomen
+dadurch, dass die Protonen und Neutronen im Atomkern ihren Energiezustand
+ändern und die Energiedifferenz wird als $\gamma$- Quant ausgesendet,
+diese haben wie die $\alpha$- Strahlung diskrete Energiebeträge.
+
+
+\subsection{Absorption von Strahlung}
+
+
+\subsubsection{Absorption von $\gamma$- Strahlung}
+
+Bei der Absorption von $\gamma$- Strahlung gibt es drei Absorptionsmechanismen,
+dem Photoeffekt bei welchem das $\gamma$-Quant von einem Atom absorbiert
+wird und dieses emittiert ein Elektron auf einer der inneren Schalen
+der Elektronenhülle. Der zweite Absorptionsmechanismus ist der Comptoneffekt,
+bei dem eine inelastische Streuung des $\gamma$- Quants stattfindet,
+in welchem es die Frequenz und die Richtung ändert. Der dritte Absorptionsmechanismus
+ist die Paarbildung, dort entstehen aus einem $\gamma$- Quant hoher
+Energie ( E>2$m_{e}c^{2}\thickapprox1MeV$) ein Elektron und ein Positron.
+
+Der Absorptionskoeffizient $\mu$setzt sich aus allen drei Absorptionsmechanismen
+zusammen
+\begin{equation}
+\mu=\mu_{Photo}+\mu_{Compton}+\mu_{Paar}
+\end{equation}
+
+
+diese Größe ist ebenfalls vom Absorbermaterial abhängig.
+
+Treffen nun N $\gamma$- Quanten auf einen Absorber der Dicke \emph{dx
+}so wird folgende Relation erhalten
+\begin{equation}
+dN=-\mu Ndx
+\end{equation}
+
+
+gelegentlich wird auch die Massenbelegung $\rho$eingeführt, welches
+die Dichte des Absorbermaterials darstellt. Dadurch wird $\mu$zu
+$\mu_{m}=\frac{\mu}{\rho}$, also 
+\begin{equation}
+dN=-\mu_{m}N\rho dx
+\end{equation}
+
+
+durch Integration ergibt sich eine exponentielle Abnahme der Teilchenzahl
+mit der Absorberdicke.
+
+\begin{equation}
+N(x)=N_{0}\cdot exp(-\mu)=N_{0}\cdot exp(-\mu_{m}\rho x)
+\end{equation}
+
+
+
+\subsubsection{Absorption von $\beta-$Strahlung}
+
+Die exponentielle Abnahme gilt nicht für $\beta-$Strahlung, der Grund
+hierfür ist, dass die $\beta-$Absorption nicht durch einen einzigen
+Prozess erfolgt. Die Elektronen verlieren ihre Energie durch mehrere
+inelastische Stöße mit den Atomen des Absorbermaterials, auch ist
+es möglich, dass sie durch eine Richtungsänderung aus dem Strahl ausscheiden.
+Somit wird für $\beta-$Strahlung die ,,mittlere Reichweite`` $R_{m}$
+definiert, dass ist die Absoberdicke bei der noch 50\% der Anfangsstrahlung
+vorhanden ist, daneben wird die ,,praktische Reichweite`` definiert,
+diese ist als Schnittpunkt des extrapolierten linearen Abfalls der
+Reichweitenverteilung mit der Achse \emph{N(x)=0 }definiert.
+
+
+\subsection{Nachweis der Strahlung}
+
+Zum Nachweis der Strahlung wird ein Geiger-Müller-Zählrohr verwendet.
+Im luftdichten Zählrohr befindet sich Argon unter einem Druck von
+ungefähr 100mbar und Alkoholdampf, welches einen Partialdruck von
+etwa 10mbar hat. Es wird praktisch jedes $\alpha$- und $\beta$-Teilchen
+vom Zählrohr erfasst, die $\gamma$- Strahlen werden mit einer kleineren
+Menge nachgewiesen.
+
+Im wesentlichen wird der Nachweismechanismus durch eine Ionisierung
+eines Argon Atoms, da sich im Inneren des Zählrohrs ein elektrisches
+Feld befindet, wird das Ionenpaar, welches aus Elektron und dem Argon-Ion
+besteht, jeweils zur Anode bzw. zur Kathode hin beschleunigt. 
+
+Auf diesem Weg ionisieren das Elektron andere Atome und es kommt zu
+einer Entladungslawine. Wenn das Argon-Ion auf die Zählrohrwand auftrifft,
+werden Sekundärelektronen emittiert, diese tragen zur Erhaltung des
+Entladungsprozesses bei. Die Alkoholmoleküle stoppen diesen Entladungsprozess.
+
+Nach jedem Entladungsstoß bleibt das Zählrohr für einige $10^{-4}s$
+für neue Teilchen unempfindlich, diese Zeit wird ,,Totzeit`` genannt.
+Erst nach diese Zeit kann ein neues Teilchen detektiert werden.
+
+
+\subsection{Poisson-Verteilung}
+
+Der Erfahrung nach ist die Rate mit der Radioaktive-Zerfälle stattfinden
+mit der Poisson-Verteilung beschreibbar. Die Poisson-Verteilung geht
+aus der Binomial-Verteilung für eine große Zahl von Objekten und einer
+geringen Ereigniswahrscheinlichkeit hervor. Die allgemeine Gleichung
+lautet 
+\begin{equation}
+\psi_{n}=\frac{\bar{k}^{k}\cdot e^{-\bar{k}}}{k!}\label{eq:Poisson-Verteilung allgemein}
+\end{equation}
+
+
+$\bar{k}$ entspricht dem Erwartungswert 
+\begin{equation}
+\bar{k}=np
+\end{equation}
+
+
+$n$ entspricht hier der Anzahl der Atome und $p$ entspricht der
+Wahrscheinlichkeit für einen Zerfall.
+
+Bei einer Poisson-Verteilung sind Erwartungswert und Varianz gleich.
+
+\begin{equation}
+\sigma^{2}=np=\bar{k}
+\end{equation}
+
+
+Um nun die Poisson-Verteilung auf den radioaktiven Zerfall anzuwenden
+muss der Mittelwert für die gemessenen Zerfälle $\bar{N}$ bestimmt
+werden. Dazu werden n-mal die Zahl der zerfallenen Kerne $N_{i}$
+jeweils in einem festen Zeitintervall $\triangle T$ gemessen. Dann
+wird aus \ref{eq:Poisson-Verteilung allgemein} 
+\begin{equation}
+\psi(N)=\frac{\bar{N}^{N}\cdot e^{-\bar{N}}}{N!}
+\end{equation}
+
+
+darauf ergibt sich für die mittlere Streuung,
+\[
+\sigma=\sqrt{\bar{N}}
+\]
+
+
+dieses wird $\sqrt{N}-Gesetz$ genannt.
+\end{document}
