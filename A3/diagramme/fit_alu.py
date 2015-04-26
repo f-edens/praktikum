@@ -23,6 +23,15 @@ data_pb = """0	8.9811115104	0.2972302496
 20	1.0670191931	0.0500643354
 """
 
+data_plexi = """0	10.4791248606
+0.5	0.9588349454
+"""
+
+data_gum = """0	10.4791248606
+0.15	3.7129883155
+0.3	1.0282104672
+"""
+
 def logistic_fun(x, n_0, x_0, a):
     return n_0*(1+np.exp(-a*x_0))/(1 + np.exp(a*(x-x_0)))
 
@@ -32,7 +41,7 @@ def expo_fun(x, n_0, a):
 
 
 def main():
-    npdata = np.genfromtxt(BytesIO(data_pb.encode()))
+    npdata = np.genfromtxt(BytesIO(data_gum.encode()))
     data_x, data_y = npdata[:, 0], npdata[:, 1]
     #data_x *= 1e-6
     # ps, es = optimize.curve_fit(logistic_fun, data_x, data_y)

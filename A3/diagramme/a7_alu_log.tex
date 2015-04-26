@@ -13,7 +13,9 @@ xlabel={Absorberdicke [\si{\micro\meter}]},
 ylabel={Impulsrate [\si{\per\second}]},
 legend style = {legend pos = outer north east, cells={anchor=east}}
 ]
-\addplot+ [mark = +, only marks] table[x = x, y= y, y error = yerror]  {
+\addplot+ [mark = +, 
+	only marks,] 
+	table[x = x, y= y, y error = yerror]  {
 x	y	yerror
 0	10.4791248606	0.3480304704
 50	9.8030160595	0.3249560292
