@@ -6,22 +6,25 @@
 %xtick = data,
 error bars/y dir = both,
 error bars/y explicit,
-only marks,
+%only marks,
 %ymin = 0,
 ymode=log,
-mark = +,
+%mark = +,
 %log ticks with fixed point,
-xlabel={Absorberdicke [\si{\micro\meter}]},
-ylabel={Impulsrate [\si{\per\second}]}
+xlabel={Absorberzahl},
+ylabel={Impulsrate [\si{\per\second}]},
+legend style = {legend pos = outer north east, cells={anchor=east}}
 ]
-\addplot+[mark = +] table[x = x, y= y, y error = yerror]  {
+\addplot+[mark = +, only marks] table[x = x, y= y, y error = yerror]  {
 x	y	yerror
-0	9.2231404959	0.2864165599
-1	5.2452830189	0.1592295912
-2	3.2668621701	0.0983464386
-3	2.1243243243	0.0619859823
-4	1.3090481786	0.0392506456
-
+0	8.9811115104	0.2972302496
+5	5.0032540334	0.1700432809
+10	3.0248331846	0.1091601283
+15	1.8822953388	0.0727996721
+20	1.0670191931	0.0500643354
 };
+\addlegendentry{Messwerte}
+\addplot+[no marks, domain=0:20] {8.9107847*exp(-0.10837785*x)};
+\addlegendentry{Exponentielle Interpolation};
 \end{axis}
 \end{tikzpicture}

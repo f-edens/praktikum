@@ -225,14 +225,49 @@ In $ \SI{2070(1)}{\second} $ haben wir $ 501 $ Pulse gemessen. Daraus ergibt sic
 
 \subsection{Absorbtion von $ \beta $-Strahlung}
 
-\begin{figure}
+Ohne einen Absorber hat die Impulsrate für den $\beta$- Strahler
+bei 500V$\pm$12,5V ungefähr 11 Zerfälle pro Sekunde. Nun werden mit
+zunehmender Schicktdicke Aluminiumabsober vor das Präperat gestellt..
+Die Messdaten lassen sich in den folgenden Diagrammen Abbildungen \ref{fig:alu_lin} und \ref{fig:alu_log} aufzeigen,
+
+\begin{figure}[h!]
 \centering
 \input{diagramme/a7_alu_lin.tex}
 \caption{Absorberdicke-Pulsrate-Diagramm für Aluminium mit linearer Skala}
+\label{fig:alu_lin}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \input{diagramme/a7_alu_log.tex}
 \caption{Absorberdicke-Pulsrate-Diagramm für Aluminium mit log Skala}
+\label{fig:alu_log}
+\end{figure}
+
+in Realität nähern sich die Werte der Achse für die Impulsrate nur
+asymptotisch an den Nullpunkt an.
+
+Wird nun extrapoliert, d.h. das Verhalten der Impulsrate wird über
+den gesicherten Bereich hinaus (approximiert) bestimmt, kann die praktische
+Reichweite bestimmt werden. 
+
+Dafür wird angenommen, dass die Impulsrate um 1,5$\frac{Zerf\ddot{a}lle}{Sekunde}$
+sinkt, wenn die Dicke des Aluminumabsorbers um 250$\mu m$ zunimmt. 
+
+Bei dem letzten gemessenen Wert beträgt die Impulsrate in sehr guter
+Näherung 4$\frac{Zerf\ddot{a}lle}{Sekunde}$ bei einer Absorberdicke
+von 770$\mu m$. Um nun die Dicke des Absorbers für 0$\frac{Zerf\ddot{a}lle}{Sekunde}$
+abzuschätzen werden die Annahmen verwendet, also müssten zusätzliche
+650$\mu m$ Aluminumabsorber hinzugefügt werden.
+
+Somit beträgt die praktische Reichweite der $\beta-$Strahlung bei
+Aluminum 1420$\mu m$.
+
+\subsection{Absorbtion von $ \gamma $-Strahlung}
+
+\begin{figure}[h!]
+\centering
+\input{diagramme/a9_pb_log.tex}
+\caption{Absorberdicke-Pulsrate-Diagramm für Blei mit log Skala}
+\label{fig:pb_log}
 \end{figure}
