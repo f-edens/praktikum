@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\begin{axis} [
+%enlargelimits=.15,
+%ybar,
+%symbolic x coords={excellent, good, neutral},
+%xtick = data,
+error bars/y dir = both,
+error bars/y explicit,
+only marks,
+%ymin = 0,
+ymode=log,
+mark = +,
+%log ticks with fixed point,
+xlabel={Absorberdicke [\si{\micro\meter}]},
+ylabel={Impulsrate [\si{\per\second}]}
+]
+\addplot+[mark = +] table[x = x, y= y, y error = yerror]  {
+x	y	yerror
+0	9.2231404959	0.2864165599
+1	5.2452830189	0.1592295912
+2	3.2668621701	0.0983464386
+3	2.1243243243	0.0619859823
+4	1.3090481786	0.0392506456
+
+};
+\end{axis}
+\end{tikzpicture}
