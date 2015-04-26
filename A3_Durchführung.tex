@@ -1,0 +1,93 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[ngerman,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\selectlanguage{ngerman}%
+
+\section{Durchführung}
+
+Im ersten Teil des Versuchs wurde die Zählrohrcharakteristik bestimmt,
+dafür wurde der $\beta$- Strahler ohne einen Absorber vor das Geiger-Müller-Zählrohr
+gestellt und die Impulsrate bei verschiedenen Spannungen gemessen,
+um die gewünschte Unsicherheit von unter 3\% zu erreichen ist es notwendig
+mehr als 1111 Impulse zu messen.
+
+\begin{table}
+\protect\caption{\selectlanguage{english}%
+Impulsrate in Abhängigkeit der Zählrohrspannung\selectlanguage{ngerman}%
+}
+
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Spannung in V $\pm12,5V$ & Gemessene Impulse & Zeit in s $\pm1s$ & Impulsrate in 1/s & Fehler\tabularnewline
+\hline 
+\hline 
+350 & 1112 & 101 & 11,01 & 0,35\tabularnewline
+\hline 
+400 & 1116 & 103 & 10,83 & 0,34\tabularnewline
+\hline 
+450 & 1117 & 98 & 11,40 & 0,36\tabularnewline
+\hline 
+500 & 1115 & 104 & 10,72 & 0,34\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+Anhand der gemessenen Werte ist sichtbar, dass die Spannung am Zählrohr
+keinen signifikanten Einfluss auf die Impulsrate hat.
+
+Im zweiten Teil des Versuchs wurde 100 mal in 10 Sekunden Intervallen
+die Untergrundstrahlung gemessen, 
+
+\begin{figure}
+\protect\caption{Untergrundimpulse}
+\includegraphics{C:/Users/hp/Desktop/Praktikum/Versuch_nr2}
+\end{figure}
+
+
+dieses Diagramm zeigt eindeutig Ähnlichkeiten zu einer Poisson-Verteilung
+auf!
+
+Aus den gemessenen Werten lässt sich der Mittelwert berechnen zu,
+\[
+\bar{N}=0,251\pm0,016\frac{Zerf\ddot{a}lle}{Sekunde}
+\]
+
+
+dies entspricht in guter Näherung einem Zerfall alle vier Sekunden!
+
+Die Standartabweichung ist die Wurzel aus diesem Wert,
+\[
+\sqrt{\bar{N}}=0,50\pm0,13
+\]
+
+
+in einer weiteren Messreihe zu Untergrundimpulsen, wurde die Zeit
+bestimmt in der mehr als 500 Impulse gemessen wurden. 
+
+Das Ergebnis dieser Messreihe zeigte, dass 501 Impulse in einer Zeit
+von $2070s\pm1s$ gemessen wurden. Für die Impulsrate gilt dementsprechend
+\[
+\frac{N}{t}=(0,24\pm0,01)\frac{Zerf\ddot{a}lle}{Sekunde}
+\]
+
+
+dieses Ergebnis stimmt gut mit dem vorherigen überein, nämlich das
+alle vier Sekunden ein Zerfall stattfindet!\selectlanguage{english}%
+
+\end{document}
