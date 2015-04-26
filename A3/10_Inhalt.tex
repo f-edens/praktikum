@@ -158,25 +158,81 @@ werden. Dazu werden n-mal die Zahl der zerfallenen Kerne $N_{i}$
 jeweils in einem festen Zeitintervall $\triangle T$ gemessen. Dann
 wird aus \ref{eq:Poisson-Verteilung allgemein} 
 \begin{equation}
-	\psi(N)=\frac{\bar{N}^{N}\cdot e^{-\bar{N}}}{N!}
+	\psi(N)=\frac{\bar{N}^{N}\cdot e^{-\bar{N}}}{N!} \label{eq:pois_id}
 \end{equation}
 
 
 darauf ergibt sich für die mittlere Streuung,
-\[
-\sigma=\sqrt{\bar{N}}
-\]
+\begin{equation}
+\sigma=\sqrt{\bar{N}} \label{eq:std_abw}
+\end{equation}
 
 
 dieses wird $\sqrt{N}-Gesetz$ genannt.
 
-\subsection{Unterkapitel 1}
-\subsubsection{Unterunterkapitel 1.1}
+Um  bei den Versuchen einen statistischen Fehler von maximal $ \SI{3}{\percent} $ zu erreichen, darf die Varianz nicht mehr als $ \SI{3}{\percent} $ der Messgröße betragen ($ 1\sigma $ Umgebung $ \sim \SI{68.3}{\percent} $ Sicherheit)
+\begin{align}
+	&\frac{\sigma}{N} = \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}} \stackrel{!}{\leq} \SI{3}{\percent} \notag \\
+	\Rightarrow & N \geq \frac{1}{(\SI{3}{\percent})^2} \approx 1112 \label{eq_n_pulszahl}
+\end{align}
 
-\section{Versuche}
+
+\newpage
+\section{Versuchsteil}
+Der Versuchsaufbau ist bei jedem der folgenden Versuche der gleiche. Ausgetauscht werden lediglich die Absorber und die Strahlenquelle. Als Strahlenquelle wird entweder ein \isotope[90]{Sr} $ \beta $-Strahler oder ein \isotope[137]{Cs} $ \gamma $-Strahler verwendet. Auf einen Geiger-Müller-Zähler mit angeschlossenem Zählwerk und Stoppuhr werden die jeweilige Strahlenquelle in vernachlässigbar geringen Abstand ausgerichtet und dazwischen gegebenen Falls die zu prüfenden Absorber platziert. Die gerade nicht verwendeten Strahlenquellen werden gegen die Wand ausgerichtet, um die Messung nach Möglichkeit nicht zu verfälschen.
+
+\subsection{Messung der Zählrohrcharakteristik}
+In diesem Versuch ist das Ziel, die Zählrohrcharakteristik zu bestimmen. Das heißt, die Abhängigkeit der gemessenen Strahlenpulse von der am Geiger-Müller-Zähler angelegten zu bestimmen. Dazu wird der zuvor beschriebene Aufbau mit dem $ \beta $-Strahler verwendet und zunächst die höchste Spannung gesucht, bei der keine Strahlung gemessen wird. Daraufhin wird ab etwa $ \SI{50}{\volt} $ über dieser Spannung die Impulsrate gemessen. Um eine statistische Unsicherheit von maximal $ \SI{3}{\percent} $ zu erreichen werden nach \eqref{eq_n_pulszahl} mindestens $ 1112 $ Strahlenpulse gemessen. Beim einstellen der Spannung muss gegebenen Falls beachtet werden, dass die es nicht zur selbständigen Gasentladung kommt und das Zählrohr somit geschädigt wird. Jedoch war es mit unserem Versuchsaufbau nicht möglich, solche Spannungen zu erreichen. \\
+Unsere Messwerte sind Tabelle \ref{tab:mess_1} zu entnehmen
+
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c|c}
+Spannung $ [\si{\volt}] \pm \num{12.5} $ & Impulszahl & Zeit $ [\si{\second}] \pm 1$ & Impulszahl $ [\si{\per\second}] $ & Unsicherheit $ [\si{\per\second}] $ \\ \hline
+$ 350 $ & $ 1112 $ & $ 101 $ & $ \num{11.0099} $ & $ \num{0.3477} $ \\
+$ 400 $ & $ 1116 $ & $ 103 $ & $ \num{10.8350} $ & $ \num{0.3410} $ \\
+$ 450 $ & $ 1117 $ & $ 98 $ & $ \num{11.3980} $ & $ \num{0.3604} $ \\
+$ 500 $ & $ 1115 $ & $ 104 $ & $ \num{10.7212} $ & $ \num{0.3373} $ \\
+\end{tabular}
+\caption{Messwerte Zählrohrcharakteristik}
+\label{tab:mess_1}
+\end{table}
+
+\subsection{Messung der Untergrundpulse}
+\subsection{Häufigkeitsverteilung der Untergrundpulse}
+Bei diesem Versuchsteil werden die Untergrundpulse gemessen, die durch natürliche Strahlenquellen auftreten. Der Anfangs beschriebene Versuchsaufbau wird dazu ohne Strahlenquelle und Absorber betrieben. \\
+Im ersten Teil dieses Versuches wird $ 100 $ mal die Strahlung in $ \SI{10}{\second} $ gemessen. Wir erhielten die Wahrscheinlichkeitsverteilung gemäß Abbildung \ref{fig:haeuf_hint_1}.
 
 \begin{figure}[h!]
 	\centering
 	\input{diagramme/a2_hauf.tex}
 	\caption{Häufigkeitsverteilung der Impulszahlen}
+	\label{fig:haeuf_hint_1}
+\end{figure}
+
+Die mittlere Impulszahl $ \bar N $ ist die Gesamtzahl der Impulse geteilt durch die Anzahl der Messungen. Diese beträgt bei uns $ \bar N = \num{2.51} $. Da von einer Poisson-Verteilung ausgegangen werden kann beträgt die Standard-Abweichung nach \eqref{eq:std_abw} $ \sigma = \sqrt{\bar N} \approx \num{1.585} $.\\
+Aus \eqref{eq:pois_id} lässt sich damit die erwartete Wahrscheinlichkeitsverteilung bestimmen. In Abbildung \ref{fig:a2_rech} ist dies gegen die im Experiment ermittelten Häufigkeiten aufgetragen.
+
+\begin{figure}[h!]
+\centering
+\input{diagramme/a2_rech.tex}
+\caption{Rechnerische und gemessene Wahrscheinlichkeitsverteilung der Impulszahlen}
+\label{fig:a2_rech}
+\end{figure}
+
+\subsection{Korrekturfaktor für Untergrundpulse}
+Aus den Untergrundpulsen entsteht für alle anderen Experimente ein Störfaktor, da der Geiger-Müller-Zähler nicht zwischen der Strahlung des Präperats und der Untergrundstrahlung unterscheidet. Um diesen Fehler zu bereinigen wird in diesem Versuchsteil die Untergrundstrahlungsrate ermittelt. Dazu wird die Zeit gemessen, die gebraucht wird um ohne Präperat mehr als $ 500 $ Pulse zu messen.\\
+In $ \SI{2070(1)}{\second} $ haben wir $ 501 $ Pulse gemessen. Daraus ergibt sich eine Pulsrate von $ \SI{.2420(108)}{\per\second} $. Diese muss von allen folgenden gemessenen Pulsraten abgezogen werden.
+
+\subsection{Absorbtion von $ \beta $-Strahlung}
+
+\begin{figure}
+\centering
+\input{diagramme/a7_alu_lin.tex}
+\caption{Absorberdicke-Pulsrate-Diagramm für Aluminium mit linearer Skala}
+\end{figure}
+
+\begin{figure}
+\centering
+\input{diagramme/a7_alu_log.tex}
+\caption{Absorberdicke-Pulsrate-Diagramm für Aluminium mit log Skala}
 \end{figure}
