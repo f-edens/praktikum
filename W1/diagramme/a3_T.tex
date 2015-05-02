@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\begin{axis}[width = .9\textwidth, height = 9cm,
+		xmin = 0,
+%		axis x line = middle,
+		xlabel = {Zeit t $ [\si{\second}] $},
+		ylabel = {Wassertemperatur $ [\si{\degreeCelsius}] $}]
+	\addplot+ [only marks, mark = o, mark options={scale=.04}] table {diagramme/a3T.data};
+\end{axis}
+\end{tikzpicture}

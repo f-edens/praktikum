@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+\begin{axis}[width = .9\textwidth, height = 9cm,
+		xmin = 180, xmax = 350,
+		xtickmin = 190,
+		ymin = 70, ymax = 230,
+		ytickmin = 90,
+		axis x line = bottom,
+		axis y line = left,
+		axis x discontinuity=crunch,
+		axis y discontinuity=crunch,
+		enlargelimits = false,
+		xlabel = {Volumen V $ [\si{\cubic\centi\meter}] $},
+		ylabel = {Druck p $ [\si{\kilo\pascal}] $}]
+	\addplot+ [only marks, mark = o, mark options={scale=.04}] table[x=V,y=p] 
+		{diagramme/a4pV16.data};
+\end{axis}
+\end{tikzpicture}
