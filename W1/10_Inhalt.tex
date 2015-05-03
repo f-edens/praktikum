@@ -11,6 +11,8 @@ Die gemessene Temperatur im Kühlsystem betrug bei Versuchsbeginn $ \SI{22.4(1)}
 
 \subsection{Bestimmung der Kühlleistung}
 
+Zur Bestimmung der Kühlleistung werden etwa $ \SI{1}{\milli\liter} $ Wasser im Stirling-Motor bis auf $ \SI{-25}{\degreeCelsius} $ abgekühlt. Dazu wird das Wasser im oberen Ende des Stirling-Motors eingesetzt, und im Uhrzeigersinn bei konstanter Drehfrequenz angetrieben. Die Drehfrequenz sollte vom ersten Versuch übernommen werden, also wieder bei etwa $ \SI{3}{\per\second} $ liegen. 
+
 \begin{figure}[h!]
 	\centering
 	\input{diagramme/a2_T.tex}
@@ -28,10 +30,51 @@ Die gemessene Temperatur im Kühlsystem betrug bei Versuchsbeginn $ \SI{22.4(1)}
 \end{figure}
 
 \subsection{Bestimmung des Wirkungsgrades aus dem $ (p,V) $-Diagramm}
-
+In diesem und dem folgendem Versuch wird der Stirling-Motor nicht mehr durch mechanische Arbeit angetrieben, sondern als Wärmekraftmaschine betrieben. Dazu wurde der Stirling-Motor am oberen Ende durch eine elektrische Heizwedel erwärmt, während er am unteren Ende weiterhin durch Wasser gekühlt wurde. Wegen $ \delta W = p\di V $ ist die abgegebene Arbeit pro Zyklus die eingeschlossene Fläche der Kurve im $ (p,V) $-Diagramm. Teilt man durch die Zeit pro Zyklus bzw. multipliziert man mit der Frequenz erhält man die Leistung. Um den Wirkungsgrad zu erhalten braucht man zudem die eingesetzte Energie. Diese wird durch Messung der Spannung und Stromstärke an der Heizwedel bestimmt. Daraus ergeben sich die folgenden Werte:\\
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{r|r|r|c}
+	 & el. Leistung $ [\si{\watt}] $ & mech. Leistung $ [\si{\watt}] $ & Wirkungsgrad \\\hline
+	 $ \SI{16}{\volt} $ & $ \num{2250.60(3643)} $ & $ \num{23.362} $ & $ \SI{1.0380(168)}{\percent} $ \\
+	 $ \SI{14}{\volt} $ & $ \num{1876.73(3305)} $ & $ \num{16.366} $ & $ \SI{0.8721(154)}{\percent} $ \\
+	 $ \SI{12}{\volt} $ & $ \num{1494.30(2941)} $ & $ \num{11.442} $ & $ \SI{0.7657(151)}{\percent} $ \\
+	 $ \SI{10}{\volt} $ & $ \num{1079.30(2519)} $ & $ \num{7.475} $ & $ \SI{0.6926(162)}{\percent} $ \\
+	 $ \SI{8}{\volt} $ & $ \num{717.50(2057)} $ & $ \num{3.822} $ & $ \SI{0.5327(153)}{\percent} $ 
+	\end{tabular}
+	\caption{Wirkungsgrad aus $ (p,V) $-Diagramm}
+	\label{tab:a4}
+\end{table}
+Die mechanische Leistung wurde aus numerischer Integration über der $ p $-$ V $-Kurve erhalten. Die elektrische Leistung aus dem Produkt von gemessener Spannung und Stromstärke.\\
+Der Wirkungsgrad ist mit maximal etwa $ \SI{1}{\percent} $ sehr gering. Dafür Verantwortlich könnten mehrere Faktoren sein. Zunächst ist der Stirling-Kreisprozess an vielen Stellen idealisiert und praktisch nicht umsetzbar. So ist an den $ (p,V) $-Diagrammen gut zu erkennen, dass insbesondere die isochore (de)kompression nicht erkennbar ist. Dies ist insbesondere eine Folge dessen, dass zu keiner Zeit das Volumen konstant gehalten. Weiterhin hat das System weder die Zeit, um während der Aufwärmphase die Temperatur der Heizwedel aufzunehmen, noch um während der Abkühlphase auf die Temperatur des Kühlwassers abzukühlen. Somit ist das Temperaturgefälle effektiv geringer als im idealisierten Kreislauf, so dass nach \ref{eq:carnot} der maximal mögliche Wirkungsgrad sinkt. \\
+Eine weitere Störquelle könnte sein, dass die Heizwedel die Wärme nicht gezielt in den Motor abstrahlt sondern auch in die Umgebung. Dadurch wird elektrische Leistung aufgenommen, die dem Kreisprozess in keiner Weise zugeführt wird.
 \begin{figure}[h!]
 	\centering
 	\input{diagramme/a4_pV16.tex}
 	\caption{$ (p,V) $-Diagramm bei $ \SI{16}{\volt} $}
 	\label{fig:pV16}
 \end{figure}
+\begin{figure}[h!]
+	\centering
+	\input{diagramme/a4_pV14.tex}
+	\caption{$ (p,V) $-Diagramm bei $ \SI{14}{\volt} $}
+	\label{fig:pV14}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\input{diagramme/a4_pV12.tex}
+	\caption{$ (p,V) $-Diagramm bei $ \SI{12}{\volt} $}
+	\label{fig:pV12}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\input{diagramme/a4_pV10.tex}
+	\caption{$ (p,V) $-Diagramm bei $ \SI{10}{\volt} $}
+	\label{fig:pV10}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\input{diagramme/a4_pV08.tex}
+	\caption{$ (p,V) $-Diagramm bei $ \SI{08}{\volt} $}
+	\label{fig:pV08}
+\end{figure}
+
