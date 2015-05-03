@@ -1,0 +1,12 @@
+\begin{tikzpicture}[]
+\begin{axis}[ymax = 7, ymin = 2, xmin = 0.17, xmax = .4, samples=1000,
+		axis x line = bottom, axis y line = left,
+		ytick = {6,4,5,3,4}, yticklabels = {$p_1$, $p_4$, $p_2$, $p_3$},
+		xtick = {.25, .3333}, xticklabels = {$V_1$, $V_2$}]
+
+\addplot [no marks, domain=.2:1] {x^(-1)};
+\addplot [no marks, domain=.15:1] {1.5*x^(-1)};
+\addplot+ [no marks] coordinates{(.25,4) (.25,6)};
+\addplot+ [no marks] coordinates{(1/3,3) (1/3,4.5)};
+\end{axis}
+\end{tikzpicture}

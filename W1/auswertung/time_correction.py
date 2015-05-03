@@ -34,7 +34,7 @@ def main():
         delta_t = dat.t[2] - dat.t[0]
         for x in xdata:
             out.write("%f\t%f\n" % (t, x))
-            t += delta_t * (1 + (t < 105))/4
+            t += delta_t/2 * (1 + (t < 105/2))/4
 
 
 if __name__ == '__main__':
