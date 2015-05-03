@@ -1,0 +1,141 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+
+\subtitle{Versuch \{Versuchsnummer\}:\\
+\{Versuchstitel\}}
+
+
+\date{\{Datum\}}
+
+
+\author{Gruppe 6MO:\\
+Frederik Edens\\
+Dennis Eckermann}
+
+\maketitle
+\vfill{}
+
+
+\tableofcontents{}
+
+\vfill{}
+
+
+\newpage{}
+
+
+\section{Einleitung}
+
+Die Versuchsreihe befasst sich ausschließlich mit dem Stirling-Motor.
+Als theoretische Grundlagen dazu sind insbesondere Kenntnisse von
+Temperatur und Wärmemenge, thermodynamischen Zuständen und Zustandsgleichungen
+sowie Kreisprozessen notwendig.
+
+
+\subsection{Temperatur und Wärmemenge und weitere Thermodynamik}
+
+Im wesentlichen ist der Unterschied zwischen Wärmemenge und Temperatur,
+dass die Wärmemenge die Masse und die spezifische Wärme mit einbezieht,
+also einen Materialabhängigen Wert, das heißt, dass je nach Beschaffenheit
+des Materials zwei Stoffe die gleiche Temperatur und die gleiche Masse
+haben, dennoch eine Wärmemenge (Energie) in sich tragen und somit
+unterschiedlich viel Arbeit verrichten können.
+
+\begin{equation}
+c\cdot m\cdot\triangle T=\triangle Q\label{eq:W=0000E4rmemenge}
+\end{equation}
+
+
+Nach dem 1. Hauptsatz der Thermodynamik lässt sich folgende Gleichung
+formulieren,
+\begin{equation}
+Q=\triangle U-W\label{eq:}
+\end{equation}
+
+
+$\triangle U$ ist die Änderung der inneren Energie eines thermodynamischen
+Systems, bei einem idealen Gas also die Änderung der kinetischen Energie
+der Gasatome, und W ist die verrichtete mechanische Arbeit.
+
+Diese lässt sich für einen isothermen Prozess wie folgt berechnen,
+
+\begin{equation}
+W_{isotherm}=-\intop_{V1}^{V2}\frac{nRT}{V}dV\label{eq:mechanische Arbeit}
+\end{equation}
+
+
+dies ist eine Näherung für ideale Gase, n ist die Anzahl der Mole
+des Gases, R ist die allgemeine Gaskonstante, T ist die Temperatur,
+die bei isothermen-Prozessen konstant ist.
+
+Der Wirkungsgrad einer Wärmekraftmaschine ist definiert als geleistete
+Arbeit durch die zugeführte Wärme,
+\begin{equation}
+\eta=\frac{|W|}{|Q|}\label{eq:Wirkungsgrad}
+\end{equation}
+
+
+es gibt allerdings keine Maschine die einen Wirkungrad von 100\% erreicht.
+
+Im Gegensatz zum Wirkungsgrad wird die Leistungszahl definiert, diese
+gilt für Kältemaschinen bzw. Wärmepumpen, es wird mechanische Arbeit
+aufgewendet um eine Wärmemenge zu übertragen, es gilt:
+\begin{equation}
+\epsilon=\frac{|Q|}{|W|}\label{eq:Leistungszahl}
+\end{equation}
+
+
+
+\subsection{Stirling-Kreisprozess}
+
+Der idealisierte Stirling-Kreisprozess besteht aus vier Schritten.
+Im ersten Schritt wird bei isothermer Ausdehnung mechanische Arbeit
+vom System abgegeben, während ihm eine gleich große Wärmemenge zugeführt
+wird. Im zweiten Schritt gibt das System durch isochore Dekompression
+Energie in Form von Wärme ab. Im dritten Schritt wird das System isotherm
+auf das Ausgangsvolumen zurückgebracht. Dabei nimmt es die gleiche
+Arbeit auf, wie es an wärme ab gibt, jedoch weniger als in Schritt
+2. Der letzte Schritt ist die isochore Erwärmung, dabei wird der Verdrängerkolben
+nach oben bewegt und die Luft nimmt Wärmeenergie auf.
+
+Wie für alle reversiblen Kreisprozesse ist auch hier die obere Schranke
+des Wirkunsgrades der Carnot-Wirkungsgrad 
+\begin{equation}
+\eta_{Carnot}=1-\frac{T_{Kalt}}{T_{Warm}}\label{eq:Carnot}
+\end{equation}
+
+
+dieser wird allerdings niemals von realen Kreisprozessen erreicht,
+da es sich hier um eine idealisierte Ansicht handelt.
+\end{document}
