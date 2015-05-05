@@ -1,19 +1,92 @@
 \section{Einleitung}
 
-Die Versuchsreihe befasst sich ausschließlich mit dem Stirling-Motor. Als theoretische Grundlagen dazu sind insbesondere Kenntnisse von Temperatur und Wärmemenge, thermodynamischen Zuständen und Zustandsgleichungen sowie Kreisprozessen notwendig.
+Die Versuchsreihe befasst sich ausschließlich mit dem Stirling-Motor.
+Als theoretische Grundlagen dazu sind insbesondere Kenntnisse von
+Temperatur und Wärmemenge, thermodynamischen Zuständen und Zustandsgleichungen
+sowie Kreisprozessen notwendig.
 
-\subsection{Temperatur und Wärmemenge} % Und weitere Thermodynamik
+
+\subsection{Temperatur und Wärmemenge und weitere Thermodynamik}
+
+Im wesentlichen ist der Unterschied zwischen Wärmemenge und Temperatur,
+dass die Wärmemenge die Masse und die spezifische Wärme mit einbezieht,
+also einen Materialabhängigen Wert, das heißt, dass je nach Beschaffenheit
+des Materials zwei Stoffe die gleiche Temperatur und die gleiche Masse
+haben, dennoch eine Wärmemenge (Energie) in sich tragen und somit
+unterschiedlich viel Arbeit verrichten können.
+
+\begin{equation}
+c\cdot m\cdot\triangle T=\triangle Q\label{eq:W=0000E4rmemenge}
+\end{equation}
+
+
+Nach dem 1. Hauptsatz der Thermodynamik lässt sich folgende Gleichung
+formulieren,
+\begin{equation}
+Q=\triangle U-W\label{eq:}
+\end{equation}
+
+
+$\triangle U$ ist die Änderung der inneren Energie eines thermodynamischen
+Systems, bei einem idealen Gas also die Änderung der kinetischen Energie
+der Gasatome, und W ist die verrichtete mechanische Arbeit.
+
+Diese lässt sich für einen isothermen Prozess wie folgt berechnen,
+
+\begin{equation}
+W_{isotherm}=-\intop_{V1}^{V2}\frac{nRT}{V}dV\label{eq:mechanische Arbeit}
+\end{equation}
+
+
+dies ist eine Näherung für ideale Gase, n ist die Anzahl der Mole
+des Gases, R ist die allgemeine Gaskonstante, T ist die Temperatur,
+die bei isothermen-Prozessen konstant ist.
+
+Der Wirkungsgrad einer Wärmekraftmaschine ist definiert als geleistete
+Arbeit durch die zugeführte Wärme,
+\begin{equation}
+\eta=\frac{|W|}{|Q|}\label{eq:Wirkungsgrad}
+\end{equation}
+
+
+es gibt allerdings keine Maschine die einen Wirkungrad von 100\% erreicht.
+
+Im Gegensatz zum Wirkungsgrad wird die Leistungszahl definiert, diese
+gilt für Kältemaschinen bzw. Wärmepumpen, es wird mechanische Arbeit
+aufgewendet um eine Wärmemenge zu übertragen, es gilt:
+\begin{equation}
+\epsilon=\frac{|Q|}{|W|}\label{eq:Leistungszahl}
+\end{equation}
+
 
 
 \subsection{Stirling-Kreisprozess}
-Der idealisierte Stirling-Kreisprozess besteht aus vier Schritten. Im ersten Schritt wird bei isothermer Ausdehnung mechanische Arbeit vom System abgegeben, während ihm eine gleich große Wärmemenge zugeführt wird. Im zweiten Schritt gibt das System durch isochore Dekompression Energie in Form von Wärme ab. Im dritten Schritt wird das System isotherm auf das Ausgangsvolumen zurückgebracht. Dabei nimmt es die gleiche Arbeit auf, wie es an wärme ab gibt, jedoch weniger als in Schritt 2. Der letzte Schritt ist die isochore Kompression. Nach Aufnahme der gleichen Wärmemenge, wie das System im dritten Schritt abgegeben hat, kehrt das System in den Ausgangszustand zurück. Der Stirling-Kreisprozess ist somit reversibel. \\
-Wie für alle reversiblen Kreisprozesse ist auch hier die obere Schranke des Wirkunsgrades der Carnot-Wirkungsgrad
-\begin{equation}
-	\eta \leq \eta_c = 1 - \frac{T_{kalt}}{T_{warm}} \label{eq:carnot}\text{.}
-\end{equation}
-Für den idealen Stirling-Kreisprozess gilt $ \eta = \eta_c $.
 
-\subsection{Stirling-Motor}
+Der idealisierte Stirling-Kreisprozess besteht aus vier Schritten.
+Im ersten Schritt wird bei isothermer Ausdehnung mechanische Arbeit
+vom System abgegeben, während ihm eine gleich große Wärmemenge zugeführt
+wird. Im zweiten Schritt gibt das System durch isochore Dekompression
+Energie in Form von Wärme ab. Im dritten Schritt wird das System isotherm
+auf das Ausgangsvolumen zurückgebracht. Dabei nimmt es die gleiche
+Arbeit auf, wie es an wärme ab gibt, jedoch weniger als in Schritt
+2. Der letzte Schritt ist die isochore Erwärmung, dabei wird der Verdrängerkolben
+nach oben bewegt und die Luft nimmt Wärmeenergie auf.
+
+Wie für alle reversiblen Kreisprozesse ist auch hier die obere Schranke
+des Wirkunsgrades der Carnot-Wirkungsgrad 
+\begin{equation}
+\eta_{Carnot}=1-\frac{T_{Kalt}}{T_{Warm}}\label{eq:Carnot}
+\end{equation}
+
+
+dieser wird allerdings niemals von realen Kreisprozessen erreicht,
+da es sich hier um eine idealisierte Ansicht handelt.
+
+\begin{figure}[h!]
+\centering
+	\input{diagramme/stir-process.tex}
+	\caption{$ (p,V) $-Diagramm des idealen Stirling-Motors. Laufrichtung im Uhrzeigersinn}
+\end{figure}
 
 \newpage
 \section{Versuchsteil}
@@ -44,6 +117,65 @@ Der von uns bestimmte Wert entspricht in etwa der Hälfte des auf Wikipedia.de\c
 Um die Kühlleitstung zu bestimmen sollte die Temperatur möglichst nah bei der Umgebungstemperatur liegen, da ansonsten die Wärmeaufnahme von der Umgebung zu großen Einfluss nimmt. Jedoch war bei uns die Steigung im Rahmen der systematischen Fehler bei uns am Anfang so konstant, dass auch wieder die Steigung die zur Berechnung der Schmelzwärme angenommen wurde verwendet werden kann. Eine Temperaturänderungsrate von $ \SI{-0,13830 \pm 0,00215}{\kelvin\per\second} $ entspricht bei \SI{1.00(2)}{\gram} Wasser einer Leistung von \SI{0,57878\pm0,00899}{\watt},
 
 \subsection{Bestimmung der Heizleistung}
+Zur Bestimmung der Heizleistung wird nun der Motor als Wärmepumpe
+betrieben, dazu wird die Umlaufrichtung umgekehrt. In Abbildung 1,
+ist der Temperaturverlauf in Abhängigkeit von der Zeit dargestellt.
+Am Anfang der Messung, ist für die ersten Sekunden kein Anstieg zu
+sehen, das liegt daran, dass diese Messung unmittelbar durchgeführt
+wurde, nachdem der Motor als Kältemaschine benutzt wurde, daher wurden
+einige Umdrehungen benötigt um den Aufheizprozess einzuleiten. Danach
+ist ein relativer linearer Anstieg der Temperatur zu sehen, ab einer
+Temperatur von ca. 0°C ist ein Plateu zu sehen, die Erklärung hierfür
+ist, dass das Eis nun am schmelzen ist, dies bedeutet, dass die zugeführte
+Wärmeenergie nicht in einer Temperaturerhöhung resultiert, sondern
+für den Schmelzvorgang benötigt wird. Ist der Schmelzprozess abgeschlossen
+steigt die Temperatur Erwartungsgemäß wieder linear an.
+
+Um nun die spezifische Wärme von Eis zu bestimmen, wird zuerst angenommen,
+dass die zugeführte Wärmeenergie pro Zeit konstant ist, da außerdem
+die spezifische Wärme von Wasser bekannt ist $\left(4,185Jg^{-1}K^{-1}\right)$,
+die Masse des Wassers ist in guter Näherung mit $(1\pm0,1)$g approximiert.
+Nachdem der Schmelzprozess beendet ist, was bei ca. 8,2°C bei einer
+Zeit von 230s der Fall ist, wird der weitere Verlauf als linear angenommen.
+Am Ende der Messung hat das Wasser eine Temperatur von 49,1°C bei
+der Zeit von 375s, daraus ergibt sich eine Temperaturerhöhung pro
+Zeit von$0,282\frac{K}{s}$. Die gesamte zugeführte Wärmeenergie lässt
+sich auch berechnen (die spezifische Wärme von Wasser und die Temperatur
+werden als genau angenommen)
+\[
+(1\pm0,1)g\cdot4,185\frac{J}{gK}\cdot40,9K=(171,16\pm17,11)J
+\]
+
+
+daraus ergibt sich eine Energiezufuhr von$(1,20\pm0,12)\frac{J}{s}$.
+
+Das Eis wird in einer Zeit von 53s um 24K erwärmt, also gilt
+\[
+(1\pm0,1)g\cdot c_{Eis}\cdot24K=(63,6\pm6,4)J
+\]
+
+
+also für die (abgeschätzte) spezifische Wärme
+\[
+c_{Eis}=(2,650\pm0,37)\frac{J}{gK}
+\]
+
+
+für den Fehler gilt
+\[
+\triangle c_{Eis}=\sqrt{\left(\frac{\partial c_{Eis}}{\partial m}\triangle m\right)^{2}+\left(\frac{\partial c_{Eis}}{\partial\triangle T}\triangle\triangle T\right)^{2}+\left(\frac{\partial c_{Eis}}{\partial\triangle Q}\triangle\triangle Q\right)^{2}}
+\]
+
+
+dieser Wert stimmt nicht mit dem Literaturwert von $2,060 \frac{J}{gK}$ 
+(Quelle: http://de.wikipedia.org/ \cite{wiki:eigenschaftenWasser}) überein, zum einen kann es daran
+liegen, dass es sich hier um eine Abschätzung handelt und einige Annahmen
+getroffen wurden die das Ergebnis verfälschen. Außerdem können gewisse
+Daten nicht mit 100\%iger Genauigkeit geschätzt werden was zu Fehlern
+führen kann!
+
+Die Temperatur des Wasser-Reservoirs ist konstant geblieben, bei 23,1°C
+und die Temperatur des Kühlwassers ist von 24,3°C auf 22,9°C abgesunken!
 
 \begin{figure}[h!]
 	\centering
@@ -100,4 +232,51 @@ Eine weitere Störquelle könnte sein, dass die Heizwedel die Wärme nicht gezie
 	\caption{$ (p,V) $-Diagramm bei $ \SI{08}{\volt} $}
 	\label{fig:pV08}
 \end{figure}
+\newpage
+\subsection{Bestimmung des Wirkungsgrades durch Abbremsen}
 
+Um den Wirkungsgrad durch Abbremsen zu bestimmen, wird eine Reibungsbremse
+benutzt, dem Prony'schen Zaum. Dieser kann an das Schwungrad befestigt
+werden und mithilfe von zwei Schrauben je nach nötiger Reibung einstellbar.
+Bei Änderung der Reibungskraft, verändert sich auch die Frequenz mit
+der das System schwingt.
+
+Das Schwungrad übt ein Drehmoment auf den Zaum aus, dieser wird mithilfe
+einer Federwaage gemessen. Das Federpendel lässt allerdings nur Messungen
+bis zu 1N zu, daher sind zusätzlich noch Gewichte vorhanden die den
+Zaum nochmal mit 0,5N ,,entlasten``, damit Messungen >1N möglich
+sind.
+
+Bei dieser Messreihe war es nicht möglich ein Drehmoment von über
+0,75N an der Federwaage plus ein Zusatzgewicht zu erreichen (=1,25N),
+da der der Stirlingmotor dann so stark gebremst wurde, dass er nicht
+mehr schwang. 
+
+Der Wirkungsgrad wird aus dem Quotienten von mechanischer Leistung
+geteilt durch die zugeführte elektrische Leistung ermittelt.
+\[
+\eta=\frac{P_{Zaum}}{P_{elektrisch}}=\frac{2\pi fFr}{UI}
+\]
+
+
+für den Fehler gilt nach Gauß'scher Fehlerfortpflanzung
+\[
+\triangle\eta=\sqrt{\left(\frac{\partial\eta}{\partial P_{Zaum}}\triangle P_{Zaum}\right)^{2}+\left(\frac{\partial\eta}{\partial P_{elektrisch}}\triangle P_{elektrisch}\right)^{2}}
+\]
+
+
+Die elektrische Leistung beträgt ( wie in Teil 4 ermittelt) 2250,6W.
+Der Wirkungsgrad liegt hier in einem Bereich von $10^{-4}$vor, ist
+also ziemlich gering.
+
+Der maximale Wirkungsgrad liegt hier bei einer Frequenz von 3,4Hz
+vor.
+
+Auch liegt hier eine Schwankung vor die nicht in den allgemeinen Trend
+passt, nämlich zwischen 4Hz und 3,5Hz sinkt der Wirkungsgrad wieder
+etwas, wahrscheinlich wurde ein Messfehler begangen, indem die Federwaage
+oder der Zaum nicht richtig eingestellt waren.
+
+\begin{figure}
+\protect\caption{Wirkungsgrad gegen Frequenz}
+\end{figure}
