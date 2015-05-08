@@ -1,0 +1,232 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+\end_preamble
+\use_default_options true
+\begin_modules
+eqs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman palatino
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 20mm
+\topmargin 2cm
+\rightmargin 10mm
+\bottommargin 25mm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Versuchsprotokoll
+\end_layout
+
+\begin_layout Subtitle
+Versuch {Versuchsnummer}:
+\begin_inset Newline newline
+\end_inset
+
+{Versuchstitel}
+\end_layout
+
+\begin_layout Date
+{Datum}
+\end_layout
+
+\begin_layout Author
+Gruppe 6MO:
+\begin_inset Newline newline
+\end_inset
+
+Frederik Edens
+\begin_inset Newline newline
+\end_inset
+
+Dennis Eckermann
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einleitung
+\end_layout
+
+\begin_layout Section
+Durchführung
+\end_layout
+
+\begin_layout Section
+Diskussion
+\end_layout
+
+\begin_layout Standard
+Im allgemeinen sind die Ergebnisse diese Versuchs mit den Erwartungen im
+ Einklang.
+ Die Abweichungen von der errechneten Poisson-Verteilung sind sehr gering
+ und somit vertretbar, bei einer größeren Anzahl von Messungen wäre eine
+ größere Übereinstimmung zu erwarten.
+\end_layout
+
+\begin_layout Standard
+Bei der 
+\begin_inset Formula $\beta$
+\end_inset
+
+-Strahlung wurde die 
+\begin_inset Quotes gld
+\end_inset
+
+mittlere
+\begin_inset Quotes grd
+\end_inset
+
+ Reichweite bei ca.
+ 520
+\begin_inset Formula $\mu m$
+\end_inset
+
+ Aluminum gemessen, da ab dieser Dicke nur noch ca.
+ 50% der Ausgangsstrahlung gemessen werden konnte.
+\end_layout
+
+\begin_layout Standard
+Der exponentielle Abfall der Impulsrate wie in Abbildung 3 sichtbar ist,
+ gilt nur näherungsweise bei kleinen Absoberdicken, diese sind in diesem
+ Fall gegeben und die Messwerte stimmen mit einem exponentiellem Abfall
+ gut überein.
+\end_layout
+
+\begin_layout Standard
+Wird nun Aluminium mit anderen Materialien verglichen, in diesem Fall Gummi
+ und Plexiglas, ist direkt sichtbar, dass Aluminium eine geringere mittlere
+ Reichweite hat als die anderen Materialien.
+\end_layout
+
+\begin_layout Standard
+Der Grund hierfür ist, dass Aluminium ein Metall ist und stärker auf Ladungsträg
+er wie Elektronen, aus denen die 
+\begin_inset Formula $\beta$
+\end_inset
+
+-Strahlung besteht, reagiert und daher ein größeres Hindernis darstellt.
+ Vergleichbare Impulsraten gibt es bei einer dicke von 0,15cm Gummi bzw.
+ 770
+\begin_inset Formula $\mu m$
+\end_inset
+
+ Aluminium bei einer Rate von ca.
+ 3,7Bq, also eine gleiche Impulsrate bei etwa der doppelten Schichtdicke
+ für Gummi.
+\end_layout
+
+\begin_layout Standard
+Bei der Absorption von 
+\begin_inset Formula $\gamma$
+\end_inset
+
+-Strahlung, stimmen die Messungen mit den Erwartungen überein, nämlich das
+ bei zunehmender Schichtdicke die Impulsrate exponentiell Abnimmt.
+\end_layout
+
+\end_body
+\end_document
