@@ -1,0 +1,125 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+
+\subtitle{Versuch \{Versuchsnummer\}:\\
+\{Versuchstitel\}}
+
+
+\date{\{Datum\}}
+
+
+\author{Gruppe 6MO:\\
+Frederik Edens\\
+Dennis Eckermann}
+
+\maketitle
+\vfill{}
+
+
+\tableofcontents{}
+
+\vfill{}
+
+
+\newpage{}
+
+Zur Bestimmung der Heizleistung wird nun der Motor als Wärmepumpe
+betrieben, dazu wird die Umlaufrichtung umgekehrt. In Abbildung 1,
+ist der Temperaturverlauf in Abhängigkeit von der Zeit dargestellt.
+Am Anfang der Messung, ist für die ersten Sekunden kein Anstieg zu
+sehen, das liegt daran, dass diese Messung unmittelbar durchgeführt
+wurde, nachdem der Motor als Kältemaschine benutzt wurde, daher wurden
+einige Umdrehungen benötigt um den Aufheizprozess einzuleiten. Danach
+ist ein relativer linearer Anstieg der Temperatur zu sehen, ab einer
+Temperatur von ca. 0\textdegree C ist ein Plateu zu sehen, die Erklärung
+hierfür ist, dass das Eis nun am schmelzen ist, dies bedeutet, dass
+die zugeführte Wärmeenergie nicht in einer Temperaturerhöhung resultiert,
+sondern für den Schmelzvorgang benötigt wird. Ist der Schmelzprozess
+abgeschlossen steigt die Temperatur Erwartungsgemäß wieder linear
+an.
+
+Um nun die spezifische Wärme von Eis zu bestimmen, wird zuerst angenommen,
+dass die zugeführte Wärmeenergie pro Zeit konstant ist, da außerdem
+die spezifische Wärme von Wasser bekannt ist $\left(4,185Jg^{-1}K^{-1}\right)$,
+die Masse des Wassers ist in guter Näherung mit $(1\pm0,1)$g approximiert.
+Nachdem der Schmelzprozess beendet ist, was bei ca. 8,2\textdegree C
+bei einer Zeit von 230s der Fall ist, wird der weitere Verlauf als
+linear angenommen. Am Ende der Messung hat das Wasser eine Temperatur
+von 49,1\textdegree C bei der Zeit von 375s, daraus ergibt sich eine
+Temperaturerhöhung pro Zeit von$0,282\frac{K}{s}$. Die gesamte zugeführte
+Wärmeenergie lässt sich auch berechnen (die spezifische Wärme von
+Wasser und die Temperatur werden als genau angenommen)
+\[
+(1\pm0,1)g\cdot4,185\frac{J}{gK}\cdot40,9K=(171,16\pm17,11)J
+\]
+
+
+daraus ergibt sich eine Energiezufuhr von$(1,20\pm0,12)\frac{J}{s}$.
+
+Das Eis wird in einer Zeit von 53s um 24K erwärmt, also gilt
+\[
+(1\pm0,1)g\cdot c_{Eis}\cdot24K=(63,6\pm6,4)J
+\]
+
+
+also für die (abgeschätzte) spezifische Wärme
+\[
+c_{Eis}=(2,650\pm0,37)\frac{J}{gK}
+\]
+
+
+für den Fehler gilt
+\[
+\triangle c_{Eis}=\sqrt{\left(\frac{\partial c_{Eis}}{\partial m}\triangle m\right)^{2}+\left(\frac{\partial c_{Eis}}{\partial\triangle T}\triangle\triangle T\right)^{2}+\left(\frac{\partial c_{Eis}}{\partial\triangle Q}\triangle\triangle Q\right)^{2}}
+\]
+
+
+dieser Wert stimmt nicht mit dem Literaturwert von $2,060\frac{J}{gK}$
+(Quelle: https://de.wikipedia.org/wiki/Spezifische\_W/C3/A4rmekapazit/C3/A4t
+) überein, zum einen kann es daran liegen, dass es sich hier um eine
+Abschätzung handelt und einige Annahmen getroffen wurden die das Ergebnis
+verfälschen. Außerdem können gewisse Daten nicht mit 100\%iger Genauigkeit
+geschätzt werden was zu Fehlern führen kann!
+
+Die Temperatur des Wasser-Reservoirs ist konstant geblieben, bei 23,1\textdegree C
+und die Temperatur des Kühlwassers ist von 24,3\textdegree C auf 22,9\textdegree C
+abgesunken!
+
+\begin{figure}
+\protect\caption{Wassertemperatur gegen Zeit}
+\includegraphics{\string"C:/Users/hp/Desktop/Praktikum/Praktikum SS15/praktikum/W1/diagramme/a2_temp\string".eps}
+\end{figure}
+
+\end{document}

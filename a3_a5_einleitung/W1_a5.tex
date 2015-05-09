@@ -1,0 +1,84 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+\maketitle
+\tableofcontents{}
+
+\newpage{}
+
+Um den Wirkungsgrad durch Abbremsen zu bestimmen, wird eine Reibungsbremse
+benutzt, dem Prony'schen Zaum. Dieser kann an das Schwungrad befestigt
+werden und mithilfe von zwei Schrauben je nach nötiger Reibung einstellbar.
+Bei Änderung der Reibungskraft, verändert sich auch die Frequenz mit
+der das System schwingt.
+
+Das Schwungrad übt ein Drehmoment auf den Zaum aus, dieser wird mithilfe
+einer Federwaage gemessen. Das Federpendel lässt allerdings nur Messungen
+bis zu 1N zu, daher sind zusätzlich noch Gewichte vorhanden die den
+Zaum nochmal mit 0,5N ,,entlasten``, damit Messungen >1N möglich
+sind.
+
+Bei dieser Messreihe war es nicht möglich ein Drehmoment von über
+0,75N an der Federwaage plus ein Zusatzgewicht zu erreichen (=1,25N),
+da der der Stirlingmotor dann so stark gebremst wurde, dass er nicht
+mehr schwang. 
+
+Der Wirkungsgrad wird aus dem Quotienten von mechanischer Leistung
+geteilt durch die zugeführte elektrische Leistung ermittelt.
+\[
+\eta=\frac{P_{Zaum}}{P_{elektrisch}}=\frac{2\pi fFr}{UI}
+\]
+
+
+für den Fehler gilt nach Gauß'scher Fehlerfortpflanzung
+\[
+\triangle\eta=\sqrt{\left(\frac{\partial\eta}{\partial P_{Zaum}}\triangle P_{Zaum}\right)^{2}+\left(\frac{\partial\eta}{\partial P_{elektrisch}}\triangle P_{elektrisch}\right)^{2}}
+\]
+
+
+Die elektrische Leistung beträgt ( wie in Teil 4 ermittelt) 2250,6W.
+Der Wirkungsgrad liegt hier in einem Bereich von $10^{-4}$vor, ist
+also ziemlich gering.
+
+Der maximale Wirkungsgrad liegt hier bei einer Frequenz von 3,4Hz
+vor.
+
+Auch liegt hier eine Schwankung vor die nicht in den allgemeinen Trend
+passt, nämlich zwischen 4Hz und 3,5Hz sinkt der Wirkungsgrad wieder
+etwas, wahrscheinlich wurde ein Messfehler begangen, indem die Federwaage
+oder der Zaum nicht richtig eingestellt waren.
+
+\begin{figure}
+\protect\caption{Wirkungsgrad gegen Frequenz}
+\end{figure}
+
+\end{document}
