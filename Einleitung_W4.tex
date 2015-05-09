@@ -1,0 +1,152 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+
+\subtitle{Versuch \{Versuchsnummer\}:\\
+\{Versuchstitel\}}
+
+
+\date{\{Datum\}}
+
+
+\author{Gruppe 6MO:\\
+Frederik Edens\\
+Dennis Eckermann}
+
+\maketitle
+\vfill{}
+
+
+\tableofcontents{}
+
+\vfill{}
+
+
+\newpage{}
+
+
+\section{Einleitung}
+
+In diesem Versuch werden molare Massen mittels zwei verschiedener
+Methoden bestimmt.
+
+Einmal mit der Dampfdichtemethode, das andere mal mit der Gefrierpunktserniedrigung.
+
+Zunächst ist als molare Masse das Verhältnis der Masse und der Stoffmenge
+definiert,
+\begin{equation}
+M=\frac{m}{\nu}\frac{g}{mol}\label{eq:Molmasse}
+\end{equation}
+
+
+wobei $\nu$ die Stoffmenge ist und m die Masse.
+
+Ein Mol ist definiert als die Anzahl der Teilchen die in 12g des Kohlenstoffisotops
+$^{12}C$ enthalten sind.
+
+Das Molvolumen ist definiert durch das Volumen durch die Stoffmenge
+\begin{equation}
+V_{m}=\frac{V}{\nu}=\frac{M}{\varrho}\frac{m^{3}}{mol}\label{eq:Molvolumen1}
+\end{equation}
+
+
+V ist das Volumen und $\varrho=\frac{m}{V}$ die Dichte des Stoffes.
+
+Aus der idealen Gasgleichung folgt für eine Stoffmenge von einem Mol.
+
+\begin{equation}
+V_{m}=\frac{RT}{p}\label{eq:Molvolumen2}
+\end{equation}
+
+
+R ist die allgemeine Gaskonstante und hat den Wert 8,314$\frac{J}{mol\cdot K}$und
+T ist die Temperatur.
+
+Unter Normalbedingungen beträgt das molare Volumen eines idealen Gases
+bei einem Mol Stoffmenge etwa 22,41$\frac{l}{mol}$. 
+
+Für eine Stoffmenge von einem Mol ergibt sich für \ref{eq:Molvolumen1}
+\begin{equation}
+\frac{M}{V_{m0}}=\frac{m}{V_{0}}\label{eq:}
+\end{equation}
+
+
+durch die ideale Gasgleichung bei Normalbedingungen und einigen weiteren
+Schritten ergibt sich,
+\begin{equation}
+M=m\frac{V_{mo}}{V}\frac{p_{0}}{p}\frac{T}{T_{0}}\label{eq:Formel}
+\end{equation}
+
+
+diese wird in der weiteren Auswertung gebraucht, m ist die Masse der
+Probesubstanz $p_{0}$und $T_{0}$ sind Druck und Temperatur unter
+Normalbedingungen.
+
+Da die Probesubstanz mit einer Spritze aufgezogen wird, ist diese
+nicht direkt Messbar. Es ist nur die Differenz der Massen der jeweils
+gefüllten und leeren Spritzen bekannt.
+
+Es kommt noch ein Zusatzterm hinzu, der dem Auftrieb zu verschulden
+ist, somit folgt
+\begin{equation}
+m=\left(m_{2}-m_{1}\right)+\varrho_{L}V_{Fl}\label{eq:masse}
+\end{equation}
+
+
+$\varrho_{L}$ ist die Dichte der Luft und $V_{Fl}$ das Volumen der
+Probesubstanz.
+
+Damit sind die grundlegenden Formeln für die Dampfdichtemethode besprochen,
+zur funktionsweise der Apperatur mehr im Versuchsteil.
+
+Bei der Gefrierpunktserdniedrigung wird die molare Masse, durch die
+Änderung des Gefrierpunkts eines Stoffes, in dem ein anderer Stoff
+in diesem gelöst wird, bestimmt.
+
+Diese wird durch folgende Formel beschrieben,
+
+\begin{equation}
+\triangle T=K\frac{1}{m_{L}}\frac{m_{S}}{M_{S}}\label{eq:Temp_diff}
+\end{equation}
+
+
+K heißt kryoskopische Konstante und ist für Lösungsmittel die charakteristische
+Größe, in diesem Fall ist das Lösungsmittel Cyclohexan. Hierfür hat
+K den Wert $20,2\cdot10^{3}\frac{gK}{mol}$. $m_{L}$ist die Masse
+des Lösungsmittels $m_{S}$ die Masse der gelösten Substanz und $M_{S}$ist
+die molare Masse der gelösten Substanz.
+
+Diese lässt sich durch einfaches umstellen der Formel berechnen,
+\begin{equation}
+M_{S}=K\frac{1}{m_{L}}\frac{m_{S}}{\triangle T}\label{eq:molareMasse}
+\end{equation}
+
+\end{document}
