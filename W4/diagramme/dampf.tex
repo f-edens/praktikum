@@ -19,7 +19,9 @@ x	y	err
 .31	48.297690439	11.634048942
 };
 
-\legend{Einzelne Messwerte, Mittelwert}
+\addplot[dashed, red, domain=.1:.5] {46.07};
+
+\legend{Einzelne Messwerte, Mittelwert, Literaturwert}
 
 \addplot[blue, only marks, error bars/y dir = both, error bars/y explicit, mark = x] table[x=x,y=y, y error = err] {
 x	y	err
@@ -34,6 +36,6 @@ x	y	err
 x	y	err
 1.31	91.8764752317	14.9681458409
 };
-
+\addplot[dashed, red, domain=1.1:1.5] {84.16};
 \end{axis}
 \end{tikzpicture}
