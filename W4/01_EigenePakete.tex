@@ -45,14 +45,16 @@
 \usepackage[backend=biber, style=numeric]{biblatex}
 \addbibresource{literatur.bib} %Bibliographie
 
+\usepackage[locale=DE]{siunitx}
+\sisetup{separate-uncertainty}
 \usepackage{pgfplots}
-\pgfplotsset{/pgf/number format/use comma}
+%\pgfplotsset{/pgf/number format/use comma}
+\SendSettingsToPgf
 \pgfplotsset{compat=1.9}
 \usepgfplotslibrary{external} 
 \tikzexternalize
 
 
-\usepackage[locale=DE]{siunitx}
-\sisetup{separate-uncertainty}
+
 \usepackage{isotope}
 \usepackage{float}
