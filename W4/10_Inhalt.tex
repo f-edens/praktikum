@@ -76,21 +76,26 @@ Die Mittelwerte der molaren Massen betragen \SI{48,3\pm11,7}{\g\per\mol} für Et
 \begin{figure}
 \centering
 \input{diagramme/dampf.tex}
-\caption{Grafische Darstellung}
+\caption{Grafische Darstellung, Quelle Literaturwerte: \cite{wiki:cyclohexan,wiki:ethanol}}
 \end{figure}
 
 
 \begin{table}[H]
 \centering
-\begin{tabular} {c|c|c}
-	 & Siedepunkt & Molare Masse \\\hline
-	Ethanol & \SI{78,32}{\degreeCelsius} & \SI{46,07}{\g\per\mol} \\
-	Cyclohexan & \SI{81}{\degreeCelsius} & \SI{84,16}{ \g\per\mol}
+\begin{tabular} {c|c|c|c}
+	 & Siedepunkt & Molare Masse & Dichte \\\hline
+	Ethanol & \SI{78,32}{\degreeCelsius} & \SI{46,07}{\g\per\mol} &  \SI{0,7893}{\g\per\cubic\centi\m} \\
+	Cyclohexan & \SI{81}{\degreeCelsius} & \SI{84,16}{ \g\per\mol} & \SI{0,78}{\g\per\cubic\centi\m} 
 \end{tabular}
-\caption{Stoffeigenschaften von Ethanol und Cyclohexan (Quellen: \cite{wiki:cyclohexan}, \cite{wiki:ethanol})}
+\caption{Stoffeigenschaften von Ethanol und Cyclohexan (Quellen: \cite{wiki:cyclohexan,wiki:ethanol})}
 \label{tab:propEthanolCyclo}
 \end{table} 
 
 
 
 \section{Diskussion} % !!!!
+\subsection{Messung anhand von Dampfdichte}
+Zunächst fällt auf, dass die von uns bestimmten molaren Massen innerhalb ihrer jeweiligen Fehler mit den Literaturwerten aus Tabelle \ref{tab:propEthanolCyclo} übereinstimmen. Insbesondere bei der Messung mit Ethanol liegen alle Einzelmessungen und auch der Mittelwert nah am Literaturwert. Beim Cyclohexan dagegen liegt bei zwei der Messungen der Literaturwert nicht im Vertrauensintervall. Dies unterstreicht auch die Wichtigkeit mehrerer Messungen. Die drei anderen Messwerte liegen dagegen deutlich näher an der Referenz.\\
+Eine Auffälligkeit der Fehler ist, dass alle bis auf einen Wert zu hoch sind. Als Fehlerursache kommen mit Blick auf die \eqref{eq:dampfMolMasse} eine zu große Masse oder Temperatur oder ein zu kleines Volumen oder zu kleiner Druck in Frage. Da die Temperatur in der Größenordnung \SI{375}{\K} liegt und relativ dazu sehr genau bestimmt werden kann, kann diese nur einen geringen Beitrag zum Fehler haben. Entsprechendes gilt auch für den Druck.
+Also ist der Fehler auf Masse und Volumen zurück zu führen. Wahrscheinlich ist bei den Messungen ein Teil der Probe nicht weit genug in den Kolben injiziert worden, so dass diese sich nicht, oder nur langsam erwärmt hat. Dadurch wird ein zu geringes Volumen gemessen und somit eine zu große molare Masse berechnet. Die Probenmasse wurde zwar systematisch falsch gemessen, da der Auftrieb vernachlässigt wurde, jedoch liegt die Dichte von Luft mit $ \rho_L = \SI{1,293}{\kilo\g\per\cubic\meter} = \SI{,001293}{\g\per\cubic\centi\m} $ (Quelle: \cite{wiki:luft}) zwei Größenordnungen unter der von Ethanol und Cyclohexan (siehe Tabelle \ref{tab:propEthanolCyclo}) und kann gegenüber der Messgenauigkeit der verwendeten Waage vernachlässigt werden.
+Möchte man eine genauere Messung erreichen sollte man zwei weitere Dinge beachten. Zum einen sollte das oben beschriebene Problem berücksichtigt werden, und sichergestellt werden, dass die gesamte Probe verdampft. Dies kann geschehen indem man sich mit dem Versuch mehr Zeit lässt, oder man die Einfüllvorrichtung optimiert. Zum anderen sollte man die Masse der Probe genauer bestimmen. Rechnet man die Messergebnisse unter Vernachlässigung des Fehlers der Masse aus, so verringert sich der systematische Fehler auf \SI{.4}{\g\per\mol} für Ethanol und \SI{.8}{\g\per\mol} für Cyclohexan. Aber auch die Erhöhung der Messgenauigkeit um nur eine Größenordnung senkt den Fehler um fast eine Größenordnung.
