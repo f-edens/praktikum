@@ -1,0 +1,111 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+
+\title{Versuchsprotokoll}
+
+
+\subtitle{Versuch \{Versuchsnummer\}:\\
+\{Versuchstitel\}}
+
+
+\date{\{Datum\}}
+
+
+\author{Gruppe 6MO:\\
+Frederik Edens\\
+Dennis Eckermann}
+
+\maketitle
+\vfill{}
+
+
+\tableofcontents{}
+
+\vfill{}
+
+
+\newpage{}
+
+
+\section{Einleitung}
+
+
+\section{Versuchsteil}
+
+
+\subsection{Messung der molaren Masse anhand der Dampfdichtemethode}
+
+
+\subsubsection{Auswertung}
+
+
+\subsection{Messung der molaren Masse anhand er Gefrierpunktserniedrigung}
+
+In diesem Teil wird im Lösungsmittel Cyclohexan eine geringe Menge
+Eicosan gelöst und der Unterschied der Gefrierpunkte gemessen. Dabei
+liegen die Mengen bei $\left(16,27\pm0,02\right)g$ Cyclohexan und
+$\left(0,39\pm0,01\right)g$ Eicosan.
+
+Zunächst wurde der Gefrierpunkt des Cyclohexans gemessen. Dafür wurde
+die Subtanz in einem Reagenzglas in ein Eisbad gelegt und unter ständigem
+rühren abgekühlt. Wird ein Plateau erreicht, wurde der Gefrierpunkt
+ermittelt. Dieser liegt bei $T_{1}=\left(6,6\pm0,1\right)\text{°C}$. 
+
+Die Ermittlung des Gefrierpunkts für das Stoffgemisch aus Cyclohexan
+und Eicosan ist analog, nur ist das rühren noch wichtiger als vorher.
+Hier liegt der Gefrierpunkt bei $T_{2}=\left(3,3\pm0,1\right)\text{°C}$.
+
+Damit beträgt die Temperaturdifferenz $\triangle T=T_{1}-T_{2}=\left(3,3\pm0,2\right)K$.
+
+Nach (1.8) gilt,
+\[
+M_{S}=20,2\cdot10^{3}\frac{gK}{mol}\frac{1}{\left(16,27\pm0,02\right)g}\frac{\left(0,39\pm0,01\right)g}{\left(3,3\pm0,2\right)K}
+\]
+
+
+das ergibt,
+\[
+M_{S}=\left(146,73\pm4,80\right)\frac{g}{mol}
+\]
+
+
+dieser Wert stimmt mit dem Literaturwert von $282,5\frac{g}{mol}$
+leider nicht überein. 
+
+
+\section{Diskussion}
+
+Das Ergebnis für die Gefrierpunktserniedrigung weicht weit vom Literaturwert
+ab. Generell wurden alle Messungen korrekt durchgeführt, aber um diesen
+Fehler zu erklären muss es an einer Stelle einen groben Fehler gegeben
+haben. Die Temperaturdifferenz ist korrekt und das Eicosan war bereits
+in 400mg Rationen aufgeteilt, somit ist es wahrscheinlich, dass der
+Fehler bei der Menge des Cyclohexans liegt. Wobei zu erwähnen ist,
+dass dieser Wert auch im Rahmen liegt. +
+\end{document}
