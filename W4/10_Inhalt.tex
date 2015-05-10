@@ -16,7 +16,8 @@ Es werden geringe Probenmengen von etwa \SI{.1}{\milli\liter} bei Ethanol und \S
 \end{figure}
 \subsubsection{Auswertung}
 
-Mit \eqref{eq:dampfMolMasse} lässt sich aus den erfassten Messwerten die molare Masse bestimmen. Da die Formel nur aus linearen und antiproportionalen Zusammenhängen besteht, lässt sich Fehlerformel \eqref{eq:err} verwenden. Der Innendruck des Kolbens passt sich dem Umgebungsdruck an. Daher entspricht $ p $ dem gemessenen Umgebungsdruck $ p = \SI{1001,9(1)}{\hecto\pascal} $. Die Innentemperatur $ T $ war über die Dauer des Experimentes konstant und wurde an beiden Enden gemessen. Die mittlere Temperatur ist $ T = \SI{102,5(8)}{\degreeCelsius} $. Als molares Volumen wird das molare Volumen des idealen Gases von $ V_m = \SI{22.413996(39)}{\mol\per\l} $ angenommen. Dieses gilt bei Normalbedingungen von $ p_0 = \SI{1013,25}{\hecto\pascal} $ und $ T_0 = \SI{0}{\degreeCelsius} $. Die damit bestimmten Ergebnisse sind in den Tabellen \ref{tab:dampf_ethanol} und \ref{tab:dampf_cyclo} zu finden.
+Mit \eqref{eq:dampfMolMasse} lässt sich aus den erfassten Messwerten die molare Masse bestimmen. Da die Formel nur aus linearen und antiproportionalen Zusammenhängen besteht, lässt sich Fehlerformel \eqref{eq:err} verwenden. Der Innendruck des Kolbens passt sich dem Umgebungsdruck an. Daher entspricht $ p $ dem gemessenen Umgebungsdruck $ p = \SI{1001,9(1)}{\hecto\pascal} $. Die Innentemperatur $ T $ war über die Dauer des Experimentes konstant und wurde an beiden Enden gemessen. Die mittlere Temperatur ist $ T = \SI{102,5(8)}{\degreeCelsius} $. Als molares Volumen wird das molare Volumen des idealen Gases von $ V_m = \SI{22.413996(39)}{\mol\per\l} $ angenommen. Dieses gilt bei Normalbedingungen von $ p_0 = \SI{1013,25}{\hecto\pascal} $ und $ T_0 = \SI{0}{\degreeCelsius} $. Die damit bestimmten Ergebnisse sind in den Tabellen \ref{tab:dampf_ethanol} und \ref{tab:dampf_cyclo} zu finden. \\
+Die Mittelwerte der Molaren
 
 \begin{table}[H]
 	\centering
@@ -33,7 +34,7 @@ Mit \eqref{eq:dampfMolMasse} lässt sich aus den erfassten Messwerten die molare
 			table-figures-integer  = 2,
 			table-figures-decimal  = 1
 			]}
-		{Probenmasse [\si{\g}]} & {Gasvolumen [\si{\l}]} & {Molvolumen [\si{\mol\per\l}]} \\\hline
+		{Probenmasse [\si{\g}]} & {Gasvolumen [\si{\l}]} & {Molvolumen [\si{\g\per\mol}]} \\\hline
 		0,10 \pm 0,02 & 0,0625 \pm 0,0005 & 49,9 \pm 10,0 \\
 		0,13 \pm 0,02 & 0,0825 \pm 0,0005 & 49,1 \pm 7,6 \\
 		0,09 \pm 0,02 & 0,0635 \pm 0,0005 & 44,2 \pm 9,9 \\
@@ -60,7 +61,7 @@ Mit \eqref{eq:dampfMolMasse} lässt sich aus den erfassten Messwerten die molare
 				table-figures-decimal  = 1
 			]}
 		
-		{Probenmasse [\si{\g}]} & {Gasvolumen [\si{\l}]} & {Molvolumen [\si{\mol\per\l}]} \\\hline
+		{Probenmasse [\si{\g}]} & {Gasvolumen [\si{\l}]} & {Molmasse [\si{\g\per\mol}]} \\\hline
 		0,24 \pm 0,02 & 0,0765 \pm 0,0005 & 97,8 \pm 8,2 \\
 		0,25 \pm 0,02 & 0,0870 \pm 0,0005 & 89,6 \pm 7,2 \\
 		0,22 \pm 0,02 & 0,0785 \pm 0,0005 & 87,4 \pm 8,0 \\
@@ -71,6 +72,13 @@ Mit \eqref{eq:dampfMolMasse} lässt sich aus den erfassten Messwerten die molare
 	\caption{Ergebnisse vom ersten Versuch mit Cyclohexan}
 	\label{tab:dampf_cyclo}
 \end{table}
+
+\begin{figure}
+\centering
+\input{diagramme/dampf.tex}
+\caption{Grafische Darstellung}
+\end{figure}
+
 
 \begin{table}[H]
 \centering
