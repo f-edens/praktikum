@@ -4,6 +4,8 @@
 %ybar,
 %symbolic x coords={excellent, good, neutral},
 %xtick = data,
+width=.9\textwidth,
+height = 8cm,
 error bars/y dir = both,
 error bars/y explicit,
 %only marks,
@@ -13,7 +15,7 @@ ymode=log,
 %log ticks with fixed point,
 xlabel={Absorberdicke $ [\si{\milli\meter}] $},
 ylabel={Impulsrate [\si{\per\second}]},
-legend style = {legend pos = outer north east, cells={anchor=east}}
+legend style = {legend pos = north east, cells={anchor=east}}
 ]
 \addplot+[mark = +, only marks,
 	error bars/x dir = both, error bars/x fixed relative=.02,] table[x = x, y= y, y error = yerror]  {

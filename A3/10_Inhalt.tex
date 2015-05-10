@@ -273,12 +273,12 @@ Wird nun extrapoliert, d.h. das Verhalten der Impulsrate wird über
 den gesicherten Bereich hinaus (approximiert) bestimmt, kann die praktische
 Reichweite bestimmt werden. 
 
-Dafür wird angenommen, dass die Impulsrate um 1,5$\frac{Zerf\ddot{a}lle}{Sekunde}$
+Dafür wird angenommen, dass die Impulsrate um \SI{1.5}{\becquerel}
 sinkt, wenn die Dicke des Aluminumabsorbers um 250$\mu m$ zunimmt. 
 
 Bei dem letzten gemessenen Wert beträgt die Impulsrate in sehr guter
-Näherung 4$\frac{Zerf\ddot{a}lle}{Sekunde}$ bei einer Absorberdicke
-von 770$\mu m$. Um nun die Dicke des Absorbers für 0$\frac{Zerf\ddot{a}lle}{Sekunde}$
+Näherung \SI{4}{\becquerel} bei einer Absorberdicke
+von 770$\mu m$. Um nun die Dicke des Absorbers für \SI{0}{\becquerel}
 abzuschätzen werden die Annahmen verwendet, also müssten zusätzliche
 650$\mu m$ Aluminumabsorber hinzugefügt werden.
 
@@ -301,7 +301,7 @@ Gummi & $ \num{.15} $ & $ \num{3.7130} $ & $ \num{0.1286} $ \\
 \label{tab:abs_gum}
 \end{table}
 Legt man eine Funktion der Form $ N(d) = N_0 \mathrm{e}^{-\mu d} $ durch die Messwerte, so erhält man für Plexiglas $ \mu \approx \SI{4.7828}{\per\centi\meter} $ und für Gummi $ \mu \approx \SI{7.1720}{\per\centi\meter} $. Wegen $ \mathrm{e}^{-\mathrm{ln} 2} = \frac{1}{2} $ ist die Halbwertsdicke gegeben durch $ R_m = \frac{\mathrm{ln}2}{\mu} $. Somit ist die Halbwertsdicke für Plexiglas $ R_m \approx \SI{0.1450}{\centi\meter} $ und für Gummi $ R_m \approx \SI{.0966}{\centi\meter} $.\\
-Die Halbwertsdicke dieser beiden Materialien ist erwartungsgemäß um Größenordnungen über der von Aluminium. Aluminium als Metall reagiert und stärker auf Ladungsträger wie die Elektronen der $ \beta $-Strahlung und stellt daher für diese ein größeres Hindernis da.
+Die Halbwertsdicke dieser beiden Materialien ist erwartungsgemäß über der von Aluminium. Aluminium als Metall reagiert und stärker auf Ladungsträger wie die Elektronen der $ \beta $-Strahlung und stellt daher für diese ein größeres Hindernis da.
 
 \subsection{Absorbtion von $ \gamma $-Strahlung}
 Im letzten Versuchsteil wurde das $\gamma$-Präperat vor das Zählrohr
@@ -349,3 +349,34 @@ für den Massenabsorptionskoeffizienten $\mu_{m}$folgt daraus,
 
 diese Werte gelten für $\gamma$-Quanten die eine Energie von $ \SI{.66}{\MeV} $
 haben.
+\newpage
+\section{Diskussion}
+
+Im allgemeinen sind die Ergebnisse diese Versuchs mit den Erwartungen
+im Einklang. Die Abweichungen von der errechneten Poisson-Verteilung
+sind sehr gering und somit vertretbar, bei einer größeren Anzahl von
+Messungen wäre eine größere Übereinstimmung zu erwarten.
+
+Bei der $\beta$-Strahlung wurde die ,,mittlere`` Reichweite bei
+ca. 520$\mu m$ Aluminum gemessen, da ab dieser Dicke nur noch ca.
+50\% der Ausgangsstrahlung gemessen werden konnte.
+
+Der exponentielle Abfall der Impulsrate wie in Abbildung 3 sichtbar
+ist, gilt nur näherungsweise bei kleinen Absoberdicken, diese sind
+in diesem Fall gegeben und die Messwerte stimmen mit einem exponentiellem
+Abfall gut überein.
+
+Wird nun Aluminium mit anderen Materialien verglichen, in diesem Fall
+Gummi und Plexiglas, ist direkt sichtbar, dass Aluminium eine geringere
+mittlere Reichweite hat als die anderen Materialien.
+
+Der Grund hierfür ist, dass Aluminium ein Metall ist und stärker auf
+Ladungsträger wie Elektronen, aus denen die $\beta$-Strahlung besteht,
+reagiert und daher ein größeres Hindernis darstellt. Vergleichbare
+Impulsraten gibt es bei einer dicke von 0,15cm Gummi bzw. 770$\mu m$
+Aluminium bei einer Rate von ca. 3,7Bq, also eine gleiche Impulsrate
+bei etwa der doppelten Schichtdicke für Gummi.
+
+Bei der Absorption von $\gamma$-Strahlung, stimmen die Messungen
+mit den Erwartungen überein, nämlich das bei zunehmender Schichtdicke
+die Impulsrate exponentiell Abnimmt.
