@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\begin{axis}[width = .9\textwidth, height=8cm,
+				xmin = 0, xmax = 3.5,
+				xlabel = {Breite Spaltöffnung $ b $ [\si{\milli\meter}]},
+				ylabel = {Schwingfrequenz $ f $ [\si{\per\second}]},
+				legend pos = south east]
+	
+	\addplot+[no marks] {0.02560155 * x + 1.90122003};
+	
+	\addplot+ [only marks,
+		error bars/.cd, y explicit, x explicit, x dir = both, y dir = both] table[x=x,y=y, x error = xerr, y error = yerr] {
+x	xerr	y	yerr
+0.5	0.05	1.901076716	0.0127601693
+1	0.05	1.9361778415	0.0137399449
+1.5	0.05	1.9498607242	0.014290247
+2	0.05	1.958937653	0.014533844
+2.5	0.05	1.9487750557	0.0142776958
+3	0.05	1.9813084112	0.0145182333
+	};
+	
+	\legend{$ {\num{0.0256}\cdot b + \num{1.9012}} $, Messwerte};
+\end{axis}
+\end{tikzpicture}
