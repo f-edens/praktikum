@@ -25,9 +25,9 @@ $c_{m,V}$.
 
 $c_{m,p}$ist die Wärmekapazität bei konstantem Druck und $c_{m,V}$
 die Wärmekapazität bei konstantem Volumen, für $\kappa$ folgt,
-\[
-\kappa=\frac{c_{m,p}}{c_{m,V}}=\frac{f+2}{f}
-\]
+\begin{equation}
+\kappa=\frac{c_{m,p}}{c_{m,V}}=\frac{f+2}{f} \label{eq:freiheitsgrade}
+\end{equation}
 
 
 $f$ ist die Zahl der Freiheitsgrade.
@@ -51,7 +51,7 @@ Die Kreifrequenz lässt sich herleiten zu,
 mit Hilfe der Schwingungsdauer $T=\frac{2\pi}{\omega}$ folgt für
 $\kappa$,
 \begin{equation}
-\kappa=\frac{4\pi^{2}mV_{0}}{p_{0}A^{2}T^{2}}\label{eq:adiabatenexponent}
+\kappa=\frac{4\pi^{2}mV_{0}}{p_{0}A^{2}T^{2}} = \frac{4\pi^{2}mV_{0}f^2}{p_{0}A^{2}}\label{eq:adiabatenexponent}
 \end{equation}
 
 
@@ -79,37 +79,74 @@ folgt für den Adiabatenexponent,
 $h_{1}$ist die Höhe des Flüssigkeitsbarometers nachdem der Druck
 erhöht wurde und $h_{3}$ist die Höhe nachdem der Hahn umgedreht wurde.
 Mit Hilfe dieser Formel lässt sich mit diesem Versuchsaufbau der Adiabatenexponent
-bestimmen.
+bestimmen. Mit \eqref{eq:freiheitsgrade} folgt daraus
+\begin{equation}
+f = 2\frac{h_1 - h_3}{h_3}
+\end{equation}
 \newpage
 
-\section{Auswertung}
+\section{Versuchsteil}
 
 \subsection{Bestimmung von $ \kappa $ nach Rüchardt-Flammersfeld}
-
-
-\begin{figure}
+\subsubsection{Durchführung}
+\begin{figure}[H]
 \centering
-\input{diagramme/luft.tex}m
-\caption{$ b $-$ f $-Diagramm mit Luft}
+\includegraphics[width=0.7\linewidth]{./bilder/versuch1}
+\caption{Versuchsaufbau nach Rüchardt-Flammersfeld (Quelle: \cite{anleitung2015})}
+\label{fig:aufbau1}
 \end{figure}
 
-\begin{figure}
+\def\vFlasche{5000}
+
+\subsubsection{Auswertung}
+Wenn der Schellenabstand verschwindet lässt sich mit \eqref{eq:adiabatenexponent} der Adiabatenexponent $ \kappa $ aus der Masse des Schwingkörpers, Volumen des Komprimierten Gases und dem Druck im Gleichgewicht zusammen. Die Masse des Schwingkörpers kann direkt gewogen werden und beträgt bei uns $ m = \SI{7,19(1)}{\g} $. Das Volumen setzt sich additiv aus dem Volumen der Flasche $ V_F = \SI{\vFlasche}{\cubic\centi\metre} $ und dem Volumen des Rohres zusammen. Das Volumen des Rohres wird aus Radius $ r $ und Höhe $ h $ bis zu Schlitz berechnet. Das ergibt $ V_R = \pi r^2 h = \SI{94,9(16)}{\cubic\centi\meter} $. Das Gesamtvolumen beträgt somit $ V = \dots $. %todo: Nachtragen
+Der Druck $ p_0 $ setzt sich zusammen aus dem Umgebungsdruck von $ p_L = \SI{1011.7(1)}{\hecto\pascal} $ und dem von der Masse ausgeübten Druck $ p_m = \frac{mg}{A} = \frac{mg}{\pi r^2} = \SI{352,9 +- 4.5}{\pascal} $. Somit ist $ p_0 = \SI{1015.43 +- .15}{hPa} $.\\
+Um die Frequenz zu ermitteln wird mit einem \textit{Least-Squares-Fit} eine Ausgleichsgerade durch die Messwerte gelegt. An den Abbildungen \ref{fig:luft} bis \ref{fig:co2} lässt sich damit der für eine verschwindene Spaltbreite extrapolierte Wert grafisch Ablesen.\\
+Die so ermittelten Frequenzen betragen $ f_\mathrm L = \SI{1.880(15)}{\per\second} $ für Luft, \newline $ f_\mathrm{Ar} = \SI{1.910(15)}{\per\second} $ für Argon und $ f_{\mathrm{CO}_2} =~??? $ für \ch{CO2}. Setzt man dies mit den anderen Werten in \eqref{eq:adiabatenexponent} ein, erhält man die Adiabatenexponenten \newline
+\begin{tabular}{l@{$~=~$}S[table-figures-integer = 1, table-figures-decimal = 3, table-figures-uncertainty = 3, table-number-alignment=left]}
+$ \kappa_\mathrm{Luft} $ &  \\
+$ \kappa_\mathrm{Ar} $ & \\
+$ \kappa_{\mathrm{CO}_2} $
+\end{tabular}
+\begin{figure}[H]
+\centering
+\input{diagramme/luft.tex}
+\caption{$ b $-$ f $-Diagramm mit Luft}
+\label{fig:luft}
+\end{figure}
+
+\begin{figure}[H]
 \centering
 \input{diagramme/ar.tex}
 \caption{$ b $-$ f $-Diagramm mit Argon}
+\label{fig:ar}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \input{diagramme/co2.tex}
 \caption{$ b $-$ f $-Diagramm mit \ch{CO2}}
+\label{fig:co2}
 \end{figure}
 
 \subsection{Bestimmung von $ \kappa $ nach Clément-Desormes}
+\subsubsection{Durchführung}
+Zunächst wird im Behälter ein Druck aufgebaut. Da die Temperatur im Behälter dabei ansteigt muss daraufhin gewartet werden, bis sich der vom Manometer angezeigte Wert nicht mehr ändert und die Luft im Behältnis somit wieder die Umgebungstemperatur angenommen hat.
+Nun misst man den Manometer-Stand $ h_1 $ ab.
+Daraufhin wird sichergestellt, dass der Drucklufthahn geschlossen ist und der Belüftungshahn kurz aufgedreht. Dabei muss beachtet werden, dass wenn der Hahn zu kurz offen ist, sich nicht der gesamte Druck abbauen kann. Wird dagegen der Hahn zu lange offen gelassen, kann nicht mehr von Adiabasie\footnote{Der Begriff kommt aus der Versuchsanleitung} ausgegangen werden.\\
+Durch die nach Möglichkeit adiabatische Expansion kommt es im Behälter zur Abkühlung während Umgebungsdruck herrscht.
+Bei der Erwärmung baut sich wieder ein Druck auf und man ließt am Manometer $ h_3 $ ab.
 %todo: Durchführung
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{./bilder/versuch2}
+\caption{Aufbau nach Clément-Desormes (Quelle: \cite{anleitung2015})}
+\label{fig:aufbau2}
+\end{figure}
 
-
-\begin{table}
+\subsubsection{Auswertung}
+Aus $ h_1 $ und $ h_3 $ lassen sich mit \eqref{eq:adiabatenexponent2} und \eqref{eq:freiheitsgrade} Adiabatenexponent und Anzahl der Freiheitsgrade direkt berechnen. Die dazugehörigen Fehler erhält man aus \eqref{eq:err_k2} und \eqref{eq:err_f}. Daraus resultieren die Ergebnisse aus Tabelle \ref{tab:versuch2}. Im Mittel liegt die Zahl der Freiheitsgrade bei $ \bar f = \num{5.51(56)} $.
+\begin{table}[H]
 \centering
 \sisetup{table-figures-integer = 1, table-figures-uncertainty = 1, table-figures-decimal = 1}
 \begin{tabular}{
@@ -125,8 +162,12 @@ bestimmen.
 8,5 \pm 0,1 & 2,3 \pm 0,1 & 1,371 \pm 0,023 & 5,39 \pm 0,34 \\
 8,2 \pm 0,1 & 2,3 \pm 0,1 & 1,390 \pm 0,025 & 5,13 \pm 0,33
 \end{tabular}
-\caption{Messwerte...}
+\caption{Ergebnisse für $ \kappa $ und $ f $}
+\label{tab:versuch2}
 \end{table}
 
 \newpage
 \section{Diskussion} 
+
+\subsection{Bestimmung von $ \kappa $ nach Clément-Desormes}
+Da Stickstoff und Sauerstoff, die beiden Haupbestandteile der Luft, beides zweiatomige Gase sind, wären $ 5 $ Freiheitsgrade zu erwarten gewesen. Jedoch streuten unsere Messwerte zwischen \num{5.13} und \num{5.85}, bei einem Mittelwert von \num{5.51}. Somit läge nach unseren Ergebnissen nicht nur die erwartete Zahl im Konfidenzintervall, sondern auch \num{6} Freiheitsgrade.\\

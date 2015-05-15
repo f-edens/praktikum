@@ -1,13 +1,31 @@
 \label{anhang}
 
 \subsection{Fehlerrechnung}
-In diesem Versuch werden alle Messgrößen linear oder anti-proportional berechnet. Daher ist der Fehler aller vorkommenden Größen $ y(x_1, \dots, x_n) $ gegeben durch
+Für Messgrößen $ y(x_1, \dots, x_n) $, die von $ x_i $ nur proportional und anti-proportional abhängen, ist die Fehlerfortpflanzung gegeben durch
 \begin{equation}
 	\Delta y = \sqrt{\sum_{i=1}^{n}\left(y\frac{\Delta x_i}{x_i}\right)^2} 
-		= |y|\sqrt{\sum_{i=1}^{n}\left(\frac{\Delta x_i}{x_i}\right)^2}  \label{eq:err}
+		= |y|\sqrt{\sum_{i=1}^{n}\left(\frac{\Delta x_i}{x_i}\right)^2}  \label{eq:err_lin}
+\end{equation}\\
+
+\subsubsection{Adiabatenexponent im Clément-Desormes-Versuch}
+Der Adiabatenexponent ist gegeben durch
+\begin{equation*}
+\kappa = \frac{h_1}{h_1 - h_3} = \frac{1}{1 - \frac{h_3}{h_1}}
+\end{equation*}
+
+Aus der gauß'schen Fehlerfortpflanzung folgt
+\begin{equation}
+	\Delta \kappa = \kappa^2\sqrt{\left(\frac{h_3}{h_1^2}\Delta h_1\right)^2 + \left(\frac{1}{h_1}\Delta h_3\right)^2} \label{eq:err_k2}
 \end{equation}
-
-
+\subsubsection{Freiheitsgrade im Clément-Desormes-Versuch}
+Die Zahl der Freiheitsgrade ist gegeben durch
+\begin{equation*}
+	f = 2\frac{h_1 - h_3}{h_3} = 2\left(\frac{h_1}{h_3} - 1\right)
+\end{equation*}
+Aus der gauß'schen Fehlerfortpflanzung folgt
+\begin{equation}
+	\Delta f = 2\sqrt{\left(\frac{\Delta h_1}{h_3}\right)^2 + \left(\frac{h_1}{h_3^2}\Delta h_3\right)^2} \label{eq:err_f}
+\end{equation}
 
 %Links zu den Dokumentationen der verwendeten Pakete.
 %

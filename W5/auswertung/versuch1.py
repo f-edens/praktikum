@@ -5,7 +5,7 @@ import numpy as np
 
 from pythonUtils import data
 
-input_file = "ar.data"
+input_file = "co2.data"
 
 
 def main():
