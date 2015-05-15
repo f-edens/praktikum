@@ -1,0 +1,115 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twoside,ngerman]{scrartcl}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=25mm,lmargin=20mm,rmargin=10mm}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm}
+
+\makeatother
+
+\begin{document}
+\newpage{}
+
+
+\section{Einleitung}
+
+In diesem Versuch wird der Adiabatenexponent $\kappa$ mit Hilfe zweier
+Methoden bestimmt.
+
+Essentiell sind hier die Poissonschen Gleichungen, welche Druck, Volumen
+und Temperatur bei adiabatischen Zustandsänderungen verknüpfen. Die
+Poissonschen Gleichungen lauten,
+
+\[
+T\cdot V^{\kappa-1}=const'
+\]
+\begin{equation}
+p\cdot V^{\kappa}=const''\label{eq:Poisson}
+\end{equation}
+\[
+\frac{T^{\kappa}}{p^{\kappa-1}}=const'''
+\]
+
+
+unter Verwendung dieser Gleichungen lassen sich geschlossene Formeln
+für $\kappa$ herleiten.
+
+$\kappa$ ist der Quotient der molaren Wärmekapazitäten $c_{m,p}$und
+$c_{m,V}$.
+
+$c_{m,p}$ist die Wärmekapazität bei konstantem Druck und $c_{m,V}$
+die Wärmekapazität bei konstantem Volumen, für $\kappa$ folgt,
+\[
+\kappa=\frac{c_{m,p}}{c_{m,V}}=\frac{f+2}{f}
+\]
+
+
+$f$ ist die Zahl der Freiheitsgrade.
+
+Die erste Methode ist die Bestimmung von $\kappa$ nach Rüchard-Flammersfeld.
+In diesem Versuchsaufbau befindet sich ein Glasrohr. welches mit einem
+Gummistopfen an einer großen Flasche befestigt ist. In die Flasche
+wird konstant entweder Luft, Argon oder CO2 hineingepumpt. Das Glasrohr
+hat auf etwa halber Höhe einen Schlitz durch den Gas entweichen kann,
+das Glasrohr besitzt die Fläche A.
+
+In diesem Rohr befindet sich ein Schwingkörper, der durch das zuströmende
+Gas und dem Schlitz zu einer harmonischen Schwingung angeregt wird.
+
+Die Kreifrequenz lässt sich herleiten zu,
+\begin{equation}
+\omega^{2}=+\frac{\kappa p_{0}A^{2}}{mV_{0}}\label{eq:Frequenz}
+\end{equation}
+
+
+mit Hilfe der Schwingungsdauer $T=\frac{2\pi}{\omega}$ folgt für
+$\kappa$,
+\begin{equation}
+\kappa=\frac{4\pi^{2}mV_{0}}{p_{0}A^{2}T^{2}}\label{eq:adiabatenexponent}
+\end{equation}
+
+
+$V_{0}$und $p_{0}$sind Volumen und Druck des Gases in der Gleichgewichtslage,
+$m$ ist die Masse des Schwingkörpers.
+
+Somit kann anhand der Schwingungsdauer des Schwingkörpers der Adiabatenexponent
+bestimmt werden.
+
+Die zweite Methode ist die Bestimmung von $\kappa$ nach Clément-Desormes.
+
+Bei dieser Methode ist ein großes Glasgefäß mit Luftgefüllt und mit
+einem Flüssigketsbarometer verbunden. Während der Belüftungshahn geschlossen
+ist wird der Druck im Gefäß erhöht.
+
+Durch richtiges Timing beim Umdrehen des Hahns kann der Expansionsprozess
+als adiabatisch angesehen werden. Durch weitere thermodynamische Überlegungen
+und Annahmen und unter der Verwendung der Poissonschen Gleichungen
+folgt für den Adiabatenexponent,
+\begin{equation}
+\kappa=\frac{h_{1}}{h_{1}-h_{3}}\label{eq:adiabatenexponent2}
+\end{equation}
+
+
+$h_{1}$ist die Höhe des Flüssigkeitsbarometers nachdem der Druck
+erhöht wurde und $h_{3}$ist die Höhe nachdem der Hahn umgedreht wurde.
+Mit Hilfe dieser Formel lässt sich mit diesem Versuchsaufbau der Adiabatenexponent
+bestimmen.
+\end{document}
