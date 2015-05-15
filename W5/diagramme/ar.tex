@@ -5,16 +5,16 @@
 				ylabel = {Schwingfrequenz $ f $ [\si{\per\second}]},
 				legend pos = south east]
 	
-	\addplot+[no marks] {0.02560155 * x + 1.90122003};
+	\addplot+[no marks] {0.02397645 * x + 1.90996119};
 	
 	\addplot+ [only marks,
 		error bars/.cd, y explicit, x explicit, x dir = both, y dir = both] table[x=x,y=y, x error = xerr, y error = yerr] {
 x	xerr	y	yerr
-0.5	0.05	1.901076716	0.0127601693
+0.5	0.05	1.9179004038	0.0128241398
 1	0.05	1.9361778415	0.0137399449
 1.5	0.05	1.9498607242	0.014290247
-2	0.05	1.958937653	0.014533844
-2.5	0.05	1.9487750557	0.0142776958
+2	0.05	1.9589376530	0.014533844
+2.5	0.05	1.9673348181	0.0143563879
 3	0.05	1.9813084112	0.0145182333
 	};
 	
