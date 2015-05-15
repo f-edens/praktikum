@@ -16,8 +16,8 @@ class Data:
         self.col_names = {name: i for i, name in enumerate(col_names)}
 
         if not converters:
-            self.data_source = np.genfromtxt(indata, skiprows=skip_lines,
-                                             converters=[komma_to_float for _ in col_names])
+            self.data_source = np.genfromtxt(indata, skiprows=skip_lines)
+        #                                             converters={i: komma_to_float for i in col_names})
         else:
             self.data_source = np.genfromtxt(indata, skiprows=skip_lines, converters=converters)
 
