@@ -7,6 +7,15 @@ Für Messgrößen $ y(x_1, \dots, x_n) $, die von $ x_i $ nur proportional und a
 		= |y|\sqrt{\sum_{i=1}^{n}\left(\frac{\Delta x_i}{x_i}\right)^2}  \label{eq:err_lin}
 \end{equation}\\
 
+\subsubsection{Adiabatenexponent im Rüchardt-Flammersfeld-Versuch}
+Der Adiabatenexponent ist gegeben durch \eqref{eq:adiabatenexponent}.\\
+Aus der gauß'schen Fehlerfortpflanzung folgt
+\begin{equation}
+	\Delta \kappa = \kappa \sqrt{\left(\frac{\Delta m}{m}\right)^2 + \left(\frac{\Delta V_0}{V_0}\right)^2 + \left(\frac{\Delta p_0}{p_0}\right)^2 + \left(2\frac{\Delta A}{A}\right)^2 + \left(2\frac{\Delta f}{f}\right)^2} \label{eq:err_k}
+\end{equation}
+
+
+
 \subsubsection{Adiabatenexponent im Clément-Desormes-Versuch}
 Der Adiabatenexponent ist gegeben durch
 \begin{equation*}
@@ -25,6 +34,13 @@ Die Zahl der Freiheitsgrade ist gegeben durch
 Aus der gauß'schen Fehlerfortpflanzung folgt
 \begin{equation}
 	\Delta f = 2\sqrt{\left(\frac{\Delta h_1}{h_3}\right)^2 + \left(\frac{h_1}{h_3^2}\Delta h_3\right)^2} \label{eq:err_f}
+\end{equation}
+Wenn man dagegen $ f $ aus $ \kappa $ bestimmt mit \begin{equation*}
+	f = \frac{2}{\kappa-1}
+\end{equation*}
+gilt
+\begin{equation}
+\Delta f = \left|\frac{2}{(\kappa-1)^2}\Delta\kappa\right| \label{eq:err_f2}
 \end{equation}
 
 %Links zu den Dokumentationen der verwendeten Pakete.
