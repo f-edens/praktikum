@@ -89,6 +89,22 @@ f = 2\frac{h_1 - h_3}{h_3}
 
 \subsection{Bestimmung von $ \kappa $ nach Rüchardt-Flammersfeld}
 \subsubsection{Durchführung}
+Um den Adiabetenexponent nach Rüchardt-Flammersfeld zu bestimmen,
+wird in die große Flasche ein Gas gepumpt. Dadurch wird der Schwingkörper
+nach oben gedrückt. Wenn der Schwingkörper über dem Schlitz im Glasrohr
+gelangt, entweicht das Gas dort hindurch. Das führt dazu, dass der
+Druck abnimmt und der Schwingkörper nach unten fällt. Je nach Art
+des Gases fällt dieser mehr oder weniger tief hinunter und wird anschließend
+wieder hochgedrückt - eine harmonische Schwingung entsteht.
+
+Nun wird die Zeit gemessen in der etwas 100 Schwingungen gezählt werden,
+daraus lässt sich die Frequenz der Schwingung und somit auch der Adiabatenexponent
+bestimmen.
+
+Es werden die Gase Argon (einatomig, 3 Freiheitsgrade),Luft(in Näherung
+zweiatomig, 5 Freiheitsgrade) und CO2(dreiatomig, gestreckt, 5 Freiheitsgrade)
+verwendet. Durch zwei Schellen am Glasrohr lässt sich die Spaltbreite
+variieren. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{./bilder/versuch1}
@@ -96,18 +112,27 @@ f = 2\frac{h_1 - h_3}{h_3}
 \label{fig:aufbau1}
 \end{figure}
 
-\def\vFlasche{5000}
+\def\vFlasche{5350}
 
 \subsubsection{Auswertung}
-Wenn der Schellenabstand verschwindet lässt sich mit \eqref{eq:adiabatenexponent} der Adiabatenexponent $ \kappa $ aus der Masse des Schwingkörpers, Volumen des Komprimierten Gases und dem Druck im Gleichgewicht zusammen. Die Masse des Schwingkörpers kann direkt gewogen werden und beträgt bei uns $ m = \SI{7,19(1)}{\g} $. Das Volumen setzt sich additiv aus dem Volumen der Flasche $ V_F = \SI{\vFlasche}{\cubic\centi\metre} $ und dem Volumen des Rohres zusammen. Das Volumen des Rohres wird aus Radius $ r $ und Höhe $ h $ bis zu Schlitz berechnet. Das ergibt $ V_R = \pi r^2 h = \SI{94,9(16)}{\cubic\centi\meter} $. Das Gesamtvolumen beträgt somit $ V = \dots $. %todo: Nachtragen
+Wenn der Schellenabstand verschwindet lässt sich mit \eqref{eq:adiabatenexponent} der Adiabatenexponent $ \kappa $ aus der Masse des Schwingkörpers, Volumen des Komprimierten Gases und dem Druck im Gleichgewicht zusammen. Die Masse des Schwingkörpers kann direkt gewogen werden und beträgt bei uns $ m = \SI{7,19(1)}{\g} $. Das Volumen setzt sich additiv aus dem Volumen der Flasche $ V_F = \SI{\vFlasche}{\cubic\centi\metre} $ und dem Volumen des Rohres zusammen. Das Volumen des Rohres wird aus Radius $ r $ und Höhe $ h $ bis zu Schlitz berechnet. Das ergibt $ V_R = \pi r^2 h = \SI{94,9(16)}{\cubic\centi\meter} $. Das Gesamtvolumen beträgt somit $ V = \SI{5444,9 +- 1,6}{\cubic\centi\meter} $. %todo: Nachtragen
 Der Druck $ p_0 $ setzt sich zusammen aus dem Umgebungsdruck von $ p_L = \SI{1011.7(1)}{\hecto\pascal} $ und dem von der Masse ausgeübten Druck $ p_m = \frac{mg}{A} = \frac{mg}{\pi r^2} = \SI{352,9 +- 4.5}{\pascal} $. Somit ist $ p_0 = \SI{1015.43 +- .15}{hPa} $.\\
 Um die Frequenz zu ermitteln wird mit einem \textit{Least-Squares-Fit} eine Ausgleichsgerade durch die Messwerte gelegt. An den Abbildungen \ref{fig:luft} bis \ref{fig:co2} lässt sich damit der für eine verschwindene Spaltbreite extrapolierte Wert grafisch Ablesen.\\
-Die so ermittelten Frequenzen betragen $ f_\mathrm L = \SI{1.880(15)}{\per\second} $ für Luft, \newline $ f_\mathrm{Ar} = \SI{1.910(15)}{\per\second} $ für Argon und $ f_{\mathrm{CO}_2} =~??? $ für \ch{CO2}. Setzt man dies mit den anderen Werten in \eqref{eq:adiabatenexponent} ein, erhält man die Adiabatenexponenten \newline
-\begin{tabular}{l@{$~=~$}S[table-figures-integer = 1, table-figures-decimal = 3, table-figures-uncertainty = 3, table-number-alignment=left]}
-$ \kappa_\mathrm{Luft} $ &  \\
-$ \kappa_\mathrm{Ar} $ & \\
-$ \kappa_{\mathrm{CO}_2} $
+Die so ermittelten Frequenzen betragen $ f_\mathrm L = \SI{1.880(15)}{\per\second} $ für Luft, \newline $ f_\mathrm{Ar} = \SI{1.900(15)}{\per\second} $ für Argon und $ f_{\mathrm{CO}_2} = \SI{1.86 +- .03}{\per\second} $ für \ch{CO2}.
+Bei \ch{CO2} wurde dabei eine weitere Ausgleichsgerade verwendet, die nicht alle Messungen mit gleicher Gewichtung berücksichtigt. Diese Vorgehen wurde gewählt, da aufgrund der Ergebnisse von Luft und Argon von einem linearen Zusammenhang ausgegangen wird. Da dieser sonst nicht gegeben ist, gehen wir von auftretenden Messfehlern aus, die wir so kompensieren wollen.
+Setzt man dies mit den anderen Werten in \eqref{eq:adiabatenexponent} und \eqref{eq:err_k} ein, erhält man die Adiabatenexponenten \newline
+\begin{tabular}{l@{$~=~$}S[table-figures-integer = 1, table-figures-decimal = 2, table-figures-uncertainty = 2, table-number-alignment=left]}
+$ \kappa_\mathrm{Luft} $ & 1,34 +- 0,04 \\
+$ \kappa_\mathrm{Argon} $ & 1,38 +- 0,05 \\
+$ \kappa_{\mathrm{CO}_2} $ & 1,31 +- 0,06
+\end{tabular}\\
+Daraus erhält man mit \eqref{eq:freiheitsgrade} und \eqref{eq:err_k2} die Zahl der Freiheitsgrade: \newline
+\begin{tabular}{l@{$~=~$}S[table-figures-integer = 1, table-figures-decimal = 1, table-figures-uncertainty = 1, table-number-alignment=left]}
+	$ f_\mathrm{Luft} $ & 5,9 +- 0,8 \\
+	$ f_\mathrm{Argon} $ & 5,3 +- 0,6 \\
+	$ f_{\mathrm{CO}_2} $ & 6,5 +- 1,2
 \end{tabular}
+
 \begin{figure}[H]
 \centering
 \input{diagramme/luft.tex}
@@ -145,7 +170,7 @@ Bei der Erwärmung baut sich wieder ein Druck auf und man ließt am Manometer $ 
 \end{figure}
 
 \subsubsection{Auswertung}
-Aus $ h_1 $ und $ h_3 $ lassen sich mit \eqref{eq:adiabatenexponent2} und \eqref{eq:freiheitsgrade} Adiabatenexponent und Anzahl der Freiheitsgrade direkt berechnen. Die dazugehörigen Fehler erhält man aus \eqref{eq:err_k2} und \eqref{eq:err_f}. Daraus resultieren die Ergebnisse aus Tabelle \ref{tab:versuch2}. Im Mittel liegt die Zahl der Freiheitsgrade bei $ \bar f = \num{5.51(56)} $.
+Aus $ h_1 $ und $ h_3 $ lassen sich mit \eqref{eq:adiabatenexponent2} und \eqref{eq:freiheitsgrade} Adiabatenexponent und Anzahl der Freiheitsgrade direkt berechnen. Die dazugehörigen Fehler erhält man aus \eqref{eq:err_k2} und \eqref{eq:err_f}. Daraus resultieren die Ergebnisse aus Tabelle \ref{tab:versuch2}. Im Mittel liegt die Zahl der Freiheitsgrade bei $ \bar f = \num{5.51(56)} $ und der Adiabatenexponent bei $ \bar\kappa_\mathrm{Luft} = \num{1.36 +- .04} $.
 \begin{table}[H]
 \centering
 \sisetup{table-figures-integer = 1, table-figures-uncertainty = 1, table-figures-decimal = 1}
@@ -168,9 +193,21 @@ Aus $ h_1 $ und $ h_3 $ lassen sich mit \eqref{eq:adiabatenexponent2} und \eqref
 
 \newpage
 \section{Diskussion} 
+\newcommand{\coz}{\ch{CO2}}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l@{$~=~$}S[table-figures-integer = 1, table-figures-decimal = 2, table-figures-uncertainty = 2, table-number-alignment=left]}
+		$ \kappa_\mathrm{Luft} $ & 1,40 \\
+		$ \kappa_\mathrm{Argon} $ & 1,67  \\
+		$ \kappa_{\mathrm{CO}_2} $ & 1,29 
+	\end{tabular}
+	\caption{Literaturwerte für Adiabentenindizes (Quelle: \cite{wiki:adiabat})}
+\end{table}
 \subsection{Bestimmung von $ \kappa $ nach Rüchardt-Flammersfeld}
-Zumindest qualitativ haben wir durch den Versuch ein zu erwartendes Ergebnis erhalten. Während \ch{CO2} die höchste Anzahl von Freiheitsgraden hat, hat Argon die geringste und Luft liegt dazwischen. Jedoch ließen sich die genauen Werte nicht bestätigen. Dies könnte daran liegen, dass der Versuch zu Anfällig auf äußere Störungen reagiert. Wir konnten bei der Durchführung beobachten, dass der Schwingkörper schon bei geringfügig zu wenig Druck auf Höhe des Schlitzes feststecken konnte. \\
-Auch die systematischen Fehler sind unter Umständen zu hoch, um ein eindeutiges Ergebnis zu erhalten. Bei den bei uns auftretenden Fehlern in der Größenordnung von $ \num{.5} $ kann auch bei ansonsten guten Werten möglicherweise zwischen zwei ganzen Zahlen unterschieden werden. 
+Zumindest qualitativ haben wir durch den Versuch ein zu erwartendes Ergebnis erhalten. Während \ch{CO2} die höchste Anzahl von Freiheitsgraden hat, hat Argon die geringste und Luft liegt dazwischen. Jedoch ließen sich die genauen Werte nicht bestätigen.
+Während der Literaturwert für \coz gut innerhalb des Konfidenzintervalls unseres Wertes liegt, und für Luft nur knapp außerhalb, ist die Abweichung bei Argon sehr deutlich. Auch fällt auf, dass unsere Werte deutlich dichter beieinander liegen als die Literaturwerte. Dies könnte daran liegen, dass der Versuch zu Anfällig auf äußere Störungen reagiert, so dass der Einfluss des verwendeten Gases vermindert wird. Wir konnten bei der Durchführung beobachten, dass der Schwingkörper schon bei geringfügig zu wenig Druck auf Höhe des Schlitzes feststecken konnte. \\
+Auch die systematischen Fehler sind unter Umständen zu hoch, um ein eindeutiges Ergebnis zu erhalten. Das haben wir bei \coz unter Umständen selbst verschuldet, da wir nicht alle Messwerte einbeziehen konnten. Jedoch können auch die bei Luft und Argon auftretenden Fehler der Größenordnung von mehr als $ \num{.5} $ bei ansonsten guten Werten möglicherweise kein genaues Ergebnis liefern. 
 
 \subsection{Bestimmung von $ \kappa $ nach Clément-Desormes}
-Da Stickstoff und Sauerstoff, die beiden Haupbestandteile der Luft, beides zweiatomige Gase sind, wären $ 5 $ Freiheitsgrade zu erwarten gewesen. Jedoch streuten unsere Messwerte zwischen \num{5.13} und \num{5.85}, bei einem Mittelwert von \num{5.51}. Somit läge nach unseren Ergebnissen nicht nur die erwartete Zahl im Konfidenzintervall, sondern auch \num{6} Freiheitsgrade.\\
+Da Stickstoff und Sauerstoff, die beiden Haupbestandteile der Luft, beides zweiatomige Gase sind, wären $ 5 $ Freiheitsgrade zu erwarten gewesen. Jedoch streuten unsere Messwerte zwischen \num{5.13} und \num{5.85}, bei einem Mittelwert von \num{5.51}. Somit läge nach unseren Ergebnissen nicht nur die erwartete Zahl im Konfidenzintervall, sondern auch \num{6} Freiheitsgrade. Entsprechend liegt auch für den Adiabatenexponent der Literaturwert gerade noch im Vertrauensintervall.\\
+Da der statistische Fehler naturgemäß abnimmt für eine größere Anzahl von Messungen, könnte man das Ergebnis durch Vergrößerung der Messreihe verbessern. Dies würde auch durch zu schnelles oder zu langsames Drehen auftretende Fehler kompensieren.

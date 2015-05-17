@@ -5,6 +5,7 @@
 				ylabel = {Schwingfrequenz $ f $ [\si{\per\second}]}]
 	
 	\addplot+[no marks] {0.00759521 * x + 1.81033195};
+	\addplot+[no marks] {-0.0187231 * x + 1.85941};
 	
 	\addplot+ [only marks,
 		error bars/.cd, y explicit, x explicit, x dir = both, y dir = both] table[x=x,y=y, x error = xerr, y error = yerr] {
@@ -17,6 +18,6 @@ x	xerr	y	yerr
 .5	0.05	1.8266413924	0.0127833737
 	};
 	
-	\legend{$ {\num{0.0076}\cdot b + \num{1.8104}} $, Messwerte};
+	\legend{$ {\num{0.0076}\cdot b + \num{1.8104}} $, $ \num{-0.0187} \cdot b + \num{1.8594} $, Messwerte};
 \end{axis}
 \end{tikzpicture}
