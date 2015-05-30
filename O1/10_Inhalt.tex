@@ -1,0 +1,33 @@
+\section{Einleitung}
+
+\begin{equation}
+	n = \frac{\sin \frac{\alpha + \delta_m}{2}}{\sin \delta_m} \label{eq:brech_pris}
+\end{equation}
+mit \begin{equation}
+	\delta_m  = \arctan \frac{x_m}{y_m} \label{eq:delta}
+\end{equation}
+
+\newpage
+\section{Auswertung}
+\subsection{Demoversuch}
+
+Die folgenden Versuche wurden mit zwei Lasern durchgeführt. Der im Folgenden als "roter Laser" bezeichnete Laser hat auf dem Gerät eine Wellenlänge von $\lambda = \SIrange{630}{680}{\nano\meter} $ angegeben. Der andere Laser, im Folgenden als "blauer Laser" bezeichnet, hat auf dem Gerät keine Wellenlänge angegeben. Daher wird die Angabe aus der Versuchsanleitung \cite[9]{anleitung2015} $ \lambda = \SI{405}{\nano\meter} $ angenommen.
+\subsection{Brechung am Prisma}
+In diesem Versuch wird der Brechungsindex eines Prismas aus Flintglas bestimmt. Dieser kann mit Hilfe von \eqref{eq:brech_pris} aus dem minimalen Ablenkungswinkel $ \delta_m $ und dem Innenwinkel des Prismenquerschnittes $ \alpha $ berechnet werden. Da das Prisma im Querschnitt ein gleichseitiges Dreieck ist, ist der Innenwinkel $ \alpha = \SI{60}{\degree} $. Um $ \delta_m $ zu bestimmen dreht man das Prisma so lange im Lichtstrahl, bis der Ablenkwinkel nicht mehr kleiner wird. Nun misst man die Abstände in $ x $- und $ y $-Richtung eines Punktes im Abgelenkten Strahl vom Prisma und erhält aus \eqref{eq:delta} den Ablenkwinkel. \\
+Unsere Ergebnisse sind in Tabelle \ref{tab:prisma} zu finden. Die dazugehörigen Fehlerrechnungen \eqref{eq:err:delta} und \eqref{eq:err:npris} sind im Anhang zu finden.
+
+\begin{table}[h]
+\centering
+\sisetup{table-figures-decimal = 1, table-figures-integer = 2, table-number-alignment = right, table-figures-uncertainty = 1}
+\begin{tabular}{r|SSSS[table-figures-decimal = 3, table-figures-integer = 1]}
+Laserfarbe & {$ x_m $ [\si{cm}]} & {$ y_m $ [\si{cm}]} 
+& {$ \delta_m $ [\si{\degree}]} & {$ n $} \\\hline
+rot & 58.0(5) & 54.0(5) & 47.0(4) & 1.608(4) \\
+blau & 57.5(5) & 47.0(5) & 50.7(4) & 1.646(4)
+\end{tabular}
+\caption{Prisma...}
+\label{tab:prisma}
+\end{table}
+
+\newpage
+\section{Diskussion} 
