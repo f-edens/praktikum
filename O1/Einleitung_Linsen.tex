@@ -1,0 +1,71 @@
+\section{Einleitung}
+In diesem Versuch wird das Verhalten von Licht, dass auf unterschiedliche Arten von optischen Komponenten manipuliert wird, untersucht.
+Obwohl Licht eine Welle ist wird es in diesem Versuch als Strahl angesehen, also Linien im Raum, daher geometrische Optik.
+Die verwendeten optischen Komponenten sind: ein Prisma, ein Gitter, eine Sammellinse und eine Streulinse.
+Das Prisma besteht aus Flintglas und ist gleichseitig (\alpha=60°).
+Für den Ablenkwinkel gilt,
+\begin{equation}
+\delta(\lambda)=\vartheta+\arcsin [(\sin \alpha)(n(\lambda)^{2}-\sin^{2}\vartheta)^{\frac{1}{2}}-\sin\varthetac \cos\alpha]-\alpha \label{eq:delta}
+\end{equation}
+Wird der Ablenkwinkel minimal lässt sich daraus der Brechungsindex des Materials bestimmen durch,
+\begin{equation}
+n = \frac{\sin \frac{\alpha + \delta_m}{2}}{\sin \delta_m} \label{eq:brech_pris}
+\end{equation}
+Hierbei ist \vartheta der Einfallswinkel, \alpha der Apexwinkel und \delta der Ablenkwinkel, dieser verändert sich außerdem mit der Wellenlänge des Lichts.
+Es fällt Licht einer bestimmten Wellenlänge \lambda auf ein Gitter mit Gitterkonstanten \textit{g}=Lückenabstand, es entsteht ein Interferenzmuster.
+Es wird der Winkel für das erste Hauptmaxima gemessen, die allgemeine Gleichung lautet:
+\begin{equation}
+\sin\vartheta_{max}=m\frac{\lambda}{g}
+\end{equation}
+Dieser Versuch wird einmal mit Luft in der Halbkreisküvette durchgeführt und einmal mit Wasser. Aus der unterschiedlichen Ablenkwinkeln \vartheta_{max} lässt sich der Brechungsindex von Wasser bestimmen, es gilt
+\begin{equation}
+\frac{\lambda}_{Wasser}{•\lambda_{Luft}}=n_{Wasser} \label{Brechungsindex_wasser}
+\end{equation}
+Für die nächste optische Komponente, die Linse, gilt nach einigen Approximationen und Rechenschritten die Linsengleichung,
+\begin{equation}
+\frac{1}{f}=\frac{1}{b}+\frac{1}{g} \label{Linsenglg}
+\end{equation}
+hierbei ist \textit{f}, die Brennweite, \textit{g} die Gegenstandsweite und \textit{b} die Bildweite.
+Für Linsensysteme die aus zwei Einzellinsen mit Brennweiten \textit{f}_{1} und \textit{f}_{2}, gilt für die Gesamtbrennweite,
+\begin{equation}
+\frac{1}{f}=\frac{1}{f_{1}}+\frac{1}{f_{2}}-\frac{d}{f_{1}f_{2}} \label{linsensystem}
+\end{equation}
+\textit{d} ist hier der Abstand der Linsen voneinander.
+Da die Linsengleichung nur unter sehr eingeschränkten Bedingungen eine ausreichende Genauigkeit hat, wird es in vielen Fällen Abweichungen geben. Diese werden als Linsenfehler bezeichnet.
+Weitere Quellen für Fehler sind die Chromatische und die Sphärische Aberration.
+Die Chromatische Aberration tritt auf, da der Brechungsindex Wellenlängenabhängig ist, somit ist auch die Brennweite Wellenlängenabhängig, dabei gilt,
+\begin{equation}
+n_{rot}<n_{blau}\Rightarrow f_{rot}>f_{blau}
+\end{equation}
+also je niedriger der Brechungsindex, desto höher die Brennweite.
+Da die Lichtstrahlen unterschiedliche Abstände von der optischen Achse haben und somit auf unterschiedlichen Abständen vom Zentrum der Linse auftreffen, werden diese auch unterschiedlich auf der optischen Achse fokussiert. Dies wird Sphärische Aberration gennant.
+Allgemein gilt hierbei das die Strahlen die auf den Rand treffen eine geringere Brennweite haben als Strahlen die näher am Zentrum sind, also
+\begin{equation}
+|f_{Rand}|<|f_{Zentrum}
+\end{equation}
+
+\newpage
+\section{Auswertung}
+\subsection{Linsen}
+Nun sollen zwei Linsen untersucht werden, eine Sammel- und eine Streulinse. Zunächst wird die Art der Linse bestimmt um die es sich handelt. Unsere Beobachtungen zeigen, dass die größere der beiden Linsen die Sammellinse und die kleinere der Linsen die Streulinse ist.
+Das ist daran zu erkennen, dass beim durchgucken durch die Sammellinse das Bild auf dem Kopf steht und dies ist charakteristisch für Sammellinsen.
+Außerdem ist das Bild, welches von der kleineren Linse erzeugt wird unscharf, was darauf schließen lässt, dass es sich um eine Streulinse handelt.
+Für die Brennweite der Sammellinse haben wir $ f=(9\pm1)\si{cm} $ gemessen. Das heißt, dass der fokussierte Strahl über 2cm Konstant gleichstark fokussiert war. Dieser Fehler ist relativ groß, der Grunde hierfür sind sowohl die Sphärische Aberration und der Linsenfehler.
+Im nächsten Schritt wird ein Linsensystem aus den beiden Linsen gebildet, welches den Laserstrahl kollimiert, also die Strahlen Parallel das System verlassen.
+Damit ergibt sich eine Gesamtbrennweite von $ f=\infty $.
+Der Abstand der Linsen von einander beträgt $ d=(6\pm0,3) \si{cm} $ somit folgt für \eqref{linsensystem},
+\begin{equation}
+0=\frac{1}{(9\pm1=\si{cm}}+\frac{1}{f_{2}}-\frac{(6\pm0,3)\si{cm}}{(9cm\pm1)\si{cm} f_{2}}
+\end{equation}
+also gilt, $ f_{2}=d-f_{1} $ \Rightarrow $ f_{2}=(-3\pm0,7) \si{cm} $, eine negative Brennweite ist für eine Streulinse charakteristisch.
+Im letzten Aufgabenteil wird ein aufgeweiteter Lichtstrahl durch die Sammellinse geschickt, dabe wird ders Strahl nicht mittig durch die Linse geschickt und die Linse wird gekippt.
+Zunächst ist klar, dass falls der Strahl durch die Mitte geht, dieser fokussiert wird. Wird nun der Strahl nicht mittig durch geschickt, so wird der Strahl ebenfalls fokussiert, aber zusätzlich wird dieser in die Richtung abgelenkt, in welche die Linse bewegt wurde.
+Wird die Linse nun gekippt (sowohl Senkrecht als auch Horizontal) entstehen senkrechte Striche, es liegt also Astigmatismus vor.
+
+
+
+
+\newpage
+\section{Diskussion} 
+Durch die Sphärische Aberration weist die Sammellinse einen relativ großen Bereich auf in dem der  Strahls konstant Fokussierung bleibt, somit ist die Brennweite nicht auf einen scharfen Punkt beschränkt sondern unscharf. 
+
