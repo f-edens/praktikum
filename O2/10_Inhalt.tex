@@ -2,6 +2,32 @@
 Diese Versuchsreihe befasst sich mit den verschiedenen Eigenschaften von Mikrowellenstrahlung. Mikrowellenstrahlung bezeichnet elektromagnetische Wellen im Wellenlängenbereich von etwa \SI{1}{\milli\meter} bis \SI{30}{\centi\meter}. Der Frequenzbereich von Mikrowellen beträgt etwa \SIrange{1}{300}{\giga\hertz}. Mikrowellenstrahlung findet im Alltag Einsatz in der Funkübertragung (zum Beispiel : WLAN, Mobilfunk) und im Mikrowellenherd.
 \subsection{Strahldivergenz}
 Der Strahlenemitter der in den Versuchen verwendet wird ist konzipiert, um einen möglichst kollimierten Strahl zu emittieren. Jedoch ist perfekte Fokussierung in der Praxis nicht möglich. Stattdessen werden die Mikrowellen unter einem Öffnungswinkel $ \Theta $ ausgesandt. Diesen Winkel bezeichnet man als Strahlendivergenz.
+\subsection{Stehende Welle durch Reflektion}
+Wird eine ebene Welle an einer zur Ausbreitungsrichtung senkrechten Fläche reflektiert, entsteht in der Reflektionsebene eine Welle mit entgegengesetzter Ausbreitungsrichtung und Phasenunterschied $ \Delta = \pi $. Zusammen mit der einfallenden Welle bildet dies eine stehende Welle. Diese hat immer einen Knoten in der Reflektionsebene. Definiert man den Knoten in der Reflektionsebene als 0. Knoten, dann gilt für den Abstand $ d $ des $ n $-ten Knotens von der Reflektionsebene
+\begin{equation}
+	d = n \frac{\lambda}{2}
+\end{equation}
+\subsection{Braggsche Refexion}
+Bei der braggschen Reflexion trifft eine ebene Welle unter dem sogenannten Glanzwinkel $ \alpha $ auf ein Gitter aus (in diesem Fall) Metallkugeln. Diese sind auf mehreren Ebenen verteilt, der Abstand wird Netzebenenabstand genannt und mit \textit{d} bezeichnet.
+Wenn eine Welle in ein solches Gitter einfällt so wird ein Teil von ihr an der ersten Ebene der Metallkugeln reflektiert, die nicht-reflektierte Strahlung wird an einer der folgenden Ebenen reflektiert. Also reflektiert jede Netzebene eine ebene Welle. Diese Wellen sind phasenverschoben und interferieren miteinander. Konstruktive Interferenz tritt auf wenn gilt,
+\begin{equation}
+2\textit{d}\sin \alpha=n\lambda
+\end{equation}
+also wenn der Gangunterschied zweier benachbarter Netzebenen reflektierten Wellen ein ganzzahliges Vielfaches der Wellenlänge beträgt.
+\subsection{Totalreflexion und Evaneszente Welle}
+Von Totalreflexion wird gesprochen, wenn ein Lichtstrahl aus einem optisch dichterem Medium in ein optisch dünneres Medium ($ n_{1}>n_{2} $) eindringt und der transmittierte Strahl mit einem Winkel von $ \SI{90}{\degree} = \vartheta_{2} $ gebrochen wird, somit entsteht kein transmittierender Strahl.
+Aus dem Brechungsgesetz,
+\begin{equation}
+n_{1}\sin \vartheta_{1}=n_{2}\sin\vartheta_{2}
+\end{equation}
+folgt mit $ \vartheta_{2}=\SI{90}{\degree} $
+\begin{equation}
+\sin\vartheta_{T}=\frac{n_{2}}{n_{1}}
+\end{equation}
+Falls $ \vartheta_{1}>\vartheta_{T} $ ist, dann wird \SI{100}{\percent} der einfallenden Welle Reflektiert.
+Allerdings existiert auch im Fall der Totalreflexion eine Welle im Medium 2, diese propagiert allerdings parallel zu Grenzfläche. Diese Welle wird allerdings im Abstand von wenigen Wellenlängen vernachlässigbar klein. Diese Welle wird \textit{evaneszente} Welle genannt.
+Wird nun ein drittes Medium mit $ n_{3}>n_{2} $ so nah an Medium 1 heran, dass die evaneszente Welle eine im Verhältnis große Amplitude hat, kann diese durch Medium 2 in das Medium 3 propagieren und sich dort fortsetzten. Dies wird \textit{frustrierte Totalreflexion} genannt.
+
 \newpage
 \section{Auswertung}
 
