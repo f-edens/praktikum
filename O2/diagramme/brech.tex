@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\begin{axis}[xmin = 0, ymin = 0, xmax = 1,
+	legend pos = south east, width = .8\textwidth, height = 8cm,
+	xlabel = $ \sin\vartheta_1 $,
+	ylabel = $ \sin\vartheta_2 $]
+	
+	\addplot+[no marks, ] {1/1.7924933055*x};
+	\addplot+[mark = +,only marks, error bars/.cd, x dir = both, x explicit, y dir=both, y explicit] table[x=x,y=y, x error = xerr, y error = yerr] {
+x	y	xerr	yerr
+0.4067366431	0.2079116908	0.0015944376	0.0170718962
+0.5735764364	0.3420201433	0.00142969	0.0164007302
+0.7071067812	0.4067366431	0.0012341341	0.0159443761
+0.8191520443	0.4539904997	0.0010010797	0.0155509975
+0.8660254038	0.4848096202	0.0008726646	0.0152649936
+};
+\legend{{$ \frac{1}{\num{1.79}}x $}, Messwerte}
+\end{axis}
+\end{tikzpicture}

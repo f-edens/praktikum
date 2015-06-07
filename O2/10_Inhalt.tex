@@ -19,7 +19,10 @@ Analog zu Licht an Linsen werden auch Mikrowellen an Grenzflächen gebrochen. Zw
 \begin{equation}
 	n_{1}\sin \vartheta_{1}=n_{2}\sin\vartheta_{2}
 \end{equation}
-Dabei sind $ n_1 $ und $ n_2 $ die Brechungsindizes der beiden Medien. Allgemein gilt, dass für einen Übergang von einem optisch dichteren Medium in ein optisch weniger dichtes ($ n_1 > n_2 $), das Licht vom Lot weg gebrochen wird. Ansonsten wird es zum Lot hin gebrochen.
+Dabei sind $ n_1 $ und $ n_2 $ die Brechungsindizes der beiden Medien. Allgemein gilt, dass für einen Übergang von einem optisch dichteren Medium in ein optisch weniger dichtes ($ n_1 > n_2 $), das Licht vom Lot weg gebrochen wird. Ansonsten wird es zum Lot hin gebrochen. Sind Ein- und Ausfallwinkel bekannt, so lässt sich daraus das Verhältnis der Brechungsindizes der Medien bestimmen. Es gilt
+\begin{equation}
+	\frac{n_2}{n_1} = \frac{\sin \vartheta_1}{\sin\vartheta_2} \label{eq:n}
+\end{equation}
 \subsection{Totalreflexion und Evaneszente Welle}
 %Von Totalreflexion wird gesprochen, wenn ein Lichtstrahl aus einem optisch dichterem Medium in ein optisch dünneres Medium ($ n_{1}>n_{2} $) eindringt und der transmittierte Strahl mit einem Winkel von $ \SI{90}{\degree} = \vartheta_{2} $ gebrochen wird, somit entsteht kein transmittierender Strahl.
 %Aus dem Brechungsgesetz,
@@ -43,7 +46,28 @@ Wird nun ein drittes Medium mit $ n_{3}>n_{2} $ so nah an Medium 1 heran, dass d
 Um die Wellenlänge zu bestimmen baut man den Versuchsaufbau um, so dass Welle an einer Metallplatte reflektiert wird. Diese steht dabei senkrecht zu Ausbreitungsrichtung der Welle. Die Welle bildet zusammen mit ihrer Reflektion eine stehende Welle. Die Abstand der Intensitätsminima entspricht gemäß \eqref{eq:lambda_stehend} der halben Wellenlänge. \\
 Die Intensitätsminima lassen sich mit einer Stabantenne messen. Man verwendet hier nicht den zuvor verwendeten Detektor, da dieser die Welle zu einem deutlich größeren Teil absorbieren Würde und somit das Modell der stehenden Welle nicht mehr gelten würde. \\
 Bei der Versuchsdurchführung hat sich gezeigt, dass abweichend vom theoretischen Modell der stehenden Welle die Intensität in den Wellenknoten nicht $ 0 $ wird. Dennoch sind ab einem gewissen Abstand vom Emitter Maxima und Minima deutlich messbar. Wir fanden Minima in den Abständen \SIlist{14+-.1; 15,5+-.1; 17,2+-.1; 19+-.1; 20,2+-.1}{\centi\meter} vom Reflektor.
-\subsection{}
+\subsection{Brechungsindex von PVC}
+Das Ziel dieses Versuches ist es, die Brechzahl von PVC zu bestimmen. Dazu wird ein halbkreisförmiger PVC-Block verwendet. Der Mikrowellenstrahl wird auf den Mittelpunkt der geraden Seite des Blocks gerichtet. Dadurch fällt der Strahl senkrecht aus dem Block aus und es kommt zu keiner weiteren Ablenkung. Nun misst man für verschiedene Einfallswinkel $ \vartheta_1 $ den Winkel, unter dem die Strahlenintensität maximal wird. Dies ist der Ausfallwinkel $ \vartheta_2 $. Man erhält mit \eqref{eq:n} die Brechzahl von PVC, da $ n_\mathrm{Luft} \simeq 1 $ bekannt ist.\\
+Wir erhalten die Werte aus Tabelle \ref{tab:n}. Die Fehler wurden mit \eqref{eq:err:n} berechnet. In Abbildung \ref{fig:n} haben wir zudem $ \sin\vartheta_1 $ gegen $ \sin\vartheta_2 $ aufgetragen. Im Mittel erhalten wir $ \bar n = \num{1.79} $ bei einem Mittleren systematischen Fehler von $ \Delta \bar n = \num{.092} $ und einer Standardabweichung von $ \sigma = \num{.0931} $
+
+\begin{table}[H]
+\centering
+\sisetup{table-figures-integer=2, table-figures-decimal=2, table-number-alignment=center, table-figures-uncertainty = 2}
+\begin{tabular}{r|SSSSS}
+$ \vartheta_1 $ & 24 +- 0,1 & 35 +- 0,1 & 45 +- 0,1 & 55 +- 0,1 & 60 +- 0,1 \\
+$ \vartheta_2 $ & 12 +- 1 & 20 +- 1 & 24 +- 1 & 27 +- 1 & 29 +- 1 \\
+$ n $ & 1,96 +- 0,17 & 1,68 +- 0,09 & 1,74 +- 0,07 & 1,80 +- 0,07 & 1,79 +- 0,06
+\end{tabular}
+\caption{Ergebnisse des Brechzahlversuches}
+\label{tab:n}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\input{diagramme/brech.tex}
+\caption{$ \sin\vartheta_2 $ gegen $ \sin\vartheta_1 $ aufgetragen}
+\label{fig:n}
+\end{figure}
 \subsection{title}
 \newpage
 \section{Diskussion} 
