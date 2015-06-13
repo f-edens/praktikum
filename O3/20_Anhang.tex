@@ -1,0 +1,42 @@
+\label{anhang}
+
+\subsection{Fehlerrechnung}
+Fehler von rein proportional oder antiproportionalen Zusammenhängen lassen sich durch die Fortpflanzung der relativen Fehler berechnen.
+\begin{equation}
+	\Delta y = \sqrt{\sum_{i=1}^{n}\left(y\frac{\Delta x_i}{x_i}\right)^2} 
+		= |y|\sqrt{\sum_{i=1}^{n}\left(\frac{\Delta x_i}{x_i}\right)^2}  \label{eq:err}
+\end{equation}
+
+\subsubsection{Brechungsindex}
+Aus der gaußschen Fehlerfortpflanzung folgt für \eqref{eq:n}
+\begin{align}
+	\Delta n = \sqrt{\left(\frac{\cos \vartheta_{1}}{\sin \vartheta_{2}} \Delta \vartheta_{1}\right)^2 + \left(\frac{\cos \vartheta_{2}\sin \vartheta_{1} }{\sin^2 \vartheta_{2}} \Delta \vartheta_{2} \right)^2} \label{eq:err:n}
+\end{align}
+
+\subsubsection{Gitterkonstante}
+Aus \eqref{eq:brag} folgt mit der gaußschen Fehlerfortpflanzung
+\begin{align}
+	\Delta \frac{d}{n} = \sqrt{\left(\frac{\Delta \lambda}{2\sin\alpha}\right)^2 + \left(\frac{\lambda\cos\alpha}{\sin^2\alpha} \Delta\alpha \right)^2}
+\end{align}
+%Links zu den Dokumentationen der verwendeten Pakete.
+%
+%\begin{itemize}
+%    \item inputenc: \url{http://ctan.org/pkg/inputenc}
+%    \item fontenc: \url{http://ctan.org/pkg/fontenc}
+%    \item babel: \url{http://ctan.org/pkg/babel}
+%    \item amsmath: \url{http://ctan.org/pkg/amsmath}
+%    \item ifthenx: \url{http://ctan.org/pkg/ifthenx}
+%    \item graphicx: \url{http://ctan.org/pkg/graphicx}
+%    \item units: \url{http://ctan.org/pkg/units}
+%    \item setspace: \url{http://ctan.org/pkg/setspace}
+%    \item hyperref: \url{http://ctan.org/pkg/hyperref}
+%    \item caption: \url{http://ctan.org/pkg/caption}
+%    \item subfig: \url{http://ctan.org/pkg/subfig}
+%    \item wrapfig: \url{http://ctan.org/pkg/wrapfig}
+%    \item cite: \url{http://ctan.org/pkg/cite}
+%    \item scrpage2: \url{http://www.komascript.de/komascriptbestandteile}
+%    \item array: \url{http://ctan.org/pkg/array}
+%    \item dcolumn: \url{http://ctan.org/pkg/dcolumn}
+%\end{itemize}
+%
+%Leider wird nicht für jedes Pakete eine Dokumentation angeboten.
