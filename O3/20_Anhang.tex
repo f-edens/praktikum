@@ -7,17 +7,13 @@ Fehler von rein proportional oder antiproportionalen Zusammenhängen lassen sich
 		= |y|\sqrt{\sum_{i=1}^{n}\left(\frac{\Delta x_i}{x_i}\right)^2}  \label{eq:err}
 \end{equation}
 
-\subsubsection{Brechungsindex}
-Aus der gaußschen Fehlerfortpflanzung folgt für \eqref{eq:n}
-\begin{align}
-	\Delta n = \sqrt{\left(\frac{\cos \vartheta_{1}}{\sin \vartheta_{2}} \Delta \vartheta_{1}\right)^2 + \left(\frac{\cos \vartheta_{2}\sin \vartheta_{1} }{\sin^2 \vartheta_{2}} \Delta \vartheta_{2} \right)^2} \label{eq:err:n}
-\end{align}
+\subsubsection{Kalibrierung des Spektrometers}
+Bei der Kalibrierung des Spektrometers war es notwendig, den Sinus des Beugungswinkel zu bestimmen. Nach gaußscher Fehlerfortpflanzung ist der Fehler hierfür gegeben durch
+\begin{equation}
+	\Delta(\sin\vartheta) = \left|\cos\vartheta\cdot\Delta \vartheta\right| \label{eq:err:sin}
+\end{equation}
 
-\subsubsection{Gitterkonstante}
-Aus \eqref{eq:brag} folgt mit der gaußschen Fehlerfortpflanzung
-\begin{align}
-	\Delta \frac{d}{n} = \sqrt{\left(\frac{\Delta \lambda}{2\sin\alpha}\right)^2 + \left(\frac{\lambda\cos\alpha}{\sin^2\alpha} \Delta\alpha \right)^2}
-\end{align}
+
 %Links zu den Dokumentationen der verwendeten Pakete.
 %
 %\begin{itemize}

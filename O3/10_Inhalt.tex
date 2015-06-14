@@ -29,17 +29,35 @@ Erhitzte Körper geben ein kontinuierliches Strahlenspektrum ab. Ab Temperaturen
 \subsection{Leuchtdioden}
 Beim \textit{pn}-Übergang in Dioden müssen Elektronen das elektrische Potential der Raumladungszone überwinden. Dabei erhält die Diode die Energie $ E_G = U \cdot e $. Diese wird in Form eines Lichtquants abgegeben. Analog zur Gasentladung gilt
 \begin{equation}
-	E_G = \frac{hc}{\lambda}
+	E_G = U\cdot e = \frac{hc}{\lambda} \label{eq:theo:diode}
 \end{equation}
-Da die Energie der freien Elektronen keine diskreten Werte annimmt kommt es zu einem kontinuierlichen Strahlenspektrum in einem kleinen Wellenlängenbereich. Von Leuchtdioden ausgesandtes Licht ist nahezu monochromatisch.
+Da die Energie der freien Elektronen keine diskreten Werte annimmt kommt es zu einem kontinuierlichen Strahlenspektrum in einem kleinen Wellenlängenbereich. Von Leuchtdioden ausgesandtes Licht ist nahezu monochromatisch. Die Wellenlänge $ \lambda $ der maximalen Intensität ist antiproportional zur Energie $ E_g $ und somit auch zur Spannung $ U $
 \newpage
 \section{Auswertung}
-\subsection{Untersuchung der Natriumdampflampe mit Prismenspektrometer}
+\subsection{Prisma und Gitter}
+Wird das Prisma als optische Komponente im Spektrometer verwendet und so ausgerichtet, dass der Strahlengang symmetrisch ist. Der Spalt wird mit einer  Natriumdampflampe ausgeleuchtet. Es sind wie erwartet zwei Linien sichtbar. Diese Linien waren aber nicht gerade sondern leicht gekrümmt, was auf eine nicht ganz richtige Ausrichtung des Spektrometers zurückzuführen ist.
+Wird das Prisma durch das Transmissionsgitter mit $ g=\SI{1/300}{\milli\meter} $  ersetzt, sind Linien bis zur 4 Beugungsordnung auffindbar. Dabei ist auffällig, dass je höher die Beugungsordnung wird, desto mehr war erkennbar, dass es sich um zwei sich überschneidende Linien handelt. Diese sind nicht scharf unterscheidbar.
+\begin{tabular}{|c|c|c|}
+\hline 
+Beugungsordnung & Lage der Hauptmaxima links & Lage der Hauptmaxima rechts \\ 
+\hline 
+0 & 0 & 0 \\ 
+\hline 
+1 & 10 & 349,75 \\ 
+\hline 
+2 & 20,5 & 339,5 \\ 
+\hline 
+3 & 31,75 & 328,25 \\ 
+\hline 
+4 & 44,5 & 315,25 \\ 
+\hline 
+\end{tabular} 
+Die Fehler für die Gradzahlen betragen $ \pm 0,25 $.
+Wird das Transmissuinsgitter mit einem ausgetauscht, dessen Gitterkonstante $ g=\SI{1/600}{\milli\meter} $ so ist zu beobachten, dass die Hauptmaxima weiter auseinander gehen ( Abstände verdoppeln sich) und das die Intensität stärker abnimmt.
 
 \subsection{Quantitative Untersuchung verschiedener Spektren am Gitterspektrometer}
 Im zweiten Versuchsteil werden die Lichtspektren verschiedener Lichtquellen an einem Gitterspektrometer untersucht. Im Spektrometer wird ein Gitter mit der Gitterkonstante $ g = \SI[quotient-mode=fraction]{1/600}{\milli\meter} $ verwendet. Die verwendeten Lichtquellen sind
 \begin{itemize}
-\item Natriumdampflampe
 \item Energiesparlampe
 \item Leuchtdioden in den Farben
 \begin{itemize}
@@ -52,26 +70,111 @@ Im zweiten Versuchsteil werden die Lichtspektren verschiedener Lichtquellen an e
 \subsubsection{Kalibrierung des Spektrometers}
 Um das Spektrometer zu kalibrieren wird zunächst das Licht einer Heliumdampflampe untersucht. Da aus der Versuchsanleitung \cite{anleitung2015} die Wellenlängenaufspaltung bekannt ist, lässt sich damit ein Zusammenhang zwischen Beugungswinkel und Wellenlänge aufstellen. Die von uns gesehenen Spektrallinien sind in Tabelle \ref{tab:kalib} zu finden.\\
 \begin{table}[H]
-\centering
-\begin{tabular}{cSSS}
-Farbe & {Wellenlänge} & {Beugungswinkel $ \vartheta $ [\si{\radian}]} & {$ \sin\vartheta $}
+\centering\
+\sisetup
+{
+	table-figures-integer = 1,
+	table-figures-decimal = 3,
+	table-figures-uncertainty = 3,
+	table-number-alignment= center
+}
+\begin{tabular}{cS[table-format=3.1]SS}
+Farbe & {Wellenlänge [\si{\nano\meter}]} & {Beugungswinkel $ \vartheta $ [\si{\radian}]} & {$ \sin\vartheta $} \\\hline\hline
+indigo & 438.8 & 0,262 +- 0,005 & 0.259 +- 0.005 \\
+indigo & 447.1 & 0,271 +- 0,005 & 0.267 +- 0.005 \\
+blau & 471.3 & 0,281 +- 0,005 & 0.277 +- 0.005 \\
+grünblau & 492.2 & 0,298 +- 0,005 & 0.294 +- 0.005 \\
+grün & 501.5 & 0,310 +- 0,005 & 0.305 +- 0.005 \\
+gelb & 587.5 & 0,358 +- 0,005 & 0.350 +- 0.005 \\
+rot & 667.8 & 0,410 +- 0,005 & 0.399 +- 0.005 \\
+rot & 706.5 & 0,441 +- 0,005 & 0.427 +- 0.004
 \end{tabular}
-\caption{Spektrallinien im Spektrometer}
+\caption{Spektrallinien der Heliumdampflampe im Spektrometer}
 \label{tab:kalib}
 \end{table}
 
 Aus dem in der Theorie gegebenen Zusammenhang \eqref{eq:theo:beug} wird $ \sin\vartheta \propto \lambda $ erwartet. Daher wird die Formel
-\begin{equation*}
-	\lambda = a\cdot \sin\vartheta
-\end{equation*}
+\begin{equation}
+	\lambda = a\cdot \sin\vartheta \label{eq:kalib}
+\end{equation}
 aufgestellt. Der Proportionalitätsfaktor $ a $ wird dabei mithilfe von \textit{Gnuplot\footnote{Version 4.6 patchlevel 4 unter Linux x86\_64 \url{http://sourceforge.net/projects/gnuplot/files/gnuplot/4.6.4/}}} nach dem \textit{Least-Squares-Fit} verfahren bestimmt. Grafisch dargestellt ist dies in Abbildung \ref{fig:kalib}. Der so bestimmte Proportionalitätsfaktor beträgt $ a = \SI{1672+-6}{\nano\meter}$ 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\input{diagramme/kalib.tex}
 	\caption{Eichkurve}
 	\label{fig:kalib}
 \end{figure}
 
+\subsubsection{Spektrum der Energiesparlampe}
+In diesem Versuchsteil wird das Spektrum einer Energiesparlampe mit dem zuvor kalibrierten Spektrometer untersucht. Damit und mit der bei der Kalibration bestimmten Formel \eqref{eq:kalib} lässt sich das Wellenlängenspektrum bestimmen. Die von uns bestimmten Werte sind Tabelle \ref{tab:espar} zu entnehmen. Zur Berechnung der Fehler wurden \eqref{eq:err:sin} und \eqref{eq:err} verwendet.
+
+\begin{table}[H]
+	\centering
+	\sisetup{table-figures-integer = 1,
+		table-figures-decimal = 3,
+		table-figures-uncertainty=3,
+		table-number-alignment = center}
+	\begin{tabular}{cSSS[table-format=3+-1]}
+	Farbe & {Beugungswinkel $ \vartheta $ [\si{\radian}]} & {$ \sin\vartheta $} & {Wellenlänge $ \lambda $ [\si{\nano\meter}]}\\\hline\hline
+	rot & 0,428 +- 0,004 & 0,415 +- 0,004 & 693 +- 6 \\
+	rot & 0,417 +- 0,004 & 0,405 +- 0,004 & 677 +- 6 \\
+	rot & 0,398 +- 0,004 & 0,388 +- 0,004 & 648 +- 6 \\
+	rot & 0,382 +- 0,004 & 0,373 +- 0,004 & 623 +- 6 \\
+	orange & 0,370 +- 0,004 & 0,362 +- 0,004 & 604 +- 6 \\
+	orangegelb & 0,360 +- 0,004 & 0,352 +- 0,004 & 588 +- 6 \\
+	orangegelb & 0,358 +- 0,004 & 0,350 +- 0,004 & 585 +- 6 \\
+	orangegelb & 0,356 +- 0,004 & 0,349 +- 0,004 & 583 +- 6 \\
+	gelb & 0,349 +- 0,004 & 0,342 +- 0,004 & 572 +- 6 \\
+	grün & 0,332 +- 0,004 & 0,326 +- 0,004 & 544 +- 6 \\
+	blau & 0,297 +- 0,004 & 0,292 +- 0,004 & 489 +- 6 \\
+	indigo & 0,271 +- 0,004 & 0,267 +- 0,004 & 447 +- 6 \\
+	violett & 0,246 +- 0,004 & 0,244 +- 0,004 & 407 +- 6
+	\end{tabular}
+	\caption{Spektrallinien der Energiesparlampe}
+	\label{tab:espar}
+\end{table}
+
+\subsubsection{Spektrum der Dioden}
+Im letzten Versuchsteil wird das Spektrum von Dioden untersucht. Dazu wird weiterhin das kalibrierte Spektrometer verwendet, so dass \eqref{eq:kalib} weiter als Beugungswinkel-Wellenlängen-Beziehung verwendet werden kann. Bei Dioden ist insbesondere die Einschaltspannung von besonderer Bedeutung, da diese der Potenzialbarriere der Raumladungszone entspricht. Diese kann dann mit der Wellenlänge der maximalen Intensität in einen Zusammenhang gebracht werden.\\
+Anders als bei der Energiesparlampe konnten wir hier kein diskretes Spektrum beobachten. Stattdessen waren kontinuierliche Spektren über verhältnismäßig kleine Wellenlängenbereiche zu erkennen. Da es mit dem Auge schwer möglich ist Intensitäten verschiedener Lichtfarben zu vergleichen sind Winkel, unter denen die Maxima auftreten nicht genau messbar. Wir erhielten für die vier Leuchtdioden mit den Lichtfarben rot, gelb, grün und blau die Wellenlängenmaxima und Einschaltspannungen aus Tabelle \ref{tab:diode}. Die Fehler wurden mit \eqref{eq:err} und \eqref{eq:err:sin} bestimmt.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{cSSS}
+	Farbe & {Einschaltspannung $ U $ [\si{\volt}]} & {Maximumswinkel $ \vartheta $ [\si{\radian}]} & {Wellenlänge $ \lambda $ [\si{\nano\meter}]} \\\hline\hline
+	rot & 1,36 +- 0,01 & 0,367 +- 0,005 & 613 +- 8 \\
+	gelb & 1,48 +- 0,01 & 0,345 +- 0,005 & 576 +- 8 \\
+	grün & 1,57 +- 0,01 & 0,332 +- 0,005 & 554 +- 8 \\
+	blau & 2,35 +- 0,01 & 0,236 +- 0,005 & 394 +- 8
+\end{tabular}
+\caption{Einschaltspannungen und Wellenlängenmaxima der Leuchtdioden}
+\label{tab:diode}
+\end{table}
+Nach \eqref{eq:theo:diode} ist $ U\cdot e \propto \frac{1}{\lambda} $ zu erwarten mit Proportionalitätskonstante $ a = hc $. Der Proportionalitätsfaktor $ a $ wird mithilfe von \textit{Gnuplot\footnote{Version 4.6 patchlevel 4 unter Linux x86\_64 \url{http://sourceforge.net/projects/gnuplot/files/gnuplot/4.6.4/}}} nach dem \textit{Least-Squares-Fit} verfahren bestimmt.
+
+\begin{figure}[H]
+\centering
+\input{diagramme/diode.tex}
+\caption{}
+\label{fig:diode}
+\end{figure}
+Gnuplot liefert uns den Proportionalitätsfaktor $ a = hc = \SI{.92(5)}{\electronvolt\micro\meter} = \SI{920(50)}{\electronvolt\nano\meter} $
+
+
 \newpage
 \section{Diskussion} 
+\subsection{Auflösungsvermögen}
+Vergleicht man die Spektren der verschiedenen dispergierenden Elemente, so ist der auffälligste Unterschied, dass beim Prisma zwei scharf trennbare Linien sichtbar sind. Bei den Gittern sind mit zunehmender Beugungsordnung zwei sich überschneidende Linien zu erkennen, daraus ist zu schließen, dass der Wellenlängenunterschied zu gering ist, um scharfe Linien aufzulösen.
+Dieser beträgt bei der verwendeten Natriumdampflampe $ \SI{0,6}{\nano\meter} $. Die Gitter unterscheiden sich durch ihre Spaltenanzahl, daraus ergibt sich wie nach dem Rayleigh-Kriterium eine bessere Unterscheitbarkeit der sich überschneidenden Linien. 
+
+
+\subsection{Spektrum der Energiesparlampe}
+Im Gegensatz zur Natriumdampflampe zeigt die Energiesparlampe einen deutlich umfangreicheres Spektrum. Dieses hat zum einen mehr Spektrallinien und ist zum anderen über einen breiteren Wellenlängenbereich verteilt. Dies ist wichtig um ein möglichst weißes Licht zu erzeugen. Weißes Licht kann nicht monochromatisch sein sondern wird immer aus Mischung mehrerer Lichtfarben erzeugt.\\
+Zudem fällt auf, dass die Mehrheit der Spektrallinien im Bereich des roten, längerwelligen Lichtes liegt. Dies ist eine erwünschte Eigenschaft, da rotes Licht im allgemeinen als warm empfunden wird, während blaues Licht als kalt wahrgenommen wird. \\
+Wir nehmen an, dass als Füllgas Quecksilberdampf verwendet wird. Vergleicht man das von uns erfasste Spektrum mit dem Hg II Spektrum \cite{NIST_ASD} findet man sehr intensive Spektrallinien bei Wellenlängen $ \lambda $ von \SIlist{588,9; 587.1;567.7;542.5}{\nano\meter}. Wir haben durch unsere Messungen unter anderem Spektrallinien bei \SIlist{588(6);585(6);572(6);544(6)}{\nano\meter}
+
+\subsection{Spektren der Dioden}
+Der erwartete Zusammenhang zwischen Spannung und Wellenlänge ließ sich nicht vollständig nachweisen. Zwar ist der antiproportionale Zusammenhang zwischen Wellenlänge und Spannung insbesondere für die rote, gelbe und grüne Diode gut zu erkennen, jedoch weicht die blaue Diode davon deutlich ab. Zudem liegt die Proportionalitätskonstante aus der Theorie gut \SI{40}{\percent} über der von uns bestimmten. \\
+Dass diese Fehler auftreten lässt insbesondere mit der Art der Durchführung begründen. Mit dem Auge ist es allgemein nur subjektiv möglich Lichtintensitäten wahrzunehmen und zu vergleichen. Insbesondere Licht verschiedener Farben in ihrer Intensität zu vergleichen fällt sehr schwer. Beispielweise wird gelb als hellere Farbe wahrgenommen als rot. Da diese beiden Farben im Spektrum direkt nebeneinander Liegen kann es so schnell zu Fehlwahrnehmungen kommen. \\
+Eine andere Eigenschaft der Dioden ließ sich dagegen gut bestätigen. Das ausgesendete Licht stammt aus einen kleinen Wellenlängenbereich. Dies ist auch in der Theorie nicht anders erwartet.

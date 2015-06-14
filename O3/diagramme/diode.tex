@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\begin{axis}[ xmin = 1.5, ymin = 1.3, xmax = 2.6, ymax = 3,
+	legend pos = south east, width = .8\textwidth, height = 8cm,
+	xlabel = {$ \frac{1}{\lambda}~[\si{\per\micro\meter}] $},
+	ylabel = {$ U\cdot e $ [\si{\electronvolt}]}]
+	
+	\addplot+[no marks, ] {0.917936*x};
+	\addplot+[no marks, ] {1.243*x};
+	\addplot+[mark = +,only marks, error bars/.cd, x dir = both, x explicit,y dir = both, y explicit] table[x=x,y=y, x error = xerr, y error = yerr] {
+y	yerr	x	xerr
+1.36	0.01	1.6321812223	0.0202823427
+1.48	0.01	1.7354838313	0.0228218387
+1.57	0.01	1.803989772	0.0245915894
+2.35	0.01	2.2850537112	0.0389447822
+};
+\legend{{$ \num{0,918}\frac{1}{\lambda} $ (Fit)}, {$ \num{1,240}\frac{1}{\lambda} $ (Theorie)} , Messwerte}
+\end{axis}
+\end{tikzpicture}
