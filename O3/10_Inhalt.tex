@@ -8,7 +8,7 @@ In diesem Spektrometer wird die Brechung am Prisma genutzt. Da der Brechungsinde
 \subsubsection{Gitterspektrometer}
 Bei der Beugung am Gitter treten die Beugungsmaxima Wellenlängenabhängig auf. Es lässt sich zwischen Winkel des Maxima $ \vartheta $, Wellenlänge des Lichts $ \lambda $, Gitterkonstante des verwendeten Gitters $ g $ und Ordnung des Maxima $ m $ der folgende Zusammenhang herleiten:
 \begin{equation}
-	\lambda = \frac{g\sin\vartheta_m}{m}
+	\lambda = \frac{g\sin\vartheta_m}{m} \label{eq:theo:beug}
 \end{equation}
 Mit einem Gitterspektrometer sind nicht beliebig kleine Wellenlängenauflösungen möglich. Das  Rayleigh-Kriterium besagt, dass eine Unterscheidung gerade noch möglich ist, falls das Maximum der einen mit dem Minimum der anderen Wellenlänge zusammenfällt. Daraus folgt für den minimalen Wellenlängenunterschied $ \Delta \lambda $ bei mittlerer Wellenlänge $ \lambda $, Anzahl der beleuchteten Gitterspalte $ N $ und Ordnung $ m $ der Zusammenhang
 \begin{equation}
@@ -35,6 +35,43 @@ Da die Energie der freien Elektronen keine diskreten Werte annimmt kommt es zu e
 \newpage
 \section{Auswertung}
 \subsection{Untersuchung der Natriumdampflampe mit Prismenspektrometer}
+
+\subsection{Quantitative Untersuchung verschiedener Spektren am Gitterspektrometer}
+Im zweiten Versuchsteil werden die Lichtspektren verschiedener Lichtquellen an einem Gitterspektrometer untersucht. Im Spektrometer wird ein Gitter mit der Gitterkonstante $ g = \SI[quotient-mode=fraction]{1/600}{\milli\meter} $ verwendet. Die verwendeten Lichtquellen sind
+\begin{itemize}
+\item Natriumdampflampe
+\item Energiesparlampe
+\item Leuchtdioden in den Farben
+\begin{itemize}
+	\item rot
+	\item gelb
+	\item grün
+	\item blau
+\end{itemize}
+\end{itemize}
+\subsubsection{Kalibrierung des Spektrometers}
+Um das Spektrometer zu kalibrieren wird zunächst das Licht einer Heliumdampflampe untersucht. Da aus der Versuchsanleitung \cite{anleitung2015} die Wellenlängenaufspaltung bekannt ist, lässt sich damit ein Zusammenhang zwischen Beugungswinkel und Wellenlänge aufstellen. Die von uns gesehenen Spektrallinien sind in Tabelle \ref{tab:kalib} zu finden.\\
+\begin{table}[H]
+\centering
+\begin{tabular}{cSSS}
+Farbe & {Wellenlänge} & {Beugungswinkel $ \vartheta $ [\si{\radian}]} & {$ \sin\vartheta $}
+\end{tabular}
+\caption{Spektrallinien im Spektrometer}
+\label{tab:kalib}
+\end{table}
+
+Aus dem in der Theorie gegebenen Zusammenhang \eqref{eq:theo:beug} wird $ \sin\vartheta \propto \lambda $ erwartet. Daher wird die Formel
+\begin{equation*}
+	\lambda = a\cdot \sin\vartheta
+\end{equation*}
+aufgestellt. Der Proportionalitätsfaktor $ a $ wird dabei mithilfe von \textit{Gnuplot\footnote{Version 4.6 patchlevel 4 unter Linux x86\_64 \url{http://sourceforge.net/projects/gnuplot/files/gnuplot/4.6.4/}}} nach dem \textit{Least-Squares-Fit} verfahren bestimmt. Grafisch dargestellt ist dies in Abbildung \ref{fig:kalib}. Der so bestimmte Proportionalitätsfaktor beträgt $ a = \SI{1672+-6}{\nano\meter}$ 
+
+\begin{figure}
+	\centering
+	\input{diagramme/kalib.tex}
+	\caption{Eichkurve}
+	\label{fig:kalib}
+\end{figure}
 
 \newpage
 \section{Diskussion} 
