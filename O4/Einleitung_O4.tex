@@ -27,4 +27,24 @@ Dabei gilt,$ große Blendenzahl \Rightarrow kleine Lichtmenge $ bzw.
 $ kleine Blendenzahl \Rightarrow große Lichtmenge $.
 \subsection{Schärfentiefe}
 Normalerweise wird nur ein Punkt Scharf auf die Bildebene abgebildet. Alle Punkte die weiter oder näher entfernt liegen, erscheinen als Zerstreuungskreise. Damit ein Punkt als scharf empfunden wird, darf der Durchmesser der Zerstreuungskreise einen Wert \textit{Z} nicht überschreiten, dieser entspricht üblicherweise 1/1500 der Bilddiagonalen.
-
+Die kleinste Entfernung, in der ein Bild scharf erscheint, wird Nahpunkt genannt. Die größte Entfernung, bis zu der ein Bild scharf erscheint, heißt dementsprechend Fernpunkt.
+Als Schärfentiefe wird der Bereich zwischen diesen beiden Punkten bezeichnet. Es besteht folgender Zusammenhang mit der Blendenzahl,
+$kleine Blendenzahl \Rightarrow kleine Schärfentiefe$
+$große Blendenzahl \Rightarrow große Schärfentiefe $
+Für jede Brennweite und Blendenzahl gibt es eine Gegenstandsweite, bei der alle Gegenstände bis ins Unendliche scharf abgebildet werden, der Fernpunkt also im unendlichen liegt. 
+Diese Weite wird hyperfokale Entfernung genannt und lässt sich berechnen aus,
+\begin{equation}
+d_{h}=f\cdot(\frac{D}{Z}+1)
+\end{equation}
+der Nahpunkt berechnet sich aus,
+\begin{equation}
+d_{n}=\frac{g}{\frac{g-f}{d_{h}-f}+1}
+\end{equation}
+für den Fernpunkt gilt,
+\begin{equation}
+d_{f}=\begin{cases}
+\frac{g}{\frac{g-f}{d_{h}-f}+1}\qquad wenn\, g\,<d_{h} & \infty\qquad wenn\, g\geq d_{h}\end{cases}
+\]
+\end{equation}
+\subsection{Bestimmung der Auflösung}
+In diesem Versuch werden zwei Methoden zur Bestimmung der Auflösung verwendet. Zum einen mit Hilfe des Siemenssterns und zum anderen mit der Methode der "schrägen Kante".
