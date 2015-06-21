@@ -1,183 +1,132 @@
-% ################################################################
-% #                                                              #
-% # Autor: Michael Epping                                        #
-% # E-Mail: michael.epping@uni-muenster.de                       #
-% # Version: 1.4                                                 #
-% # Datum: Juni 2013                                             #
-% # Info: Diese Datei sollte nicht verändert werden.             #
-% #    Hier werden die Einstellungen festgelegt und              #
-% #    Pakete eingebunden. Alles weitere wird über               #
-% #    die Dateien verändert, die mit "0X_" beginnen.            #
-% # Copyright: CC0 (macht mit diesen Dateien was ihr wollt)      #
-% #    https://creativecommons.org/publicdomain/zero/1.0/deed.de #
-% #                                                              #
-% ################################################################
+\section{Einleitung}
+In diesem Versuch sollen optische Abbildungen mit Hilfe einer digitalen Spiegelreflexkamera untersucht werden.
+\subsection{Optische Abbildungen}
+Für dünne Linsen und achsennahe Strahlen gilt die Linsengleichung,
+\begin{equation}
+\frac{1}{f}=\frac{1}{b}+\frac{1}{g}
+\end{equation}
+$ g $ ist der Abstand des Gegenstands zu Linse, $ b $ ist der Abstand der Bildebene zur Linse und $ f $ bezeichnet die Brennweite.
+Aus dem Quotienten von $ b $ und $ g $ lässt sich der Abbildungsmaßstab $ M $ bestimmen.
+\begin{equation}
+M=\frac{b}{g}
+\end{equation}
+Dieser ist ein Maß für die Vergrößerung bzw. die Verkleinerung des Objektes.
+\subsection{Optische Auflösung und Blende}
+Wegen der Wellennatur des Lichts, gibt es eine Aulösungsgrenze für optische Abbildungen. Da die Abbildungsleistung von Linsen in der Mitte am besten ist wird um die Auflösung zu verbessern eine Blende ( auch Apertur genannt) mit einem Durchmesser $ D $ vor oder hinter die Linse gebracht. Dadurch gelangen nur noch Strahlen innerhalb des Durchmessers zur Linse. Das Licht wird durch die Blende gebeugt und es entstehen typischerweise Beugungsscheibchen. Damit zwei Bildpunkte von einander unterscheidbar sind, muss das Maximum des ersten mit dem Minimum des zweiten Bildpunktes zusammenfallen (Rayleigh-Kriterium).
+Für eine kreisförmige Apertur lässt sich die Auflösung der Linse durch,
+\begin{equation}
+d=2,4391...\cdot\lambda\cdot\frac{f}{D}
+\end{equation}
+beschreiben.$ d $ entspricht der Größe des Beugungsscheibchens für die Wellenlänge $ \lambda $.
+Der Quotient von $ f $ und $ D $ wird auch Blendenzahl gennant und mit $ k $ bezeichnet,
+\begin{equation}
+k=\frac{f}{D}
+\end{equation}
+neben der Rolle im Auflösungsvermögen, reguliert diese Größe ebenfalls die Lichtmenge die durch die Linse auf den Sensor fällt.
+Dabei gilt,
+ große Blendenzahl $ \Rightarrow $ kleine Lichtmenge  bzw.
+ kleine Blendenzahl $ \Rightarrow $ große Lichtmenge .
+\subsection{Schärfentiefe}
+Normalerweise wird nur ein Punkt Scharf auf die Bildebene abgebildet. Alle Punkte die weiter oder näher entfernt liegen, erscheinen als Zerstreuungskreise. Damit ein Punkt als scharf empfunden wird, darf der Durchmesser der Zerstreuungskreise einen Wert $ Z $ nicht überschreiten, dieser entspricht üblicherweise 1/1500 der Bilddiagonalen.
+Die kleinste Entfernung, in der ein Bild scharf erscheint, wird Nahpunkt genannt. Die größte Entfernung, bis zu der ein Bild scharf erscheint, heißt dementsprechend Fernpunkt.
+Als Schärfentiefe wird der Bereich zwischen diesen beiden Punkten bezeichnet. Es besteht folgender Zusammenhang mit der Blendenzahl,
+kleine Blendenzahl $ \Rightarrow $ kleine Schärfentiefe
+große Blendenzahl $ \Rightarrow $ große Schärfentiefe 
+Für jede Brennweite und Blendenzahl gibt es eine Gegenstandsweite, bei der alle Gegenstände bis ins Unendliche scharf abgebildet werden, der Fernpunkt also im unendlichen liegt. 
+Diese Weite wird hyperfokale Entfernung genannt und lässt sich berechnen aus,
+\begin{equation}
+d_{h}=f\cdot(\frac{D}{Z}+1)
+\end{equation}
+der Nahpunkt berechnet sich aus,
+\begin{equation}
+d_{n}=\frac{g}{\frac{g-f}{d_{h}-f}+1}
+\end{equation}
+für den Fernpunkt gilt,
+\begin{equation}
+d_{f}=\begin{cases}
+\frac{g}{\frac{g-f}{d_{h}-f}+1}\qquad wenn\, g\,<d_{h} &\: , \infty  \qquad wenn\, g\geq d_{h}\end{cases}
+\]
+\end{equation}
 
-% Änderungen 1.2 -> 1.3
-% * Bei der Verwendung von texlive2012 gibt es Probleme mit myalphadin.
-%   Diese Vorlage für Einträge insLiteraturverzeichnis habe ich durch unsrtdin ersetzt.
-% * Da ich jetzt mit TeXlipse arbeite, habe ich ein paar Anpassungen vorgenommen.
-%   So ist z.B. der Name der bib-Datei fest vorgegeben, damit auch die Autovervollständigung bei BibTeX-Keys funktioniert.
-% * Zusätzliche Kommentare sollten das Arbeiten mit dieser Vorlage erleichtern.
-% * Die Vorlage enthält sinnvollen Text und nicht nur nutzlose Platzhalter.
+\subsection{Bestimmung der Auflösung}
+Mathematisch wird die Auflösung als Modulationsübertragungsfunktion beschrieben (kurz:MTF). Die MTF ist von der räumlichen Frequenz abhängig, also in Linienpaaren pro Längeneinheit. Um die MTF zu bestimmen, wird zunächst der Kontrast benötigt, dieser ist definiert als,
+\begin{equation}
+C(\nu)=\frac{V_{max}-V_{min}}{V_{max}+V_{min}}
+\end{equation}
+$ V_{max} $ ist der Grauwert einer weißen Fläche und $ V_{min} $ der Grauwert einer schwarzen Fläche. Für die MTF gilt,
+\begin{equation}
+MTF(\nu)=\frac{C(\nu)}{C(0)}
+\end{equation}
+$ C(0) $ ist der maximale Kontrast.
+In diesem Versuch werden zwei Methoden zur Bestimmung der Auflösung verwendet. Zum einen mit Hilfe des Siemenssterns und zum anderen mit der Methode der "schrägen Kante".
+Beim Siemensstern handel es sich um einen Kreis mit abwechselnd weißen und schwarzen Sektoren. Je näher man dem Mittelpunkt kommt, desto geringer wird der Abstand zwischen den Sektoren. Ab einem bestimmtem Abstand vom Stern kann dieser nicht mehr aufgelöst werden und nur noch als graue Fläche dargestellt. Der Durchmesser $ d $ dieser grauen Fläche ist ein Maßstab für das Auflösungsvermögen, es gilt für Auflösung der Linienpaare,
+\begin{equation}
+l=\frac{\pi d}{n}
+\end{equation}
+$ n $ ist die Anzahl der Linienpaare, in diesem Versuch sind es 36.
+Um die Auflösung mittels der Methode der "schrägen Kante", wird eine Kante welche schräg zum Sensor steht fotografiert. Anschließend wird das Profil der Kante mit einem Computerprogramm gemittelt. Es sollte eine annähernde Sprungfunktion herauskommen. Diese wird abgeleitet, daraus folgt ein abgeschwächter Dirac-Impuls (bei einer perfekten Kante, wäre es ein Dirac-Impuls). Diese Funktion wird nun Fouriertransformiert.
+Die Kurve die jetzt zu sehen ist, ist die MTF-Kurve.
+\section{Auswertung}
+\subsection{Schärfentiefe}
+Der erste subjektive Eindruck bestand darin, dass die Schärfentiefe mit zunehmender Blendenzahl zunimmt.
+Der Nullpunkt der Skala war  $ g=(104\pm1)cm $ entfernt, anhand der abgebildeten Skala ist nun die Schärfentiefe gut abzuschätzen.
+Die Werte in den Tabellen sind in Meter.
 
-% Änderungen 1.3 -> 1.4
-% * Das Paket "ifthenx" gibt es unter Ubuntu 12.04 mit texlive 2009-15 nicht. Als alternative habe ich "xifthen" eingetragen.
-% * Tabulatoren habe ich durch Leerzeichen ersetzt. Dadurch bleibt das Layout (Einrücken und Position Kommentare) erhalten, 
-%   egal mit welchem Editor man die Dateien öffnet.
-% * Ich habe einen Copyright-Vermerk hinzugefügt, nämlich dass es im Prizip keines gibt.
-% * Neuer Abschnitt: latexmk
-% * Neuer Abschnitt: Verbatim
-% * Die Bilddatei "titelseite.jpg" wurde entfernt (wegen Copyright), da die Vorlage ab jetzt öffentlich zugänglich sein soll.
-% * "README.txt" im Verzeichnis Bilder wurde erstellt.
-% * Literaturangabe der Anleitung zur Optik, Wärmelehre und Atomphysik hinzugefügt. 
 
-% ###############
-% # Allgemeines #
-% ###############
 
-% Zeilen, die mit einem Prozentzeichen beginnen sind Kommentare. 
-% Alle verwendeten Funktionen sind mit solchen Kommentaren versehen, so dass man den Zweck der jeweiligen Funktion nachvollziehen kann.
+\begin{tabular}{|c|c|c|}
+\hline 
+Blendenzahl & gemessener Fernpunkt & gemessener Nahpunkt \\ 
+\hline 
+1,8 & 1,08 & 1,01 \\ 
+\hline 
+2,8 & 1,10 & 1,01 \\ 
+\hline 
+4 & 1,14 & 1,00 \\ 
+\hline 
+5,6 & 1,16 & 0,99 \\ 
+\hline 
+8 & 1,17 & 0,95 \\ 
+\hline 
+11 & alles scharf & alles scharf \\ 
+\hline 
+16 & alles scharf & alles scharf \\ 
+\hline 
+22 & alles scharf & alles scharf \\ 
+\hline 
+\end{tabular} 
 
-% ######################################
-% # Konfigurieren der Dokumentenklasse #
-% ######################################
 
-\documentclass[
-    a4paper,                                               % Papierformat
-    oneside,                                               % Einseitig
-    %twoside,                                              % Zweiseitig
-    12pt,                                                  % Schriftgröße
-    pagesize=auto,                                         % schreibt die Papiergröße korrekt ins Ausgabedokument
-    headsepline,                                           % Linie unter der Kopfzeile
-    %draft=true                                            % Markiert zu lange und zu kurze Zeilen
- ]{scrartcl}
-% Es gibt die Dokumenttypen scrartcle, srcbook, scrreprt und scrlettr. Diese gehören zum KOME-Skript und sollten für deutsche Texte benutzt werden.
-% Für englische Texte wählt man entsprechend article, book, report und letter.
-% Es ist  nicht unbedingt zu empfehlen, bei einem bestehendem Dokument, die documentclass zu ändern.
+Alle Zahlen dieser Tabelle haben einen Fehler von $ \pm1cm $.
+In der folgenden Tabelle sind die theoretisch berechneten Werte eingetragen.
 
-% ####################
-% # Pakete einbinden #
-% ####################
 
-% Pakete erweitern LaTeX um zusätzliche Funktionen. Dies ist eine Satz nützlicher Pakete.
-% Weitere sollten in der Datei"`01_EigenePakete.tex"' hinzugefügt werden.
-\usepackage[utf8x]{inputenc}                                                  % Legt die Zeichenkodierung fest, z.B UTF8
-\usepackage[T1]{fontenc}                                                      % Verwendung der Zeichentabelle T1, für deutschsprachige Dokumente sinnvoll
-\usepackage[ngerman,english]{babel}                                           % Silbentrennung nach neuer deutscher und englischer Rechtschreibung
-\usepackage{amsmath}                                                          % Mathepaket
-\usepackage{xifthen}                                                          % Wird benötigt um \ifthenelse zu benutzen
-\usepackage[pdftex]{graphicx}                                                 % Zum flexiblen Einbinden von Grafiken, pdftex ist optional
-\usepackage{units}                                                            % Ermöglicht die Nutzung von \unit[Zahl]{Einheit}
-\usepackage{setspace}                                                         % Einfaches wechseln zwischen unterschiedlichen Zeilenabständen
-\usepackage[pdfpagelabels]{hyperref}                                          % Verlinkt Textstellen im PDF Dokument
-\usepackage[font=small,labelfont=bf,labelsep=endash,format=plain]{caption}    % Darstellung für Caption s.u.
-\usepackage{subfig}                                                           % Bilder nebeneinander
-\usepackage{wrapfig}                                                          % Fließtext um Figure-Umgebung
-\usepackage{cite}                                                             % Zusatzfunktionen zum zitieren
-\usepackage{scrpage2}                                                         % Wird für Kopf- und Fußzeile benötigt
-\usepackage{array,dcolumn}                                                    % Beide Pakete werden für die Ausrichtung der Tabellenspalten benötigt
-\usepackage{siunitx}
 
-% weitere Pakete einbinden
-\input{01_EigenePakete}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Blendenzahl & Nahpunkt & Fernpunkt & hyperfokale Entfernung \\ 
+\hline 
+1,8 & 1,03 & 1,05 & 70,2 \\ 
+\hline 
+2,8 & 1,02 & 1,06 & 44,2 \\ 
+\hline 
+4 & 1,01 & 1,07 & 31,3 \\ 
+\hline 
+5,6 & 1 & 1,09 & 22,1 \\ 
+\hline 
+8 & 0,98 & 1,11 & 15,7 \\ 
+\hline 
+11 & 0,95 & 1,14 & 11,1 \\ 
+\hline 
+16 & 0,92 & 1,19 & 7,86 \\ 
+\hline 
+22 & 0,88 & 1,27 & 5,57 \\ 
+\hline 
+\end{tabular} 
 
-% ############################
-% # Eigene Befehle einbinden #
-% ############################
 
-\input{02_EigeneBefehle}
+Die Fehler für die Nahpunkte betragen $ \pm1cm $ und für die Fernpunkte $ \pm2 cm $.
 
-% #########################
-% # Variablen importieren #
-% #########################
-
-\input{03_Variablen}
-\newboolean{show}
-
-% #########################
-% # Beginn des Dokumentes #
-% #########################
-
-\begin{document}
-\selectlanguage{ngerman}                                   % Schreibsprache Deutsch
-\onehalfspacing                                            % 1 1/2 facher Zeilenabstand
-\addtokomafont{sectioning}{\rmfamily}                      % Schriftsatz
-\numberwithin{equation}{section}                           % Nummerierung der Formeln entsprechend der Section (z.B. 1.1)
-\addtokomafont{caption}{\small\linespread{1}\selectfont}   % Ändert Schriftgröße und Zeilenabstand bei captions
-
-% Römische Ziffern als Seitenzahlen für Titelseite bis einschließlich dem Inhaltsverzeichnis
-\setcounter{page}{1}
-\pagenumbering{roman}
-
-% #######################################
-% # Kopf- und Fußzeile konfigurieren    #
-% #######################################
-
-\ihead{\textit{\varNum\ - \varName }}                      % Innenseite der Kopfzeile
-\chead{}                                                   % Mitte der Kopfzeile
-\ohead{\textit{\varAutor}}                                 % Außenseite der Kopfzeile
-\ifoot{}                                                   % Innnenseite der Fußzeile
-\cfoot{- \textit{\pagemark} -}                             % Mitte der Fußzeile
-\ofoot{}                                                   % Aussenseite der Fußzeile
-
-% ###################################
-% # Ausrichtung der Tabellenspalten #
-% ###################################
-
-\newcolumntype{,}[1]{D{,}{,}{#1}}                          % , in Tabellen untereinander stellen
-\newcolumntype{p}{D{p}{\pm}{-1}}                           % +- in Tabellen untereinander stellen
-
-% ########################
-% # Titelseite einbinden #
-% ########################
-
-\input{04_Titelseite}
-
-% ################################
-% # Inhaltsverzeichnis einbinden #
-% ################################
-
-\tableofcontents
-\newpage
-
-% Zurücksetzen der Seitenzahlen auf arabische Ziffern
-\setcounter{page}{1}
-\pagenumbering{arabic}
-
-\pagestyle{scrheadings}                                    % Ab hier mit Kopf- und Fußzeile
-
-% ###################################
-% # Den Inhalt der Arbeit einbinden #
-% ###################################
-
-\input{einleitung_O3}
-
-% ####################
-% # Anhang einbinden #
-% ####################
-
-% Löscht man die Datei "`20_Anhang.tex"', dann wird kein Anhang erzeugt.
-\IfFileExists{20_Anhang}{
-    \newpage
-    \appendix
-    \section{Anhang}
-    \input{20_Anhang}
-} % Nach \IfFileExists muss eine Leerzeile eingefügt werden
-
-% ###################################
-% # Literaturverzeichnis mit BibTeX #
-% ###################################
-
-\setboolean{show}{\varZeigeLiteraturverzeichnis}
-\ifthenelse{\boolean{show}}{
-    \newpage
-    \bibliography{literatur}
-    \bibliographystyle{\varLiteraturLayout}
-}{}
-
-% #######################
-% # Ende des Dokumentes #
-% #######################
-
-\end{document}
+\section{Diskussion}
+\subsection{Schärfentiefe}
+Die berechneten Werte Stimmen nicht mit den "gemessenen" Werten überein, allerdings ist die Diskrepanz nicht besonders groß. Der Hauptgrund dafür ist die subjektive Wahrnehmung, da absolut scharfe Darstellung und gute Erkennbarkeit leicht miteinander verwechselt werden können. Ist eine Zahl beispielsweise gut lesbar, aber nicht scharf im Sinne der Größe von Z, neigt der subjektive Beobachter dazu diese als scharf zu bezeichnen und mit einzubeziehen. (Verbesserungsvorschlag: in der Vorbereitung genau definieren was als scharf angesehen werden kann und was nicht.)
