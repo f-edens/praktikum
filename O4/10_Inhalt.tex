@@ -1,0 +1,114 @@
+\section{Einleitung}
+In diesem Versuch sollen optische Abbildungen mit Hilfe einer digitalen Spiegelreflexkamera untersucht werden.
+\subsection{Optische Abbildungen}
+Für dünne Linsen und achsennahe Strahlen gilt die Linsengleichung,
+\begin{equation}
+\frac{1}{f}=\frac{1}{b}+\frac{1}{g}
+\end{equation}
+$ \textit{g} $ ist der Abstand des Gegenstands zu Linse, $ \textit{b} $ ist der Abstand der Bildebene zur Linse und $ \textit{f} $ bezeichnet die Brennweite.
+Aus dem Quotienten von $ \textit{b} $ und $ \textit{g} $ lässt sich der Abbildungsmaßstab $ \textit{M} $ bestimmen.
+\begin{equation}
+M=\frac{b}{g}
+\end{equation}
+Dieser ist ein Maß für die Vergrößerung bzw. die Verkleinerung des Objektes.
+\subsection{Optische Auflösung und Blende}
+Wegen der Wellennatur des Lichts, gibt es eine Aulösungsgrenze für optische Abbildungen. Da die Abbildungsleistung von Linsen in der Mitte am besten ist wird um die Auflösung zu verbessern eine Blende ( auch Apertur genannt) mit einem Durchmesser $ \textit{D} $ vor oder hinter die Linse gebracht. Dadurch gelangen nur noch Strahlen innerhalb des Durchmessers zur Linse. Das Licht wird durch die Blende gebeugt und es entstehen typischerweise Beugungsscheibchen. Damit zwei Bildpunkte von einander unterscheidbar sind, muss das Maximum des ersten mit dem Minimum des zweiten Bildpunktes zusammenfallen (Rayleigh-Kriterium).
+Für eine kreisförmige Apertur lässt sich die Auflösung der Linse durch,
+\begin{equation}
+d=2,4391\ldots\cdot\lambda\cdot\frac{f}{D}
+\end{equation}
+beschreiben.$ \textit{d} $ entspricht der Größe des Beugungsscheibchens für die Wellenlänge $ \lambda $.
+Der Quotient von $ \textit{f} $ und $ \textit{D} $ wird auch Blendenzahl gennant und mit $ \textit{k} $ bezeichnet,
+\begin{equation}
+k=\frac{f}{D}
+\end{equation}
+neben der Rolle im Auflösungsvermögen, reguliert diese Größe ebenfalls die Lichtmenge die durch die Linse auf den Sensor fällt.
+Dabei gilt, große Blendenzahl $ \Rightarrow $ kleine Lichtmenge bzw.
+kleine Blendenzahl $ \Rightarrow $ große Lichtmenge.
+\subsection{Schärfentiefe}
+Normalerweise wird nur ein Punkt Scharf auf die Bildebene abgebildet. Alle Punkte die weiter oder näher entfernt liegen, erscheinen als Zerstreuungskreise. Damit ein Punkt als scharf empfunden wird, darf der Durchmesser der Zerstreuungskreise einen Wert $ \textit{Z} $ nicht überschreiten, dieser entspricht üblicherweise 1/1500 der Bilddiagonalen.
+Die kleinste Entfernung, in der ein Bild scharf erscheint, wird Nahpunkt genannt. Die größte Entfernung, bis zu der ein Bild scharf erscheint, heißt dementsprechend Fernpunkt.
+Als Schärfentiefe wird der Bereich zwischen diesen beiden Punkten bezeichnet. Es besteht folgender Zusammenhang mit der Blendenzahl,
+$kleine Blendenzahl \Rightarrow kleine Schärfentiefe$
+$große Blendenzahl \Rightarrow große Schärfentiefe $
+Für jede Brennweite und Blendenzahl gibt es eine Gegenstandsweite, bei der alle Gegenstände bis ins Unendliche scharf abgebildet werden, der Fernpunkt also im unendlichen liegt. 
+Diese Weite wird hyperfokale Entfernung genannt und lässt sich berechnen aus,
+\begin{equation}
+d_{h}=f\cdot(\frac{D}{Z}+1)
+\end{equation}
+der Nahpunkt berechnet sich aus,
+\begin{equation}
+d_{n}=\frac{g}{\frac{g-f}{d_{h}-f}+1}
+\end{equation}
+für den Fernpunkt gilt,
+\begin{equation}
+d_{f}=\begin{cases}
+\frac{g}{\frac{g-f}{d_{h}-f}+1}\qquad wenn\, g\,<d_{h} & \infty\qquad wenn\, g\geq d_{h}\end{cases}
+\end{equation}
+\subsection{Bestimmung der Auflösung}
+Mathematisch wird die Auflösung als Modulationsübertragungsfunktion beschrieben (kurz:MTF). Die MTF ist von der räumlichen Frequenz abhängig, also in Linienpaaren pro Längeneinheit. Um die MTF zu bestimmen, wird zunächst der Kontrast benötigt, dieser ist definiert als,
+\begin{equation}
+C(\nu)=\frac{V_{max}-V_{min}}{V_{max}+V_{min}}
+\end{equation}
+$ {V_{max}} $ ist der Grauwert einer weißen Fläche und $ {V_{min}} $ der Grauwert einer schwarzen Fläche. Für die MTF gilt,
+\begin{equation}
+\text{MTF}(\nu)=\frac{C(\nu)}{C(0)}
+\end{equation}
+$ \textit{C(0)} $ ist der maximale Kontrast.
+In diesem Versuch werden zwei Methoden zur Bestimmung der Auflösung verwendet. Zum einen mit Hilfe des Siemenssterns und zum anderen mit der Methode der "schrägen Kante".
+Beim Siemensstern handel es sich um einen Kreis mit abwechselnd weißen und schwarzen Sektoren. Je näher man dem Mittelpunkt kommt, desto geringer wird der Abstand zwischen den Sektoren. Ab einem bestimmtem Abstand vom Stern kann dieser nicht mehr aufgelöst werden und nur noch als graue Fläche dargestellt. Der Durchmesser $ \textit{d} $ dieser grauen Fläche ist ein Maßstab für das Auflösungsvermögen, es gilt für Auflösung der Linienpaare,
+\begin{equation}
+l=\frac{\pi d}{n}
+\end{equation}
+$ \textit{n} $ ist die Anzahl der Linienpaare, in diesem Versuch sind es 36.
+Um die Auflösung mittels der Methode der "schrägen Kante", wird eine Kante welche schräg zum Sensor steht fotografiert. Anschließend wird das Profil der Kante mit einem Computerprogramm gemittelt. Es sollte eine annähernde Sprungfunktion herauskommen. Diese wird abgeleitet, daraus folgt ein abgeschwächter Dirac-Impuls (bei einer perfekten Kante, wäre es ein Dirac-Impuls). Diese Funktion wird nun Fouriertransformiert.
+Die Kurve die jetzt zu sehen ist, ist die MTF-Kurve.
+
+\newpage
+\section{Auswertung}
+\subsection{Auflösung des Objektivs für verschiedene Blenden}
+Bei diesem Versuchsteil wird die Auflösungseigenschaft des Objektiv in Abhängigkeit zur Blende ermittelt. Dazu werden die gleichen Blendenstufen und die gleichen Bilder wie bei der zuvor untersuchten Schärfentiefe betrachtet. Auf dem Testchart befindet sich auch ein geneigter schwarzer Balken auf weißen Hintergrund. Dieser ermöglicht es mit dem zur Verfügung gestellten Programm\footnote{ImageJ mit extra angepassten Plugin - ursprüngliches Plugin verfügbar unter \url{http://imagej.nih.gov/ij/plugins/se-mtf/index.html}} die MTF-Kurve ausgeben zu lassen. \\
+
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/018.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/028.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/040.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/056.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/080.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/110.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/160.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+\begin{figure}
+	\centering
+	\input{diagramme/mtf/220.tex}
+	\caption{Blendenstufe \num{1.8}}
+\end{figure}
+
+\newpage
+\section{Diskussion} 
