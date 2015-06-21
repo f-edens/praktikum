@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\begin{axis}[xmin = 0, xmax = 100,
+	ylabel = {Modulationsfaktor},
+	xlabel = {Linienpaare pro mm},
+	ytick = {0, .25, ..., 1},
+	extra x ticks={31.5},
+	extra x tick style={grid=major,
+	tick label style={
+	rotate=90,anchor=east}}, ]
+\addplot+[no marks] table[x=X,y=Y] {auswertung/mtf/objektiv/160.data};
+\addplot+[dashed, red, no marks, domain=0:100] {.5};
+\end{axis}
+\end{tikzpicture}
