@@ -1,12 +1,12 @@
 \begin{tikzpicture}
-\begin{axis}[xmin = 0, xmax = 100,
+\begin{axis}[xmin = 0, xmax = 100, width = .7\linewidth,
 	ylabel = {Modulationsfaktor},
 	xlabel = {Linienpaare pro mm},
 	ytick = {0, .25, ..., 1},
-	extra x ticks={31.5},
+	extra x ticks={39},
 	extra x tick style={grid=major,
-	tick label style={
-	rotate=90,anchor=east}}, ]
+	tick label style={,
+		,anchor=north, yshift=17}}, ]
 \addplot+[no marks] table[x=X,y=Y] {auswertung/mtf/objektiv/40.data};
 \addplot+[dashed, red, no marks, domain=0:100] {.5};
 \end{axis}
