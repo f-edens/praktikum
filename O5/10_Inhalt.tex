@@ -1,0 +1,106 @@
+\section{Einleitung}
+In diesem Versuch wird das Verhalten von polarisiertem Licht untersucht.
+\subsection{Polarisation durch Reflexion}
+Es wird von linear polarisiertem Licht gesprochen, wenn der E-Feldvektor in nur einer Raumrichtung schwingt und von zirkular polarisiertem Licht wenn der E-Feldvektor eine Schraubenlinie beschreibt. Es wird elliptisch polarisiert genannt, wenn der E-Feldvektor eine Ellipse beschreibt.
+Trifft Licht auf eine Glasfläche mit Brechungsindex $ n $ wird der Strahl teilweise reflektiert und teilweise gebrochen. Der Anteil des reflektierten Strahles hängt vom Einfallswinkel $ \alpha $ und von der Polarisation des Lichts ab.
+Dabei hat senkrecht zur Einfallsebene Polarisiertes Licht (s-polarisiert) ein größeres Reflexionsvermögen als parallel zur Einfallsebene Polarisiertes Licht (p-polarisiert).
+Dabei gibt es für p-polarisiertes Licht einen Einfallswinkel $ \alpha_{B} $ bei welchem kein Licht reflektiert wird, es gilt
+\begin{equation}
+\tan \alpha_{B} = n	\label{eq:brew}
+\end{equation}
+somit ist das reflektierte Licht vollständig linear s-polarisiert.
+\subsection{Doppelbrechung in Kalkspat}
+Beim Durchgang von unpolarisierten Licht durch den Kalkspatkristall, wird dieser in zwei Teilstrahlen aufgeteilt.
+Ein Strahl verhält sich nach dem Snelliusschen Brechungsgesetz und wird daher auch ordentlicher Strahl genannt, für diesen gilt der Brechungindex $ n_{O} $. Der andere Teilstrahl wird außerordentlicher Strahl genannt, für diesen gilt der Brechungsindex $ n_{a} $. Die beiden Teilstrahlen sind orthogonal zueinander polarisiert. Der ordentliche Strahl ist s-polarisiert und der außerordentliche Strahl ist p-polarisiert.
+\subsection{Polarisation durch selektive Absorption}
+Polarisator und Analysator sind zwei einfache Polarisationsfilter. Fällt unpolarisiertes
+Licht auf so einen Filter, wird dieser Polarisator genannt. Mit einem
+zweiten Filter, dem Analysator, kann man nun untersuchen, ob z.B. die Polarisationsebene
+sich gedreht hat. Die Komponente $\vec E = \vec E_0 \cos\varphi$ wird durchgelassen und die Komponente $\vec E' = \vec E_0 \cos\varphi$ wird absorbiert, wenn $\varphi$ der Winkel zwischen den Filtern ist. Da der gemessene Kurzschlussstrom eines Photoelements proportional der Lichtintensität I ist, folgt das \textit{Gesetz von Malus}
+\begin{equation}
+I = I_0 \cos^2\varphi \label{eq:malus}
+\end{equation}
+\subsection{$ \lambda/2 $-Platte}
+Häufig ist es von Vorteil die Schwingungsebene von linear polarisiertem Licht um einen Winkel $ \bigtriangleup\alpha $ zu drehen. Mit einer $ \lambda/2-Platte $ ist dies möglich. Wenn der $ \vec{E}-Vektor $ den Winkel $ \varphi $ gegen die optische Achse hat, so kann dieser in zwei Komponenten aufspalte. Diese sind einmal der parallele Anteil $ E_{\|} = E\cos \varphi $ und der senkrechte Anteil $ E_{\bot}=E\sin \varphi $ . Treffen die beiden Komponente in die Platte ein sind sie in Phase. Die Komponenten haben unterschiedliche Laufzeiten, so entsteht zwischen ihnen eine Phasendifferenz $\bigtriangleup\varphi $. Es gilt, 
+\begin{equation}
+\bigtriangleup\varphi=\frac{2\pi}{\lambda}d(n_{2}-n_{1})
+\end{equation}
+$d$ ist die Strecke die durchlaufen wird. Bei der $ \lambda/2 - Platte $ gilt, $ d(n_{2}-n_{1})=\lambda/2 $, also $ \bigtriangleup\varphi=\pi $. Dabei hat sich der $ \vec{E}-Vektor $ um den Winkel $\bigtriangleup=2\varphi $ Durch das drehen der $ \lambda/2-Platte $ lässt sich jeder Winkel und somit jede gewünschte Drehung herbeiführen.
+\subsection{Optische Aktivität}
+Diese Medien, z.B. eine Zuckerlösung, haben die Eigenschaft die Polarisationsebene linear polarisierten Lichts zu drehen. Generell fehlen solchen Substanzen bestimmte Symmetrieeigenschaften - Kristalle ohne Symmetriezentrum, Moleküle ohne Symmetriezentrum und Ebene, in allen Zustandsformen. Die Kristalle oder Moleküle sind in einer Lösung zwar statistisch verteilt, zeigen diese Eigenschaften aber trotzdem: Die Lichtwelle wird von der Substanz in eine Richtung gedreht, aber nicht in die andere Richtung zurück, da die Substanz "'auf der Rückseite`` nicht die selben Eigenschaften besitzt, da es nicht symmetrisch ist. Durchdringt eine Lichtwelle nun so eine Substanz, die in Lösung ist, so hängt der Drehwinkel $\alpha$ von der Konzentration $c$ und der durchdrungenen Länge $l$ proportional ab:
+\begin{equation}
+\alpha = \alpha_{s}\cdot c\cdot l \label{eq:opt_akt}
+\end{equation}
+$\alpha_{s}$ ist der Proportionalitätsfaktor und heißt spezifische Drehung.
+\newpage
+\section{Auswertung}
+\subsection{Überprüfung des Gesetz von Malus}
+Das Gesetz von Malus gibt den Zusammenhang \eqref{eq:malus} zwischen transmittierter Lichtintensität und Winkel des Polarisators an.\\
+Um den Zusammenhang nachzuweisen wird die Intensität von Licht, dass durch zwei Polarisatoren
+gemessen. Da die Spannung am Photoelement proportional zur Lichtintensität ist, wird mit dieser Stellvertretend gearbeitet. Durch den ersten Polarisator wird die Polarisationsebene festgelegt. Diese wird im Verlauf der Messung beibehalten. Der zweite Polarisator wird zunächst so eingestellt, dass die Menge des transmittierten Lichts minimal wird. Daraufhin wird in \SI{10}{\degree}-Schritten die Spannung am Photoelement gemessen über einen Winkelbereich von insgesamt \SI{180}{\degree}.\\
+Die von uns erhaltenen Messwerte sind im Laborbuch zu finden. Zur Auswertung haben wir diese Noch um eine Spannung von \SI{2+-1}{mV} bereinigt, die ohne einfallendes Licht gemessen wird.
+Die um den systematischen Fehler bereinigten Messwerte haben wir mit Hilfe von \textit{Gnuplot} nach dem \textit{Least-Square-Fit} Verfahren gegen eine Funktion $ I(\alpha)  = I_0 \cos^2(\alpha-\alpha_0)$ gefittet. Abweichend von der Theorie taucht bei uns noch ein weiterer Summand im Argument des Kosinus auf, da wir die Winkel nicht in Bezug zur Polarisationsebene gemessen haben. Die bereinigten Werte und der dazugehörige Fit sind in Abbildung \ref{fig:malus} zu sehen.
+\begin{figure}[H]
+\centering
+\def\h{10cm}
+\input{diagramme/malus.tex}
+\caption{Malus-Kurve [Platzhalter]}
+\label{fig:malus}
+\end{figure}
+
+\subsection{Reflexion von p- und s-polarisierten Licht}
+In diesem Versuch wird die Reflexion von Licht an einer Glasplatte in Abhängigkeit der Polarisationsrichtung untersucht. Dazu wird die Lichtintensität des an einer Glasscheibe reflektierten Lichts in Abhängigkeit vom Winkel gemessen. Als Lichtintensität wird die am Photosensor gemessene Spannung angenommen, da diese proportional zur einfallenden Lichtmenge ist. Dies führt man sowohl mit Licht durch, dass senkrecht zur Brechungsebene polarisiert einfällt, als auch mit Licht, das parallel zur Brechungsebene polarisiert einfällt. Zudem misst man die Lichtintensität, wenn das Licht direkt, also ohne von der Glasplatte beeinflusst zu werden, in den Photosensor fällt. Daraus lässt sich dann das Verhältnis von reflektierten zu einfallenden Licht bestimmen.\\
+Bei der Messung ist uns aufgefallen, dass nicht nur ein, sondern zwei reflektierte Lichtpunkte zu sehen sind. Auf eine mögliche Begründung gehen wir in der Diskussion ein. Während der Durchführung kam dadurch erschwerend hinzu, dass man den Sensor immer wieder passend auf einen Lichtpunkt ausrichten muss. Um möglichst vergleichbare Messungen durchzuführen haben wir den Sensor jeweils so ausgerichtet, dass die gemessene Spannung maximal wird.\\
+Von unsere Messwerten, die im Laborbuch zu finden sind, haben wir zunächst den Spannungswert den wir an der Photodiode ohne einfallendes Licht messen abgezogen. Damit minimieren wir den systematischen Fehler. Daraufhin haben wir diese Werte durch die Gesamtlichtintensität geteilt, um den Reflexionskoeffizienten zu erhalten. Die Gesamtlichtintensität beträgt nach Abzug des systematischen Fehlers für parallel-polarisiertes Licht \SI{914(2)}{mV} und für senkrecht-polarisiertes Licht \SI{843(2)}{mV}. Die Fehlerfortpflanzung lässt sich dabei mit \eqref{eq:err} bestimmen. Die so erhaltenen Werte sind in Abbildung \ref{fig:refp} dargestellt.\\
+
+
+\begin{figure}[H]
+\centering
+\input{diagramme/refp.tex}
+\caption{Reflexion von polarisierten Licht [Platzhalter]}
+\label{fig:refp}
+\end{figure}
+Für parallel polarisiertes Licht ist zwischen \SI{55(1)}{\degree} und \SI{60(1)}{\degree} minimal. Somit liegt der Brewster-Winkel im Bereich $ \alpha_B = \SI{57,5(35)}{\degree} $.
+Aus \eqref{eq:brew} erhält man daraus den Brechungsindex des Glases, aus \eqref{eq:err:brew} die dazugehörige Unsicherheit. Wir erhalten $ n = \num{1,57(22)} $.
+
+\subsection{Optische Aktivität von Zuckerlösungen}
+Ziel dieses Versuches ist es die Zuckerkonzentration einer Lösung anhand der optischen Aktivität zu bestimmen. Dazu sind als Hilfsmittel vier Zuckerlösungen mit bekannter Konzentration gegeben in gleich langen, transparenten Gefäßen wie die unbekannte Zuckerlösung.
+Dazu wird das Licht zunächst durch einen ersten Polarisator in einer Ebene linear polarisiert. Daraufhin fällt das Licht durch die Zuckerlösung und danach durch einen zweiten Polarisator. Diesen zweiten Polarisator dreht man so, dass die Menge des transmittierten Lichts minimal wird. In diesem Fall ist der Polarisator genau rechtwinklig zur Polarisationsebene. Somit lässt sich der Drehwinkel $ \alpha $ in der Lösung aus dem Winkel $ \alpha_{12} $ zwischen den Polarisatoren errechnen durch
+\begin{equation}
+	\alpha = \alpha_{12} - \SI{90}{\degree}
+\end{equation}
+Nach \eqref{eq:opt_akt} ist der Drehwinkel proportional zur Konzentration der Lösung bei konstanter Länge. Also lässt sich eine Ausgleichsgerade 
+\begin{equation}
+	\alpha(c) = k\cdot c \label{eq:zucker-fit}
+\end{equation}
+durch die Messwerte legen. Dabei ist $ k $ eine Proportionalitätskonstante. Aus dieser Geraden lassen sich die Drehwinkel beliebiger Konzentrationen bestimmen.\\
+Bei der Durchführung haben wir den Winkel minimaler Intensität nicht mithilfe des Photosensors bestimmt. Da dieser für kleine Intensitäten nicht fein genug misst, haben wir stattdessen ein weißes Blatt Papier hinter den zweiten Polarisator gehalten und den Winkel gesucht, unter dem der Lichtpunkt verschwindet. Auf diese Methode lässt sich der Winkel genauer einstellen, als man ihn auf der Skala ablesen kann.\\
+Unsere Messwerte sind in Abbildung \ref{fig:zucker} graphisch dargestellt. Für die Ausgleichsgerade haben wir mit \textit{Gnuplot} nach dem \textit{Least-Square-Fit} Verfahren unsere Messwerte gegen \eqref{eq:zucker-fit} gefittet. Wir erhielten daraus $ k = \num{1.08+-.05} $. Dabei ist $ \num{.025} $ der von \textit{Gnuplot} angegebene statistische Fehler. Dazu schätzen wir einen weiteren Fehler gleicher Größe aus der Unsicherheit der Messwerte ab.
+\begin{figure}[H]
+\centering
+\input{diagramme/zucker.tex}
+\caption{Zucker [Platzhalter]}
+\label{fig:zucker}
+\end{figure}
+Stellt man \eqref{eq:zucker-fit} um, erhält man \begin{equation}
+	c = \frac{\alpha}{k}
+\end{equation}
+Damit, und dem Fehler aus \eqref{eq:err} erhalten wir für die Konzentration der unbekannten Lösung $ c = \SI{27,0(23)}{\gram\per 100\centi\meter^{3}} $
+%\begin{figure}[H]
+%\centering
+%\input{diagramme/refs.tex}
+%\caption{Reflektion senkrecht [Platzhalter]}
+%\label{fig:refs}
+%\end{figure}
+\newpage
+\section{Diskussion} 
+\subsection{Gesetz von Malus}
+Das Gesetz von Malus passt sehr gut zur Darstellung der von uns gemessenen Daten. Mit nur einer Ausnahme berühren alle Messpunkte die nach dem Gesetz von Malus gefittete Kurve. 
+
+\subsection{p- und s-polarisiertes Licht}
+Vom Trend entsprechen die Kurven den theoretisch Erwarteten. Im Fall des parallel-polarisierten Lichts ist der Tiefpunkt im Bereich des Brewster-Winkels sichtbar geworden und die Lichtintensität ist in diesem Bereich fast nicht messbar. Auch bei senkrecht polarisierten Licht sind mit steigenden Brechungswinkeln zunehmende Reflexionskoeffizienten sichtbar. Jedoch sind hier auch einige Ausreißer zu sehen. Insbesondere die gemessenen Intensitäten bei \SI{30}{\degree} und \SI{75}{\degree} fallen aus der Reihe. \\
+Eine Erklärung für die Streuung der Messwerte kann auch die beschriebenen zwei reflektierten Punkte sein. Dass zwei Punkte zu sehen sind, ist wahrscheinlich eine Folge dessen, dass es an der Glasplatte zwei Reflexionsebenen gibt. Neben der vorderen Ebene beim Einfall reflektiert das Licht auch an der hinteren Glasebene beim Ausfallen. Durch die Brechung beim Einfallen kommt es dabei zum Parallelversatz und es sind zwei Lichtpunkte zu sehen. \\
+Da nach den Snellius'schen Brechungsgesetzen der Lichtstrahl in die hintere Plattenebene steiler einfällt, kann das Licht hier zu großen Teilen reflektiert werden. Daher könnte dies eine Erklärung für den Ausreißer bei \SI{30}{\degree} sein. \\
+Der Brechungsindex des Glases liegt in einem sinnvollen Bereich. Der Brechungsindex von verschiedenen Glasen liegt im Bereich \num{1,5} bis \num{2.0} \cite{wiki:brech}. Der von uns bestimmte Wert $ n = \num{1.57(22)} $ passt in diesen Bereich. Jedoch haben wir in vorherigen Versuchen bereits Methoden kennengelernt, um den Brechungsindex mit einfacheren Mitteln genauer zu bestimmen. Es hat sich im Versuch zwar gezeigt, dass es möglich ist einen Brechungsindex so zu Bestimmen, ich halte es aber nicht für sinnvoll die Methode anzuwenden, wenn das einzige Ziel ist, den Brechungsindex eines Materials zu bestimmen.
+
+\subsection{Optische Aktivität von Zuckerlösungen}

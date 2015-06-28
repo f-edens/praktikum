@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\begin{axis}[xticklabel=$\pgfmathprintnumber{\tick}^\circ$, width=.9\linewidth, height=10cm,
+	axis y line=left, axis x line = bottom, xmin = 20.1]
+	\addplot+ [only marks, mark=+, 
+		error bars/.cd, x dir = both, x fixed=1,
+		y dir = both, y fixed = 2] 
+	table[x=x,y=y, x error=xerr, y error=yerr] {
+x	xerr	y	yerr
+30	1	138	2
+35	1	38	2
+40	1	50	2
+45	1	61	2
+50	1	59	2
+55	1	89	2
+60	1	140	2
+65	1	184	2
+70	1	258	2
+75	1	378	2
+80	1	367	2
+85	1	518	2
+	};
+%	\addplot+[domain= -45:140, no marks, samples=100] {2043*(cos(x- 44.9940891727))^2};
+\legend{Meswerte, $ 2043\cos^2(x-\SI{45,0}{\degree}) $}
+\end{axis}
+
+\end{tikzpicture}

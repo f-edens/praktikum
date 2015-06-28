@@ -1,0 +1,132 @@
+\section{Einleitung}
+In diesem Versuch sollen optische Abbildungen mit Hilfe einer digitalen Spiegelreflexkamera untersucht werden.
+\subsection{Optische Abbildungen}
+Für dünne Linsen und achsennahe Strahlen gilt die Linsengleichung,
+\begin{equation}
+\frac{1}{f}=\frac{1}{b}+\frac{1}{g}
+\end{equation}
+$ g $ ist der Abstand des Gegenstands zu Linse, $ b $ ist der Abstand der Bildebene zur Linse und $ f $ bezeichnet die Brennweite.
+Aus dem Quotienten von $ b $ und $ g $ lässt sich der Abbildungsmaßstab $ M $ bestimmen.
+\begin{equation}
+M=\frac{b}{g}
+\end{equation}
+Dieser ist ein Maß für die Vergrößerung bzw. die Verkleinerung des Objektes.
+\subsection{Optische Auflösung und Blende}
+Wegen der Wellennatur des Lichts, gibt es eine Aulösungsgrenze für optische Abbildungen. Da die Abbildungsleistung von Linsen in der Mitte am besten ist wird um die Auflösung zu verbessern eine Blende ( auch Apertur genannt) mit einem Durchmesser $ D $ vor oder hinter die Linse gebracht. Dadurch gelangen nur noch Strahlen innerhalb des Durchmessers zur Linse. Das Licht wird durch die Blende gebeugt und es entstehen typischerweise Beugungsscheibchen. Damit zwei Bildpunkte von einander unterscheidbar sind, muss das Maximum des ersten mit dem Minimum des zweiten Bildpunktes zusammenfallen (Rayleigh-Kriterium).
+Für eine kreisförmige Apertur lässt sich die Auflösung der Linse durch,
+\begin{equation}
+d=2,4391...\cdot\lambda\cdot\frac{f}{D}
+\end{equation}
+beschreiben.$ d $ entspricht der Größe des Beugungsscheibchens für die Wellenlänge $ \lambda $.
+Der Quotient von $ f $ und $ D $ wird auch Blendenzahl gennant und mit $ k $ bezeichnet,
+\begin{equation}
+k=\frac{f}{D}
+\end{equation}
+neben der Rolle im Auflösungsvermögen, reguliert diese Größe ebenfalls die Lichtmenge die durch die Linse auf den Sensor fällt.
+Dabei gilt,
+ große Blendenzahl $ \Rightarrow $ kleine Lichtmenge  bzw.
+ kleine Blendenzahl $ \Rightarrow $ große Lichtmenge .
+\subsection{Schärfentiefe}
+Normalerweise wird nur ein Punkt Scharf auf die Bildebene abgebildet. Alle Punkte die weiter oder näher entfernt liegen, erscheinen als Zerstreuungskreise. Damit ein Punkt als scharf empfunden wird, darf der Durchmesser der Zerstreuungskreise einen Wert $ Z $ nicht überschreiten, dieser entspricht üblicherweise 1/1500 der Bilddiagonalen.
+Die kleinste Entfernung, in der ein Bild scharf erscheint, wird Nahpunkt genannt. Die größte Entfernung, bis zu der ein Bild scharf erscheint, heißt dementsprechend Fernpunkt.
+Als Schärfentiefe wird der Bereich zwischen diesen beiden Punkten bezeichnet. Es besteht folgender Zusammenhang mit der Blendenzahl,
+kleine Blendenzahl $ \Rightarrow $ kleine Schärfentiefe
+große Blendenzahl $ \Rightarrow $ große Schärfentiefe 
+Für jede Brennweite und Blendenzahl gibt es eine Gegenstandsweite, bei der alle Gegenstände bis ins Unendliche scharf abgebildet werden, der Fernpunkt also im unendlichen liegt. 
+Diese Weite wird hyperfokale Entfernung genannt und lässt sich berechnen aus,
+\begin{equation}
+d_{h}=f\cdot(\frac{D}{Z}+1)
+\end{equation}
+der Nahpunkt berechnet sich aus,
+\begin{equation}
+d_{n}=\frac{g}{\frac{g-f}{d_{h}-f}+1}
+\end{equation}
+für den Fernpunkt gilt,
+\begin{equation}
+d_{f}=\begin{cases}
+\frac{g}{\frac{g-f}{d_{h}-f}+1}\qquad wenn\, g\,<d_{h} &\: , \infty  \qquad wenn\, g\geq d_{h}\end{cases}
+\]
+\end{equation}
+
+\subsection{Bestimmung der Auflösung}
+Mathematisch wird die Auflösung als Modulationsübertragungsfunktion beschrieben (kurz:MTF). Die MTF ist von der räumlichen Frequenz abhängig, also in Linienpaaren pro Längeneinheit. Um die MTF zu bestimmen, wird zunächst der Kontrast benötigt, dieser ist definiert als,
+\begin{equation}
+C(\nu)=\frac{V_{max}-V_{min}}{V_{max}+V_{min}}
+\end{equation}
+$ V_{max} $ ist der Grauwert einer weißen Fläche und $ V_{min} $ der Grauwert einer schwarzen Fläche. Für die MTF gilt,
+\begin{equation}
+MTF(\nu)=\frac{C(\nu)}{C(0)}
+\end{equation}
+$ C(0) $ ist der maximale Kontrast.
+In diesem Versuch werden zwei Methoden zur Bestimmung der Auflösung verwendet. Zum einen mit Hilfe des Siemenssterns und zum anderen mit der Methode der "schrägen Kante".
+Beim Siemensstern handel es sich um einen Kreis mit abwechselnd weißen und schwarzen Sektoren. Je näher man dem Mittelpunkt kommt, desto geringer wird der Abstand zwischen den Sektoren. Ab einem bestimmtem Abstand vom Stern kann dieser nicht mehr aufgelöst werden und nur noch als graue Fläche dargestellt. Der Durchmesser $ d $ dieser grauen Fläche ist ein Maßstab für das Auflösungsvermögen, es gilt für Auflösung der Linienpaare,
+\begin{equation}
+l=\frac{\pi d}{n}
+\end{equation}
+$ n $ ist die Anzahl der Linienpaare, in diesem Versuch sind es 36.
+Um die Auflösung mittels der Methode der "schrägen Kante", wird eine Kante welche schräg zum Sensor steht fotografiert. Anschließend wird das Profil der Kante mit einem Computerprogramm gemittelt. Es sollte eine annähernde Sprungfunktion herauskommen. Diese wird abgeleitet, daraus folgt ein abgeschwächter Dirac-Impuls (bei einer perfekten Kante, wäre es ein Dirac-Impuls). Diese Funktion wird nun Fouriertransformiert.
+Die Kurve die jetzt zu sehen ist, ist die MTF-Kurve.
+\section{Auswertung}
+\subsection{Schärfentiefe}
+Der erste subjektive Eindruck bestand darin, dass die Schärfentiefe mit zunehmender Blendenzahl zunimmt.
+Der Nullpunkt der Skala war  $ g=(104\pm1)cm $ entfernt, anhand der abgebildeten Skala ist nun die Schärfentiefe gut abzuschätzen.
+Die Werte in den Tabellen sind in Meter.
+
+
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Blendenzahl & gemessener Fernpunkt & gemessener Nahpunkt \\ 
+\hline 
+1,8 & 1,08 & 1,01 \\ 
+\hline 
+2,8 & 1,10 & 1,01 \\ 
+\hline 
+4 & 1,14 & 1,00 \\ 
+\hline 
+5,6 & 1,16 & 0,99 \\ 
+\hline 
+8 & 1,17 & 0,95 \\ 
+\hline 
+11 & alles scharf & alles scharf \\ 
+\hline 
+16 & alles scharf & alles scharf \\ 
+\hline 
+22 & alles scharf & alles scharf \\ 
+\hline 
+\end{tabular} 
+
+
+Alle Zahlen dieser Tabelle haben einen Fehler von $ \pm1cm $.
+In der folgenden Tabelle sind die theoretisch berechneten Werte eingetragen.
+
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Blendenzahl & Nahpunkt & Fernpunkt & hyperfokale Entfernung \\ 
+\hline 
+1,8 & 1,03 & 1,05 & 70,2 \\ 
+\hline 
+2,8 & 1,02 & 1,06 & 44,2 \\ 
+\hline 
+4 & 1,01 & 1,07 & 31,3 \\ 
+\hline 
+5,6 & 1 & 1,09 & 22,1 \\ 
+\hline 
+8 & 0,98 & 1,11 & 15,7 \\ 
+\hline 
+11 & 0,95 & 1,14 & 11,1 \\ 
+\hline 
+16 & 0,92 & 1,19 & 7,86 \\ 
+\hline 
+22 & 0,88 & 1,27 & 5,57 \\ 
+\hline 
+\end{tabular} 
+
+
+Die Fehler für die Nahpunkte betragen $ \pm1cm $ und für die Fernpunkte $ \pm2 cm $.
+
+\section{Diskussion}
+\subsection{Schärfentiefe}
+Die berechneten Werte Stimmen nicht mit den "gemessenen" Werten überein, allerdings ist die Diskrepanz nicht besonders groß. Der Hauptgrund dafür ist die subjektive Wahrnehmung, da absolut scharfe Darstellung und gute Erkennbarkeit leicht miteinander verwechselt werden können. Ist eine Zahl beispielsweise gut lesbar, aber nicht scharf im Sinne der Größe von Z, neigt der subjektive Beobachter dazu diese als scharf zu bezeichnen und mit einzubeziehen. (Verbesserungsvorschlag: in der Vorbereitung genau definieren was als scharf angesehen werden kann und was nicht.)
