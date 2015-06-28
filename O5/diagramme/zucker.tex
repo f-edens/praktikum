@@ -1,6 +1,8 @@
 \begin{tikzpicture}
 \begin{axis}[yticklabel=$\pgfmathprintnumber{\tick}^\circ$, width=.9\linewidth, height=10cm,
-	legend pos = north west, xmajorgrids]
+	legend pos = north west, xmajorgrids,
+	ylabel = {Drehwinkel $ \alpha $},
+	xlabel = {Zuckerkonzentration $ c $ [\si{g/100.cm^{3}}]}]
 	\addplot+ [only marks, mark=+, 
 		error bars/.cd,
 		y dir = both, y fixed = 2] 

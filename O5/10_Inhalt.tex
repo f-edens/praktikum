@@ -44,9 +44,13 @@ Die um den systematischen Fehler bereinigten Messwerte haben wir mit Hilfe von \
 \centering
 \def\h{10cm}
 \input{diagramme/malus.tex}
-\caption{Malus-Kurve [Platzhalter]}
+\caption{Malus-Kurve}
 \label{fig:malus}
 \end{figure}
+\subsection{$ \lambda/2 $-Platte}
+Nun sollen die Eigenschaften der $ \lambda /2 -Platte $ untersucht werden.
+Zuerst sollte geprüft werden, ob die $ \lambda /2 -Platte $ bei $ \SI{45}{\degree} $ die Polarisationsebene tatsächlich um $ \SI{90}{\degree} $ dreht. Um das zu untersuchen, wurden die Polarisationsfilter zunächst so eingestellt, dass der Relativwinkel $ 0^\circ $ beträgt. Ohne $ \lambda /2 -Platte $ wäre die gemessene Intensität maximal. Bringt man die $ \lambda /2 -Platte $ hinter den ersten Polarisationsfilter so wird eine minimale Intensität gemessen. Werden nun die Polarisationsfilter so eingestellt, dass der Relativwinkel $ 90^\circ $ beträgt, so wird ohne $ \lambda /2 -Platte $ ein Minimum gemessen. Mit $ \lambda /2 -Platte $ wird hier ein Maximum gemessen.
+Wird die $ \lambda /2 -Platte $ auf $ 30^\circ $ eingestellt so ist ein Minimum bei einem Relativwinkel von $ 30^\circ $ messbar und ein Maximum bei einem Relativwinkel von $ 120^\circ $.
 
 \subsection{Reflexion von p- und s-polarisierten Licht}
 In diesem Versuch wird die Reflexion von Licht an einer Glasplatte in Abhängigkeit der Polarisationsrichtung untersucht. Dazu wird die Lichtintensität des an einer Glasscheibe reflektierten Lichts in Abhängigkeit vom Winkel gemessen. Als Lichtintensität wird die am Photosensor gemessene Spannung angenommen, da diese proportional zur einfallenden Lichtmenge ist. Dies führt man sowohl mit Licht durch, dass senkrecht zur Brechungsebene polarisiert einfällt, als auch mit Licht, das parallel zur Brechungsebene polarisiert einfällt. Zudem misst man die Lichtintensität, wenn das Licht direkt, also ohne von der Glasplatte beeinflusst zu werden, in den Photosensor fällt. Daraus lässt sich dann das Verhältnis von reflektierten zu einfallenden Licht bestimmen.\\
@@ -57,7 +61,7 @@ Von unsere Messwerten, die im Laborbuch zu finden sind, haben wir zunächst den 
 \begin{figure}[H]
 \centering
 \input{diagramme/refp.tex}
-\caption{Reflexion von polarisierten Licht [Platzhalter]}
+\caption{Reflexion von polarisierten Licht}
 \label{fig:refp}
 \end{figure}
 Für parallel polarisiertes Licht ist zwischen \SI{55(1)}{\degree} und \SI{60(1)}{\degree} minimal. Somit liegt der Brewster-Winkel im Bereich $ \alpha_B = \SI{57,5(35)}{\degree} $.
@@ -79,23 +83,31 @@ Unsere Messwerte sind in Abbildung \ref{fig:zucker} graphisch dargestellt. Für 
 \begin{figure}[H]
 \centering
 \input{diagramme/zucker.tex}
-\caption{Zucker [Platzhalter]}
+\caption{$ c $-$ \alpha $-Diagramm des untersuchten Zuckers}
 \label{fig:zucker}
 \end{figure}
 Stellt man \eqref{eq:zucker-fit} um, erhält man \begin{equation}
 	c = \frac{\alpha}{k}
 \end{equation}
-Damit, und dem Fehler aus \eqref{eq:err} erhalten wir für die Konzentration der unbekannten Lösung $ c = \SI{27,0(23)}{\gram\per 100\centi\meter^{3}} $
+Damit, und dem Fehler aus \eqref{eq:err} erhalten wir für die Konzentration der unbekannten Lösung $ c = \SI{27,0(23)}{\gram\per 100.\centi\meter^{3}} $
+
 %\begin{figure}[H]
 %\centering
 %\input{diagramme/refs.tex}
 %\caption{Reflektion senkrecht [Platzhalter]}
 %\label{fig:refs}
 %\end{figure}
+\subsection{Kalkspat}
+Wird der Laser durch einen Kalkspatkristall geschickt ist sichtbar, dass der Strahl sich aufteilt. Wird der Polarisationsfilter auf $ \SI{29}{\degree} $ eingestellt ist nur der untere Strahl sichtbar, bei $ \SI{120}{\degree} $ ist nur der obere Strahl sichtbar. 
+
 \newpage
 \section{Diskussion} 
 \subsection{Gesetz von Malus}
 Das Gesetz von Malus passt sehr gut zur Darstellung der von uns gemessenen Daten. Mit nur einer Ausnahme berühren alle Messpunkte die nach dem Gesetz von Malus gefittete Kurve. 
+
+\subsection{$ \lambda /2 $ -Platte}
+Bei einer Einstellung von $ 45^\circ $ wurde, wie erwartet, eine Drehung der Polarisationsebene von $ 90^\circ $ gemessen.
+Bei einer Veränderung von $ 45^\circ $ auf $ 30^\circ $ wurde eine Drehung der Polarisationsebene von $ 30^\circ $ beobachtet, dies war ebenfalls erwartet.
 
 \subsection{p- und s-polarisiertes Licht}
 Vom Trend entsprechen die Kurven den theoretisch Erwarteten. Im Fall des parallel-polarisierten Lichts ist der Tiefpunkt im Bereich des Brewster-Winkels sichtbar geworden und die Lichtintensität ist in diesem Bereich fast nicht messbar. Auch bei senkrecht polarisierten Licht sind mit steigenden Brechungswinkeln zunehmende Reflexionskoeffizienten sichtbar. Jedoch sind hier auch einige Ausreißer zu sehen. Insbesondere die gemessenen Intensitäten bei \SI{30}{\degree} und \SI{75}{\degree} fallen aus der Reihe. \\
@@ -104,3 +116,8 @@ Da nach den Snellius'schen Brechungsgesetzen der Lichtstrahl in die hintere Plat
 Der Brechungsindex des Glases liegt in einem sinnvollen Bereich. Der Brechungsindex von verschiedenen Glasen liegt im Bereich \num{1,5} bis \num{2.0} \cite{wiki:brech}. Der von uns bestimmte Wert $ n = \num{1.57(22)} $ passt in diesen Bereich. Jedoch haben wir in vorherigen Versuchen bereits Methoden kennengelernt, um den Brechungsindex mit einfacheren Mitteln genauer zu bestimmen. Es hat sich im Versuch zwar gezeigt, dass es möglich ist einen Brechungsindex so zu Bestimmen, ich halte es aber nicht für sinnvoll die Methode anzuwenden, wenn das einzige Ziel ist, den Brechungsindex eines Materials zu bestimmen.
 
 \subsection{Optische Aktivität von Zuckerlösungen}
+Der in der Theorie angenommene lineare Zusammenhang zwischen Konzentration der Lösung und Drehwinkel konnte im Versuch gut gezeigt werden. Die von uns erhaltenen Messwerte lassen sich durch eine Ursprungsgrade gut darstellen. Die Unsicherheit der ermittelten Konzentration ist mit etwa \SI{10}{\percent} zwar relativ hoch, jedoch lassen sich im allgemeinen Winkel noch viel genauer bestimmen, als es uns im Versuch möglich war. \\
+Ich kann mir für dieses Verfahren praktische Anwendung vorstellen. Die in diesem Versuch ermittelten werte lassen sich relativ schnell und einfach ermitteln. Dies wäre technisch sogar voll automatisch umsetzbar. Will man nun die Lösungskonzentration von optisch aktiven Stoffen bestimmen, ist der Vorteil dieser Methode, dass sie "von außen" angewendet werden kann. Die Probe bleibt in Menge und Qualität vollständig erhalten.
+
+\subsection{Kalkspat}
+Wie erwartet ist der obere Strahl s-polarisiert und der untere p-polarisiert. Dies könnte beispielweise in der optischen Datenübertragung technisch genutzt werden. In einem Lichtleiter wird ein Signal senkrecht und das andere Signal parallel polarisiert Übertragen. Beim Empfänger werden diese dann mit einem Kalkspat wieder getrennt und können unabhängig verarbeitet werden.
