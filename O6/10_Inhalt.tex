@@ -1,0 +1,29 @@
+\section{Einleitung}
+In diesem Versuch wird die Beugung von monochromatischen Licht an Rechteckspalten und Kombinationen mehrerer Rechteckspalte untersucht. 
+\subsection{Beugung}
+Wenn monochromatische ebene Lichtwellen durch eine Blendenöffnung fallen können auf einem dahinter liegenden Schirm dunkle und helle Bereiche erkannt werden. Diesen Effekt nennt man Beugung. Das auf dem Schirm zu erkennende Bild wird als Beugungsmuster oder Beugungsbild bezeichnet.\\
+Beugung kann durch das huygenssche Prinzip erklärt werden. An jedem Punkt der Blendenöffnung entstehen Elementarwellen. Je nach Winkel müssen diese verschiedene Strecken zum Schirm zurück legen. Diesen Streckenunterschied bezeichnet man als Gangunterschied $ \Delta $. Unter einem Winkel von \SI{0}{\degree}, also senkrecht zur Blende, sind alle Gangunterschiede $ 0 $. Hier liegt allgemein das Hauptmaximum des Beugungsbildes.\\
+Mathematisch detailliert beschrieben wird Beugung durch das kirchhoffsche Beugungsintegral. Da in den im Versuch nur Fälle beobachtet werden, in denen die Blendenöffnung klein und der Schirm weit von Blende entfernt ist wird dieses Integral nur in Fraunhofer-Näherung betrachtet:
+\begin{equation}
+	\psi(x,y) \propto \int\int_{\text{Blende}} b(x', y') \e^{-\iu k \frac{xx'+yy'}{L}}\di x'\di y' \label{eq:fraun}
+\end{equation}
+Dabei ist $ b(x',y') $ die Blendenfunktion, $ k $ ist die Wellenzahl $ k = \frac{2\pi}{\lambda} $ mit Wellenlänge $ \lambda $, $ L $ ist die Entfernung zwischen Blende und Schirm. Die Amplitude $ \psi $ entspricht somit abgesehen von Vorfaktoren und Streckungsfaktoren der Fourier-Transformation der Blendenöffnung. \\
+Gemessen wird nicht die Amplitude $ \psi $ sondern die Intensität $ I $. Diese erhält man durch
+\begin{equation}
+	I = \left|\psi\right|^2
+\end{equation}
+
+\subsection{Beugung am Rechteckspalt}
+Bei der Beugung am Rechteckspalt im Versuch ist der Spalt in $ y $-Richtung deutlich größer als die Breite des Laserstrahls. Daher wird nur das Beugungsmuster entlang der $ x $-Achse betrachtet. Die Blendenfunktion $ b(x) $ ist Bereich der Blendenöffnung $ 1 $, sonst $ 0 $. Somit gilt für einen Spalt der Breite $ d $ nach \eqref{eq:fraun}
+\begin{equation}
+	\psi(x) \propto \int_{-\frac{d}{2}}^{\frac{d}{2}} \e^{-\iu k \frac{xx'}{L}}\di x' = 2L\frac{\sin\left(\frac{dkx}{2L}\right)}{kx}
+\end{equation}
+und damit
+\begin{equation}
+	I \propto \frac{sin^2\left(\frac{dkx}{2L}\right)}{x^2}
+\end{equation}
+\newpage
+\section{Auswertung}
+
+\newpage
+\section{Diskussion} 
