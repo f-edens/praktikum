@@ -20,8 +20,24 @@ Bei der Beugung am Rechteckspalt im Versuch ist der Spalt in $ y $-Richtung deut
 \end{equation}
 und damit
 \begin{equation}
-	I \propto \frac{sin^2\left(\frac{dkx}{2L}\right)}{x^2}
+	I \propto \frac{\sin^2\left(\frac{dkx}{2L}\right)}{x^2} \label{eq:beug_einzel}
 \end{equation}
+Das Maximum des Beugungsbildes befindet sich bei $ x = 0 $. Weitere lokale Maxima jeweils für $ \sin^2\left(\frac{dkx}{2L}\right) \approx 1 $
+
+\subsection{Beugung an Mehrfachspalten}
+Mehrfachspalte bestehen aus mehreren Rechteckspalten nebeneinander im jeweiligen Abstand $ g $. Dieser Abstand $ g $ ist die Gitterkonstante. Das Beugungsbild entsteht durch Überlagerung der Beugungsbilder der einzelnen Rechteckspalte. Für große Schirmabstände ist der Gangunterschied $ \Delta s $ in guter Näherung gegeben durch
+\begin{equation}
+	\Delta s = g \sin\varphi \approx g \frac{x}{L}
+\end{equation}
+Dabei ist $ \varphi $ der Beugungswinkel. Addiert man die Amplituden auf erhält man mit Amplitude $ \psi_0 $ der einzelnen Rechteckspalte und Gitterzahl $ N $ die Gesamtamplitude
+\begin{equation}
+	\psi = \sum_{n = 0}^{N-1} \psi_0 \e^{\iu k n\Delta s} = N\psi_0 \frac{1-\e^{\iu{kN\Delta s}}}{1 - \e^{\iu {k\Delta s}}} = N\psi_0 \frac{\e^{\iu\frac{kN\Delta s}{2}}}{\e^{\iu\frac{k\Delta s}{2}}} \frac{\sin\left({\frac{kN\Delta s}{2}}\right)}{\sin\left({\frac{k\Delta s}{2}}\right)}
+\end{equation}
+Die Intensität ist damit gegeben durch
+\begin{equation}
+	I = N^2\psi_0^2 \frac{\sin^2\left({\frac{kN\Delta s}{2}}\right)}{\sin^2\left({\frac{k\Delta s}{2}}\right)} = I_0 N^2 \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)}
+\end{equation}
+Die Intensität nimmt also quadratisch mit der Gitterzahl zu. $ I_0 $ ist nach \eqref{eq:beug_einzel} abhängig von $ x $ und Bildet damit eine Einhüllende der Intensitätsverteilung. Ihr Einfluss nimmt mit zunehmender Spaltzahl und -dichte ab. $ \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)} $ hat Hauptmaxima für $ \sin\left({\frac{kgx}{2L}}\right) = 0 $. Dazwischen befinden sich $ N-1 $ Minima und $ N-2 $ Nebenmaxima.
 \newpage
 \section{Auswertung}
 
