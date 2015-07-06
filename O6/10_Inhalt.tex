@@ -31,15 +31,157 @@ Mehrfachspalte bestehen aus mehreren Rechteckspalten nebeneinander im jeweiligen
 \end{equation}
 Dabei ist $ \varphi $ der Beugungswinkel. Addiert man die Amplituden auf erhält man mit Amplitude $ \psi_0 $ der einzelnen Rechteckspalte und Gitterzahl $ N $ die Gesamtamplitude
 \begin{equation}
-	\psi = \sum_{n = 0}^{N-1} \psi_0 \e^{\iu k n\Delta s} = N\psi_0 \frac{1-\e^{\iu{kN\Delta s}}}{1 - \e^{\iu {k\Delta s}}} = N\psi_0 \frac{\e^{\iu\frac{kN\Delta s}{2}}}{\e^{\iu\frac{k\Delta s}{2}}} \frac{\sin\left({\frac{kN\Delta s}{2}}\right)}{\sin\left({\frac{k\Delta s}{2}}\right)}
+	\psi = \sum_{n = 0}^{N-1} \psi_0 \e^{\iu k n\Delta s} = \psi_0 \frac{1-\e^{\iu{kN\Delta s}}}{1 - \e^{\iu {k\Delta s}}} = \psi_0 \frac{\e^{\iu\frac{kN\Delta s}{2}}}{\e^{\iu\frac{k\Delta s}{2}}} \frac{\sin\left({\frac{kN\Delta s}{2}}\right)}{\sin\left({\frac{k\Delta s}{2}}\right)}
 \end{equation}
 Die Intensität ist damit gegeben durch
 \begin{equation}
-	I = N^2\psi_0^2 \frac{\sin^2\left({\frac{kN\Delta s}{2}}\right)}{\sin^2\left({\frac{k\Delta s}{2}}\right)} = I_0 N^2 \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)}
+	I =\psi_0^2 \frac{\sin^2\left({\frac{kN\Delta s}{2}}\right)}{\sin^2\left({\frac{k\Delta s}{2}}\right)} = I_0  \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)} \label{eq:beug_mehrfach}
 \end{equation}
-Die Intensität nimmt also quadratisch mit der Gitterzahl zu. $ I_0 $ ist nach \eqref{eq:beug_einzel} abhängig von $ x $ und Bildet damit eine Einhüllende der Intensitätsverteilung. Ihr Einfluss nimmt mit zunehmender Spaltzahl und -dichte ab. $ \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)} $ hat Hauptmaxima für $ \sin\left({\frac{kgx}{2L}}\right) = 0 $. Dazwischen befinden sich $ N-1 $ Minima und $ N-2 $ Nebenmaxima.
+ $ I_0 $ ist nach \eqref{eq:beug_einzel} abhängig von $ x $ und Bildet damit eine Einhüllende der Intensitätsverteilung. Ihr Einfluss nimmt mit zunehmender Spaltzahl und Spaltdichte ab. $ \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)} $ hat Hauptmaxima für $ \sin\left({\frac{kgx}{2L}}\right) = 0 $, also 
+\begin{equation}
+x = m \frac{2\pi L}{kg}
+\end{equation} mit ganzen Zahlen $ m $. Dazwischen befinden sich $ N-1 $ Minima und $ N-2 $ Nebenmaxima. Setzt man dies $ x $-Werte in \eqref{eq:beug_einzel} ein und normiert für $ m = 0 $ auf $ 1 $, erhält man
+\begin{equation}
+	I_0 = \left(\frac{\sin\left(m\pi\frac{d}{g}\right)}{m\pi\frac{d}{g}}\right)^2 \label{eq:form-faktor}
+\end{equation}
+Diesen Faktor nennt man Formfaktor. Er kann verwendet werden um anhand der Hauptmaxima die Gitterstruktur zu bestimmen.\\
+Das globale Intensitätsmaximum befindet sich bei $ x = 0 $. Da 
+\begin{equation}
+	\lim\limits_{x\to 0} \frac{\sin^2\left({\frac{kNgx}{2L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)} = N^2
+\end{equation}
+ist die Intensität des Maximums proportional zum Quadrat der Spaltenzahl. Dieser Zusammenhang gilt auch an allen anderen Stellen mit $ \sin\left({\frac{kgx}{2L}}\right) \to 0$.
 \newpage
 \section{Auswertung}
+\subsection{Intensitätsverteilung von Einzelspalten}
+Im ersten Versuchsteil soll aus den Beugungsbildern eines Lasers an Einzelspalten verschiedener Breiten (\SIlist{,075;0,15; ,4}{\milli\meter}) die Wellenlänge des verwendeten Lasers bestimmt werden. Dazu fittet man den gemessenen Intensitätsverlauf gegen eine Funktion 
+\begin{equation}
+	f(x) = a \cdot \frac{\sin^2(bx)}{x^2} + c
+\end{equation}
+Nach \eqref{eq:beug_einzel} entspricht $ b $ dem Vorfaktor im Argument des Sinus 
+\begin{equation}
+	b = \frac{dk}{2L} = \frac{\pi d}{\lambda L}
+\end{equation}
+Also ist die Wellenlänge $ \lambda $ gegeben durch
+\begin{equation}
+	\lambda = \frac{\pi d}{bL} \label{eq:ausw-einzel}
+\end{equation}
+Die Fits haben wir mit \textit{Gnuplot} nach dem \textit{Least-Square-Fit} Verfahren erstellt. Sie sind zusammen mit den Messwerten in Abbildung \ref{fig:beug-einzel} zu sehen.
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/einzel.plt"
+	\end{gnuplot}
+	\caption{Beugungsbilder der Einzelspalte verschiedener Breiten mit Fit}
+	\label{fig:beug-einzel}
+\end{figure}
+Bei der Auswertung ist uns aufgefallen, dass die Datenreihe, die eigentlich zur Spaltbreit \SI{,4}{\milli\meter} gehören sollte, nur dann sinnvolle Werte ergibt, wenn man eine Spaltbreite von \SI{,075}{\milli\meter} annimmt. Wir können nicht feststellen, ob dies durch einen Fehler von uns verursacht wurde, oder ob die verwendete Software beim Exportieren der Messwerte einen Fehler erzeugt hat.\\
+Zudem haben wir die Abstand zwischen Schirm und Blende nicht notiert. Wir schätzen diesen daher durch \SI{90(10)}{\centi\meter} ab.\\
+Aus den Fits erhalten wir bei einer Blendenöffnung von \SI{,075}{mm} $ b = \SI{403(1)}{\per\meter} $ und $ b = \SI{401(1)}{\per\meter} $. Bei einer Blendenöffnung von \SI{,15}{\milli\meter} erhalten wir $ b = \SI{840(1)}{\per\meter} $. Mit \eqref{eq:ausw-einzel} erhalten wir daraus im Mittel eine Wellenlänge von $ \lambda = \SI{640(70)}{\nano\meter} $.
+
+\subsection{Vergleich der Beugungsbilder von Einzel- und Doppelspalt}
+In diesem Versuch wird das Beugungsbild eines Einzelspalt der Breite $ d = \SI{,15}{\milli\meter} $ mit dem eines Doppelspaltes gleicher Breite und Gitterkonstante $ g = \SI{,25}{\milli\meter} $ verglichen. Nach Formel \eqref{eq:beug_mehrfach} wird erwartet, dass sich die Beugungsbilder nach dem normieren nur noch um den Strukturfaktor
+\begin{equation}
+	\frac{\sin^2\left({\frac{kgx}{L}}\right)}{\sin^2\left({\frac{kgx}{2L}}\right)}
+\end{equation}
+unterscheiden, also das Beugungsbild des Einzelspalts eine Einhüllende des Beugungsbildes des Doppelspalts bildet. Unsere Messwerte sind in Abbildung \ref{fig:beug-einzel-doppel} zu sehen.
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/einzel-doppel.plt"
+	\end{gnuplot}
+	\caption{Beugunsbild eines Einzelspalt und Doppelspalt gleicher Breite}
+	\label{fig:beug-einzel-doppel}
+\end{figure}
+
+\subsection{Vergleich der Beugungsbilder mehrerer Doppelspalte}
+Bei diesem Versuchsteil werden die Intensitätsverläufe mehrerer Doppelspalte untersucht. Diese haben alle jeweils Spaltöffnungen der Breite $ \SI{,15}{\milli\meter} $ bei Spaltabständen von $ \SIlist{,25;,50;1,00}{\milli\meter} $ respektive. Nach der Theorie wird erwartet, dass die Dichte der Maxima gemäß \eqref{eq:beug_mehrfach} proportional zur Gitterkonstante zunimmt. Dabei bleibt jedoch die relative Intensität verschiedener Maxima an gleicher $ x $-Position gleich. \\
+Unsere Beugungsbilder sind in Abbildung \ref{fig:beug-doppel} zu sehen.
+
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/doppel.plt"
+	\end{gnuplot}
+	\caption{Beugungsbilder verschiedener Doppelspalte mit gleichen Spaltöffnungen}
+	\label{fig:beug-doppel}
+\end{figure}
+
+\subsection{Vergleich der Beugungsbilder mehrerer Mehrfachspalte}
+In diesem Versuchsteil wird das Beugungsverhalten von Licht an Mehrfachspalten abhängig von der Anzahl der beleuchteten Spalte untersucht. Dazu werden optische Gitter mit Spaltöffnung $ d = \SI{,15}{\milli\meter} $ und Gitterkonstante $ g = \SI{.25}{\milli\meter} $ bei Spaltzahlen von $ N = \numlist{3;4;5;40} $ verwendet. Insbesondere soll dabei der Zusammenhang zwischen $ N $ und der Intensität untersucht werden. Daher werden in diesem Versuchsteil alle Beugungsbilder mit dem gleichen Faktor normiert. \\
+Bei der Durchführung fiel auf, dass, anders als in der Theorie erwartet, die Intensität nicht bei $ N = 40 $ sondern für $ N = 5 $ maximal wird. Daher sind alle Messwerte in Abbildung \ref{fig:beug-mehrfach} durch das Maximum des Intensitätsverlaufs für $ N = 5 $ geteilt. Diese Beobachtung lässt sich mit der Beobachtung in Verbindung bringen, dass bei $ N = 40 $ nicht das gesamte Gitter beleuchtet wurde.
+
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/mehrfach.plt"
+	\end{gnuplot}
+	\caption{Beugungsbilder verschiedener Mehrfachspalte mit gleichen Spaltgrößen und -abständen}
+	\label{fig:beug-mehrfach}
+\end{figure}
+Am Hauptmaximum betragen die relativen Intensitäten für $ N = 5 $ $ I_{rel} = \num{.98(2)} $, für $ N = 4 $ $ I_{rel} = \num{,91(2)} $ und für $ N = 3 $ ist $ I_{rel} = \num{,625(5)} $.
+
+\subsubsection{Bestimmung des Formfaktors}
+Zur Bestimmung des Formfaktors werden am Diagramm die Intensitätsabnahmen an den Hauptmaxima abgelesen. Gemittelt über $ N = \numlist{3;4;5} $ und den Hauptmaxima auf beiden Seiten des globalen Maximums erhalten wir die folgenden Intensitätsverhältnisse zum Maximum nullter Ordnung: \num{0,27+-0,03} für $ |m| = 1 $ und \num{0,039+-0,004} für $ |m| = 2 $. Für größere Ordnungen ist die Intensitätsauflösung zu gering um zuverlässige Werte zu erhalten. \\
+Die so erhaltenen Werte fitten wir gegen eine Funktion
+\begin{equation}
+	f(m) = \frac{\sin^2(am)}{(am)^2}
+\end{equation}
+Nach \eqref{eq:form-faktor} gilt
+\begin{equation}
+	a = \frac{\pi d}{g} ~\Leftrightarrow~ \frac{d}{g} = \frac{a}{\pi}
+\end{equation}
+Die Intensitätsverhältnisse sind zusammen mit dem dazugehörigen Fit in Abbildung \ref{fig:form-faktor} dargestellt.
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/formfaktor.plt"
+	\end{gnuplot}
+	\caption{Formfaktor in Abhängigkeit zur Ordnung der Maxima}
+	\label{fig:form-faktor}
+\end{figure}
+Mit \textit{Gnuplot} nach dem \textit{Least-Square-Fit} Verfahren erhalten wir $ a = \num{1,9(1)} $. Damit ist $ \frac{d}{g} = \num{,60(4)} $.
+
+\subsection{Nebenmaxima am Vierfachspalt}
+In diesem Versuchsteil wird der Bereich zwischen dem zweiten und dritten Hauptmaxima des Vierfachspalts genauer betrachtet. In der Theorie werden hier drei Minima und zwei Nebenmaxima erwartet. Das von uns aufgenommene Beugungsbild ist in Abbildung \ref{fig:neben} zu sehen.
+\begin{figure}[H]
+	\centering
+	\begin{gnuplot}[terminal=pdf, terminaloptions=color]
+		load "diagramme/nebenmax.plt"
+	\end{gnuplot}
+	\caption{Auflösung des Bereichs zwischen zweiten und dritten Hauptmaximum}
+	\label{fig:neben}
+\end{figure}
 
 \newpage
-\section{Diskussion} 
+\section{Diskussion}
+\subsection{Verschiedene Einfachspalte}
+Die von uns bestimmte Wellenlänge $ \lambda = \SI{640(70)}{\nano\meter} $ liegt im Bereich des roten Lichts. Somit haben wir, obwohl wir den Schirmabstand abschätzen mussten, einen realistischen Werte erhalten. Das Beugung verwendet werden kann um die Wellenlänge von Licht zu bestimmen haben wir bereits in früheren Versuchen gesehen. Im Spektroskopie-Versuch O3 haben wir Beugung am Gitter verwendet, um aus den Beugungswinkel die spektrale Aufteilung des Lichts zu bestimmen. Mit dem dort verwendeten Aufbau, mit dem Beugungswinkel auf weniger als \SI{.1}{\degree} genau messbar sind, lässt sich auch die Wellenlänge genauer bestimmen.\\
+Selbst wenn man den Schirmabstand genau bestimmt hätte, wäre das Ergebnis aus dem Einzelspalt-Versuch ungenauer, da die Nebenmaxima deutlich weniger scharf auflösen.
+
+\subsection{Vergleich von Doppel- und Einzelspalt}
+Der theoretisch erwartete Verlauf ist etwa bis zum ersten Minimum des Einzelspalts zu beobachten. Die Intensität des Doppelspalts hier immer unter der des Einzelspalts und nähert sich ihr beim Hauptmaximum an. Ebenfalls gut zu erkennen ist, dass wie erwartet zwischen zwei Maxima immer ein Minimum und keine weiteren Nebenmaxima sind.\\
+Das der Verlauf im äußeren Verlauf nicht den Erwartungen entspricht ist wahrscheinlich die Folge diverser Störeinflüsse. In der Theorie geht man von monochromatischen Ebenen wellen aus, die durch alle Spalte mit gleicher Intensität fallen. Allein die Annahme der ebenen Wellen ist bedingt durch den, selbst im Vergleich zum Versuchsaufbau, beschränkten Laserstrahls. Nach dem huygensschen Prinzip kann im Rand des Strahls keine ebene Welle existieren. 
+\subsection{Doppelspalte}
+Die stärksten Interferenzphänomene sind bei einem Spaltabstand von $ 0,5mm $ beobachtbar. Bei einem Abstand von $ 0,25mm $ ist ebenfalls Interferenz zu sehen, bei einem Abstand von $ 1mm $ aber war die Intensitätsverteilung eher die eines Einzelspalts. Dies entspricht im wesentlichen der Theorie. Mit zunehmenden $ g $ rücken die Maxima und Minima immer dichter zusammen, so dass sich der Verlauf immer öfter dem des Einzelspalts annähert.
+\subsection{Mehrfachspalte}
+Die Lage der Hauptmaxima wird bei allen Spaltenzahlen als gleich erwartet. Es wird erwartet, dass die Anzahl der Nebenmaxima mit zunehmender Spaltenzahl größer wird. Auch wird angenommen, dass mit größerer Spaltenzahl die Intensität der Hauptmaxima zunimmt und die Breite der Hauptmaxima abnimmt. Also die Hauptmaxima bei $ N=40 $ am hellsten und am schmalsten. \\
+Entgegen der Erwartungen war bei einer Spaltenzahl von 5 die Intensität am höchsten und die Hauptmaxima am schmalsten.
+Ein möglicher Grund hierfür wäre, dass der Laser nicht alle 40 Spalten beleuchten kann und einige Spalten nur zum Teil beleuchtet wurden. Das könnte das Interferenzmuster beeinflussen.\\
+Auch wenn die Abhängigkeit der Intensität von der Spaltzahl bis auf die Abweichung bei 40 Spalten, die leicht zu erklären ist, qualitativ beobachtet wurde, stimmen die quantitativen Verhältnisse nicht mit der Theorie überein. Nach der Theorie wird ein quadratischer Zusammenhang erwartet. Somit wäre das Verhältnis zwischen $ N = 4 $ und $ N=5 $ 
+\begin{equation*}
+	\left(\frac{4}{5}\right)^2 = \frac{16}{25} = \num{,64}
+\end{equation*}
+Stattdessen beobachten wir aber ein Verhältnis von mehr als $ \num{,9} $. Auch die anderen Verhältnisse sind größer als erwartet. \\
+Eine mögliche Erklärung wäre, dass in der Theorie angenommen wird, dass parallel verlaufende Strahlen mit rein konstruktiver Interferrenz am gleichen Punkt auf dem Schirm auftreffen. In der Praxis trifft das aber nur als Näherung zu. Mit zunehmender Breite des beleuchteten Blendenbereichs kommt es zunehmend zu einem Gangunterschied zwischen den Äußeren Strahlen und den Mittleren. Dadurch kommt es zur teilweisen Auslöschung, so dass die Intensität zwar noch zunimmt, jedoch nicht quadratisch. Dies könnte auch erklären, warum bei $ N = 40 $ die Intensität geringer als bei $ N = 5 $ ist.
+
+\subsection{Formfaktor}
+Da wir $ d $ und $ g $ kennen, können wir die Gitterstruktur auch direkt berechnen. 
+\begin{equation*}
+	\frac{d}{g} = \frac{15}{25} = \num{.6}
+\end{equation*}
+Der aus den Intensitätsverteilungen bestimmte Wert $ \frac{d}{g} = \num{,60(4)} $ stimmt damit genau überein. Dieses Verfahren lässt sich auch bei Gittern anwenden, bei denen nicht wie in diesem Versuch die Längen direkt messbar sind. Mit sichtbaren Licht ließen sich damit Gitter mit Größen bis in den Bereich weniger Mikrometer untersuchen. Nimmt man
+Wellen höherer Energie wie beispielsweise Röntgen- oder Gammastrahlung ließen sich damit auch noch viel kleinere Gitterstrukturen wie Kristallstrukturen untersuchen. \\
+Die von uns erzielte Genauigkeit ist zwar relativ gering, jedoch ließen sich bei feineren Gittern auch noch mehr Spalte beleuchten, so dass sich mehr Beugungsordnungen verwenden lassen.
+
+\subsection{Auflösung der Nebenmaxima}
+Die Nebenmaxima sind im Beugungsbild kaum zu erkennen. Dies ist jedoch wahrscheinlich kein Problem der Datenerfassung oder -verarbeitung. Es ist anzunehmen, dass in dem Bereich der Einfluss des Formfaktors den Struktur nahezu vollständig unterdrückt. In praktischen Anwendungen ist dieser Effekt jedoch oft von Vorteil. Beleuchtet man viele Gitterspalte entsteht dazwischen ein im Vergleich zur Breite der Hauptmaxima breiter Bereich, in dem die Intensität gering ist. Dadurch lassen sich Hauptmaxima besser auflösen. Dies ist ein Effekt, der bereits im Spektrometerversuch O3 zu beobachten war. Verwendet man dort ein Gitter mit halber Spaltdichte sind doppelt so viele Spektrallinien zu sehen. Will man ein großes Spektrum auflösen ist dies unter Umständen problematisch. Es könnte passieren, dass kurzwellige Spektrallinien hoher Ordnung mit langwelligen Spektrallinien niedrigerer Ordnung überschneiden. In diesem Fall wäre das Auflösungsvermögen zu gering.

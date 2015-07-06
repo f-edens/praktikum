@@ -3,8 +3,8 @@ __author__ = 'fred'
 import numpy as np
 
 
-def komma_to_float(input):
-    return float(input.replace(",", "."))
+def komma_to_float(col_names):
+    return {n: lambda x: float(x.replace(",", ".")) for n in col_names}
 
 
 col_name_xy = ("x", "y")
@@ -19,7 +19,7 @@ class Data:
             self.data_source = np.genfromtxt(indata, skiprows=skip_lines)
         #                                             converters={i: komma_to_float for i in col_names})
         else:
-            self.data_source = np.genfromtxt(indata, skiprows=skip_lines, converters=converters)
+            self.data_source = np.genfromtxt(indata, skip_header=skip_lines, converters=converters)#, names=col_names)
 
     def __getattr__(self, item):
         if item in self.col_names:
